@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://d3wlo1e38hc0r"]
+[gd_scene load_steps=7 format=3 uid="uid://d3wlo1e38hc0r"]
 
 [ext_resource type="Texture2D" uid="uid://6smrw5nysy3c" path="res://2023-09-05_02.43.32.png" id="1_wim2s"]
 [ext_resource type="Texture2D" uid="uid://d33w5ndxlxx3b" path="res://GrassTileSet.png" id="2_qaisi"]
 [ext_resource type="PackedScene" uid="uid://blr8r7l5ygafu" path="res://scene/Rat.tscn" id="3_tgf0x"]
 [ext_resource type="PackedScene" uid="uid://b1ppkef85f5qu" path="res://scene/enemy.tscn" id="4_7ko7s"]
-[ext_resource type="Texture2D" uid="uid://duooe4xjlt7w7" path="res://dripgod.jpeg" id="5_4mhme"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yoarg"]
 texture = ExtResource("2_qaisi")
@@ -624,8 +623,3 @@ position = Vector2(1213, 344)
 
 [node name="CharacterBody2D4" parent="." instance=ExtResource("4_7ko7s")]
 position = Vector2(584, 245)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(266, 187)
-scale = Vector2(0.212515, 0.175566)
-texture = ExtResource("5_4mhme")

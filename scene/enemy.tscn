@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b1ppkef85f5qu"]
 
-[ext_resource type="Texture2D" uid="uid://duooe4xjlt7w7" path="res://dripgod.jpeg" id="1_udh6u"]
+[ext_resource type="Texture2D" uid="uid://duooe4xjlt7w7" path="res://assets/texture/dripgod.jpeg" id="1_udh6u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rqt6i"]
 size = Vector2(78, 144)

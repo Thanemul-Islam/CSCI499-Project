@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://duooe4xjlt7w7"
-path="res://.godot/imported/dripgod.jpeg-7fc6fa8e61a34bc563f84ff1f9668511.ctex"
+uid="uid://bql8kpea45jjw"
+path="res://.godot/imported/StoneTileSet2final.png-0b780687be3dc81ab9098deae6643c21.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/texture/dripgod.jpeg"
-dest_files=["res://.godot/imported/dripgod.jpeg-7fc6fa8e61a34bc563f84ff1f9668511.ctex"]
+source_file="res://assets/StoneTileSet2final.png"
+dest_files=["res://.godot/imported/StoneTileSet2final.png-0b780687be3dc81ab9098deae6643c21.ctex"]
 
 [params]
 

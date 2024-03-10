@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d33w5ndxlxx3b"
-path="res://.godot/imported/GrassTileSet.png-b81498bfe17bbd0681c8380725fdd946.ctex"
+uid="uid://bsmgtfidcp0d"
+path="res://.godot/imported/test_rat2_falling_Sheet_png.png-42e9018b2ac331beecc5e6e89bdaa839.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GrassTileSet.png"
-dest_files=["res://.godot/imported/GrassTileSet.png-b81498bfe17bbd0681c8380725fdd946.ctex"]
+source_file="res://assets/texture/test_rat2_falling_Sheet_png.png"
+dest_files=["res://.godot/imported/test_rat2_falling_Sheet_png.png-42e9018b2ac331beecc5e6e89bdaa839.ctex"]
 
 [params]
 

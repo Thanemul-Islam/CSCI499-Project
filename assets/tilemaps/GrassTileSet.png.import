@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmjng7kfp3drd"
-path="res://.godot/imported/tonyrun.png-b704568a0d178f093ddf1faa90fc97e9.ctex"
+uid="uid://d33w5ndxlxx3b"
+path="res://.godot/imported/GrassTileSet.png-e6a93d472fe2ca416c1b5d59260c8ab6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/texture/tonyrun.png"
-dest_files=["res://.godot/imported/tonyrun.png-b704568a0d178f093ddf1faa90fc97e9.ctex"]
+source_file="res://assets/tilemaps/GrassTileSet.png"
+dest_files=["res://.godot/imported/GrassTileSet.png-e6a93d472fe2ca416c1b5d59260c8ab6.ctex"]
 
 [params]
 

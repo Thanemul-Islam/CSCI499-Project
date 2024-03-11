@@ -2,9 +2,12 @@ extends CharacterBody2D
 
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -600.0
+const JUMP_VELOCITY = -700.0
 @onready var sprite_2d = $Sprite2D
+@onready var healthbar = $Healthbar
 
+var health
+var is_alive: bool = true
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -33,4 +36,19 @@ func _physics_process(delta):
 	if direction != 0:
 		sprite_2d.flip_h = isLeft
 
+func _ready():
+	health = 3
+	
+	healthbar.init_health(health)
+	
 
+func _die():
+	is_alive = false
+	queue_free()
+
+func _set_health(value):
+	health = value
+	if health <=0 && is_alive:
+		_die()
+	
+	healthbar.health = health

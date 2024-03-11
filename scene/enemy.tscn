@@ -1,17 +1,18 @@
 [gd_scene load_steps=3 format=3 uid="uid://b1ppkef85f5qu"]
 
-[ext_resource type="Texture2D" uid="uid://duooe4xjlt7w7" path="res://assets/dripgod.jpeg" id="1_udh6u"]
+[ext_resource type="Texture2D" uid="uid://doc4dt6g020iu" path="res://assets/roach.png" id="1_fhvlu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rqt6i"]
-size = Vector2(78, 144)
+size = Vector2(63, 31)
 
-[node name="CharacterBody2D2" type="CharacterBody2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1.00003, -4.99994)
-scale = Vector2(0.0966543, 0.116505)
-texture = ExtResource("1_udh6u")
+[node name="roach" type="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -5)
+position = Vector2(0.5, -2.5)
 shape = SubResource("RectangleShape2D_rqt6i")
+
+[node name="Node2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0.375, -10)
+scale = Vector2(2.21094, 2.125)
+texture = ExtResource("1_fhvlu")

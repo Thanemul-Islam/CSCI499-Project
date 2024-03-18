@@ -6,6 +6,9 @@ const JUMP_VELOCITY = -700.0
 @onready var sprite_2d = $Sprite2D
 @onready var healthbar = $Healthbar
 
+var jump_count = 0
+var jump_max = 2
+
 var health
 var is_alive: bool = true
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -16,10 +19,14 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
+	
+	if is_on_floor():
+		jump_count = 0
 
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and jump_count<jump_max:
 		velocity.y = JUMP_VELOCITY
+		jump_count += 1
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.

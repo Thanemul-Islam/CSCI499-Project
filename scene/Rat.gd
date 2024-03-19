@@ -38,7 +38,6 @@ func _physics_process(delta):
 
 func _ready():
 	health = 3
-	
 	healthbar.init_health(health)
 	
 

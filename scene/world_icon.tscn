@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://56wqq3f15xbq"]
+[gd_scene load_steps=5 format=3 uid="uid://56wqq3f15xbq"]
 
 [ext_resource type="Script" path="res://scene/world_icon.gd" id="1_uaoyf"]
+[ext_resource type="PackedScene" uid="uid://cjet3jdp60qfl" path="res://scene/level_select.tscn" id="2_5sgqw"]
 
 [sub_resource type="Gradient" id="Gradient_otjmr"]
 offsets = PackedFloat32Array(0)
@@ -17,6 +18,7 @@ offset_right = 64.0
 offset_bottom = 64.0
 pivot_offset = Vector2(32, 32)
 script = ExtResource("1_uaoyf")
+level_select_packed = ExtResource("2_5sgqw")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0

@@ -28,6 +28,4 @@ func _input(event):
 	
 	if event.is_action_pressed("ui_accept"):
 		if current_level.next_scene_path:
-			var enemy_scene = ResourceLoader.load_threaded_get(current_level.next_scene_path)
-			var enemy = enemy_scene.instantiate()
-			add_child(enemy)
+			Functions.load_screen_to_scene(current_level.next_scene_path)

@@ -19,6 +19,13 @@ config/icon="res://icon.svg"
 
 Functions="*res://scene/Functions.gd"
 
+[display]
+
+window/size/viewport_width=960
+window/size/viewport_height=540
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_height"
+
 [input]
 
 ui_cancel={

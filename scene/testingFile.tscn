@@ -629,5 +629,5 @@ position = Vector2(1152, 400)
 position = Vector2(599, 305)
 
 [node name="Finish" parent="." instance=ExtResource("6_r455n")]
-position = Vector2(504, 896)
+position = Vector2(1280, 360)
 target_level = ExtResource("6_tr7it")

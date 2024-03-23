@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://d3wlo1e38hc0r"]
+[gd_scene load_steps=9 format=3 uid="uid://d3wlo1e38hc0r"]
 
 [ext_resource type="Texture2D" uid="uid://6smrw5nysy3c" path="res://assets/2023-09-05_02.43.32.png" id="1_wim2s"]
 [ext_resource type="Texture2D" uid="uid://d33w5ndxlxx3b" path="res://assets/tilemaps/GrassTileSet.png" id="2_qaisi"]
 [ext_resource type="PackedScene" uid="uid://blr8r7l5ygafu" path="res://scene/Rat.tscn" id="3_tgf0x"]
 [ext_resource type="PackedScene" uid="uid://b1ppkef85f5qu" path="res://scene/enemy.tscn" id="4_7ko7s"]
+[ext_resource type="PackedScene" uid="uid://dtw1nh2smuhfq" path="res://scene/finish.tscn" id="6_r455n"]
+[ext_resource type="PackedScene" uid="uid://b2y8ahvr1rgih" path="res://scene/tutorial level.tscn" id="6_tr7it"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yoarg"]
 texture = ExtResource("2_qaisi")
@@ -621,7 +623,11 @@ scale = Vector2(1.54058, 1.57167)
 position = Vector2(628, 593)
 
 [node name="CharacterBody2D3" parent="." instance=ExtResource("4_7ko7s")]
-position = Vector2(1237, 396)
+position = Vector2(1152, 400)
 
 [node name="CharacterBody2D4" parent="." instance=ExtResource("4_7ko7s")]
 position = Vector2(599, 305)
+
+[node name="Finish" parent="." instance=ExtResource("6_r455n")]
+position = Vector2(504, 896)
+target_level = ExtResource("6_tr7it")

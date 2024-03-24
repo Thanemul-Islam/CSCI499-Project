@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjrc6ghs2ry0o"]
+
+[ext_resource type="PackedScene" uid="uid://cnrkj0aupslyt" path="res://scene/platform.tscn" id="1_2yge2"]
+
+[node name="platform" instance=ExtResource("1_2yge2")]
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(0.125, 0)

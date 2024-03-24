@@ -441,7 +441,7 @@ layer_0/tile_data = PackedInt32Array(-655351, 196608, 1, -589815, 196608, 2, -52
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_6rcbu")]
 position = Vector2(-179, -43)
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+[node name="Camera2D2" type="Camera2D" parent="CharacterBody2D"]
 
 [node name="big platform4" parent="." instance=ExtResource("4_na5mj")]
 script = SubResource("GDScript_cmq3v")

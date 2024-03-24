@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjet3jdp60qfl"]
+[gd_scene load_steps=4 format=3 uid="uid://bu4p00pj6pvhp"]
 
 [ext_resource type="Script" path="res://scene/level_select.gd" id="1_f6wu6"]
-[ext_resource type="PackedScene" uid="uid://q0tg1dbvd3et" path="res://scene/level_icon.tscn" id="1_t1bw0"]
-[ext_resource type="PackedScene" uid="uid://h3gg5e4ds20j" path="res://scene/player_icon.tscn" id="3_4l8wp"]
+[ext_resource type="PackedScene" path="res://scene/level_icon.tscn" id="1_t1bw0"]
+[ext_resource type="PackedScene" path="res://scene/player_icon.tscn" id="3_4l8wp"]
 
 [node name="LevelSelect" type="Control"]
 layout_mode = 3

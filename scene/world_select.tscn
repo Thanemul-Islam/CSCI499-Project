@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://wtjrfsyu71xp"]
+[gd_scene load_steps=4 format=3 uid="uid://dqcjkr0fu8sc2"]
 
 [ext_resource type="Script" path="res://scene/world_select.gd" id="1_bcla0"]
 [ext_resource type="PackedScene" uid="uid://56wqq3f15xbq" path="res://scene/world_icon.tscn" id="1_n243a"]
-[ext_resource type="PackedScene" uid="uid://h3gg5e4ds20j" path="res://scene/player_icon.tscn" id="3_wct74"]
+[ext_resource type="PackedScene" path="res://scene/player_icon.tscn" id="3_wct74"]
 
 [node name="WorldSelect" type="Control"]
 layout_mode = 3

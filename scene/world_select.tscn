@@ -18,30 +18,30 @@ grow_vertical = 2
 script = ExtResource("1_bcla0")
 
 [node name="WolrdIcon" parent="." instance=ExtResource("1_n243a")]
-offset_left = 128.0
-offset_top = 448.0
-offset_right = 192.0
-offset_bottom = 512.0
+offset_left = 112.0
+offset_top = 272.0
+offset_right = 176.0
+offset_bottom = 336.0
 
 [node name="WolrdIcon2" parent="." instance=ExtResource("1_n243a")]
-offset_left = 320.0
-offset_top = 384.0
-offset_right = 384.0
-offset_bottom = 448.0
+offset_left = 304.0
+offset_top = 168.0
+offset_right = 368.0
+offset_bottom = 232.0
 world_index = 2
 
 [node name="WolrdIcon3" parent="." instance=ExtResource("1_n243a")]
 offset_left = 512.0
-offset_top = 448.0
+offset_top = 288.0
 offset_right = 576.0
-offset_bottom = 512.0
+offset_bottom = 352.0
 world_index = 3
 
 [node name="WolrdIcon4" parent="." instance=ExtResource("1_n243a")]
-offset_left = 704.0
-offset_top = 384.0
-offset_right = 768.0
-offset_bottom = 448.0
+offset_left = 688.0
+offset_top = 192.0
+offset_right = 752.0
+offset_bottom = 256.0
 world_index = 4
 
 [node name="PlayerIcon" parent="." instance=ExtResource("3_wct74")]

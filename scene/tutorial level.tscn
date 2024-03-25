@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://b2y8ahvr1rgih"]
+[gd_scene load_steps=29 format=3 uid="uid://b2y8ahvr1rgih"]
 
 [ext_resource type="Texture2D" uid="uid://geryd74pl4x" path="res://assets/tilemaps/cavebackextra.png" id="1_7m65j"]
 [ext_resource type="Texture2D" uid="uid://bod3dhgkq8elf" path="res://assets/tilemaps/GrassTileSet3final.png" id="1_mmlhc"]

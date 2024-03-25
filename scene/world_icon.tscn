@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://56wqq3f15xbq"]
 
 [ext_resource type="Script" path="res://scene/world_icon.gd" id="1_uaoyf"]
-[ext_resource type="PackedScene" uid="uid://cjet3jdp60qfl" path="res://scene/level_select.tscn" id="2_5sgqw"]
+[ext_resource type="PackedScene" uid="uid://bu4p00pj6pvhp" path="res://scene/level_select.tscn" id="2_5sgqw"]
 
 [sub_resource type="Gradient" id="Gradient_otjmr"]
 offsets = PackedFloat32Array(0)

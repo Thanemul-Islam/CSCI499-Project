@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://cex527lnbbty8" path="res://assets/tilemaps/caveback2para3.png" id="7_kvr5e"]
 [ext_resource type="Texture2D" uid="uid://diplyu0qexi2y" path="res://assets/tilemaps/caveback2para2.png" id="8_4747r"]
 [ext_resource type="Texture2D" uid="uid://cyvhwh7rup7s1" path="res://assets/tilemaps/caveback2para1.png" id="9_xcn83"]
+[ext_resource type="PackedScene" uid="uid://dtw1nh2smuhfq" path="res://scene/finish.tscn" id="10_ptmau"]
+[ext_resource type="PackedScene" uid="uid://dqcjkr0fu8sc2" path="res://scene/world_select.tscn" id="11_1px1d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0735w"]
 texture = ExtResource("1_mmlhc")
@@ -273,11 +275,11 @@ texture = ExtResource("2_sh4tb")
 8:2/0 = 0
 8:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 8:2/0/physics_layer_0/angular_velocity = 0.0
-8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, -8, 8, 8)
+8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, -7.125, 6, 8)
 9:2/0 = 0
 9:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 9:2/0/physics_layer_0/angular_velocity = 0.0
-9:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, -8, 8, 8)
+9:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.5, 8, 8, -8, 8, 8)
 10:2/0 = 0
 10:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 10:2/0/physics_layer_0/angular_velocity = 0.0
@@ -606,7 +608,7 @@ layer_0/tile_data = PackedInt32Array(-655351, 196608, 1, -589815, 196608, 2, -52
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_6rcbu")]
 position = Vector2(-848, -48)
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+[node name="Camera2D2" type="Camera2D" parent="CharacterBody2D"]
 
 [node name="big plat4" parent="." instance=ExtResource("4_na5mj")]
 script = SubResource("GDScript_cmq3v")
@@ -755,6 +757,10 @@ monitorable = false
 
 [node name="CollisionShape2D" parent="small platform5/Area2D" index="0"]
 position = Vector2(668.5, -122)
+
+[node name="Finish" parent="." instance=ExtResource("10_ptmau")]
+position = Vector2(1759, -667)
+target_level = ExtResource("11_1px1d")
 
 [connection signal="body_entered" from="big plat4/Area2D" to="big plat4" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="big plat4/Area2D" to="big plat4" method="_on_area_2d_body_exited"]

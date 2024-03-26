@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://d33w5ndxlxx3b" path="res://assets/tilemaps/GrassTileSet.png" id="2_qaisi"]
 [ext_resource type="PackedScene" uid="uid://blr8r7l5ygafu" path="res://scene/Rat.tscn" id="3_tgf0x"]
 [ext_resource type="PackedScene" uid="uid://b1ppkef85f5qu" path="res://scene/enemy.tscn" id="4_7ko7s"]
+[ext_resource type="PackedScene" uid="uid://dqcjkr0fu8sc2" path="res://scene/world_select.tscn" id="5_lidju"]
 [ext_resource type="PackedScene" uid="uid://dtw1nh2smuhfq" path="res://scene/finish.tscn" id="6_r455n"]
-[ext_resource type="PackedScene" uid="uid://b2y8ahvr1rgih" path="res://scene/tutorial level.tscn" id="6_tr7it"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yoarg"]
 texture = ExtResource("2_qaisi")
@@ -624,7 +624,7 @@ position = Vector2(599, 305)
 
 [node name="Finish" parent="." instance=ExtResource("6_r455n")]
 position = Vector2(1288, 376)
-target_level = ExtResource("6_tr7it")
+target_level = ExtResource("5_lidju")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_tgf0x")]
 position = Vector2(200, 912)

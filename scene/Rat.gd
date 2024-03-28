@@ -8,13 +8,16 @@ const JUMP_VELOCITY = -700.0
 
 
 # Variables for dash trail & timer
-@export var trail_node : PackedScene
+@export var dash_trail_node : PackedScene
 @onready var dash_trail_timer = $Dash_Trail_Timer
 
 
 var jump_count = 0
 var jump_max = 2
 
+# Variables to help deal with many dash bugs
+var canDash = true
+var isDashing = false
 
 var health
 var is_alive: bool = true
@@ -25,12 +28,12 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _physics_process(delta):
 	# Adding walk animation
 	if(velocity.x > 1 || velocity.x < -1):
-		sprite_2d.animation = "walk2"
+		sprite_2d.animation = "walk1"
 	else:
 		sprite_2d.animation = "idle"
 	
 	# Add the gravity.
-	if not is_on_floor():
+	if not is_on_floor() and !isDashing:
 		velocity.y += gravity * delta
 
 		# Adding jumping frame
@@ -47,10 +50,10 @@ func _physics_process(delta):
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("left", "right")
-	if direction:
+	var direction = Input.get_axis("left", "right") 
+	if direction and !isDashing:
 		velocity.x = direction * SPEED
-	else:
+	elif !direction and !isDashing:
 		velocity.x = move_toward(velocity.x, 0, 10)
 
 	move_and_slide()
@@ -78,8 +81,8 @@ func _set_health(value):
 
 
 # Function to add trail to dash
-func add_trail():
-	var trail = trail_node.instantiate()
+func add_dash_trail():
+	var trail = dash_trail_node.instantiate()
 	
 	# Turning the trail character when facing left
 	var turn_left = velocity.x < 0
@@ -91,20 +94,27 @@ func add_trail():
 
 
 func _on_dash_trail_timer_timeout():
-	add_trail()
+	add_dash_trail()
 
 
 # Dash function
 func dash():
 	dash_trail_timer.start()
+	isDashing = true # Setting true at start to deal with physics conflicts up there
 	
-	var tween = get_tree().create_tween()
-	# Had to tweek the position change to only have a change in X axis
-	tween.tween_property(self,"position", position + velocity * Vector2(1,0), 0.5)
+	# Gets direction of dash from where the sprite is facing
+	if sprite_2d.flip_h: # This spaghetti was the best global facing direction I could find
+		velocity = Vector2(SPEED * -2.25, 0) # Only a change in X velocity and not Y
+	else:
+		velocity = Vector2(SPEED * 2.25, 0)
 	
-	await tween.finished
+	await get_tree().create_timer(.5).timeout # Timer for trail to get off 5 sprites
 	dash_trail_timer.stop()
+	isDashing = false 
 
 func _input(event):
-	if event.is_action_pressed("dash"):
+	if event.is_action_pressed("dash") and canDash:
 		dash()
+		canDash = false
+		await get_tree().create_timer(1).timeout # Time between dashes
+		canDash = true

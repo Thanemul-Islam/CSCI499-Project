@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://56wqq3f15xbq" path="res://scene/world_icon.tscn" id="1_n243a"]
 [ext_resource type="Texture2D" uid="uid://dpadne0j240u4" path="res://assets/World and level select/Mellow node background.jpg" id="2_mdtoq"]
 [ext_resource type="PackedScene" uid="uid://h3gg5e4ds20j" path="res://scene/player_icon.tscn" id="3_wct74"]
-[ext_resource type="PackedScene" uid="uid://bpnnnc0vfvop1" path="res://scene/Level_select_2.tscn" id="4_wtyuh"]
-[ext_resource type="PackedScene" uid="uid://dd8o6xjsoqxiu" path="res://scene/Level_select_3.tscn" id="5_13r7f"]
+[ext_resource type="PackedScene" path="res://scene/Level_select_2.tscn" id="4_wtyuh"]
+[ext_resource type="PackedScene" path="res://scene/Level_select_3.tscn" id="5_13r7f"]
 
 [node name="WorldSelect" type="Control"]
 layout_mode = 3

@@ -2,29 +2,32 @@ extends CharacterBody2D
 
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -700.0
+const JUMP_VELOCITY = -500.0
 @onready var sprite_2d = $Sprite2D
 @onready var healthbar = $Healthbar
-
+@onready var invulnerability_timer = $InvulnerabilityTimer
 
 # Variables for dash trail & timer
 @export var dash_trail_node : PackedScene
 @onready var dash_trail_timer = $Dash_Trail_Timer
 
-
 var jump_count = 0
 var jump_max = 2
+
+@export var max_health = 3
+var health = max_health
+
 
 # Variables to help deal with many dash bugs
 var canDash = true
 var isDashing = false
 
-var health
+
 var is_alive: bool = true
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-
+#movements and animation
 func _physics_process(delta):
 	# Adding walk animation
 	if(velocity.x > 1 || velocity.x < -1):
@@ -63,22 +66,32 @@ func _physics_process(delta):
 	if direction != 0:
 		sprite_2d.flip_h = isLeft
 
+#player spawn
 func _ready():
-	health = 3
 	healthbar.init_health(health)
-	
 
+#player death
 func _die():
 	is_alive = false
 	queue_free()
+	#emit_signal("died")
 
+#sets healthbar value
 func _set_health(value):
-	health = value
-	if health <=0 && is_alive:
-		_die()
-	
+	var prev_health = health
+	health = clamp(value,0,max_health)
 	healthbar.health = health
+	if health != prev_health:
+		#emit_signal("health_updated",health)
+		if health == 0:
+			_die()
+			#emit_signal("killed")
 
+#calculates damage and updates health
+func _damage(amount):
+	if invulnerability_timer.is_stopped:
+		invulnerability_timer.start()
+		_set_health(health - amount)
 
 # Function to add trail to dash
 func add_dash_trail():
@@ -95,7 +108,6 @@ func add_dash_trail():
 
 func _on_dash_trail_timer_timeout():
 	add_dash_trail()
-
 
 # Dash function
 func dash():
@@ -118,3 +130,7 @@ func _input(event):
 		canDash = false
 		await get_tree().create_timer(1).timeout # Time between dashes
 		canDash = true
+
+
+func _on_spikes_impaled():
+	_damage(1)

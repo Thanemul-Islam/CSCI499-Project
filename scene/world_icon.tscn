@@ -1,15 +1,12 @@
 [gd_scene load_steps=5 format=3 uid="uid://56wqq3f15xbq"]
 
 [ext_resource type="Script" path="res://scene/world_icon.gd" id="1_uaoyf"]
-[ext_resource type="PackedScene" uid="uid://bu4p00pj6pvhp" path="res://scene/level_select.tscn" id="2_5sgqw"]
+[ext_resource type="PackedScene" uid="uid://bu4p00pj6pvhp" path="res://scene/level_select_1.tscn" id="2_5sgqw"]
 
-[sub_resource type="Gradient" id="Gradient_otjmr"]
-offsets = PackedFloat32Array(0)
-colors = PackedColorArray(0, 0, 0, 1)
+[sub_resource type="Gradient" id="Gradient_cl0vp"]
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_j4c0i"]
-gradient = SubResource("Gradient_otjmr")
-width = 64
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_eum2t"]
+gradient = SubResource("Gradient_cl0vp")
 
 [node name="WolrdIcon" type="Control"]
 layout_mode = 3
@@ -32,4 +29,5 @@ horizontal_alignment = 1
 layout_mode = 0
 offset_right = 64.0
 offset_bottom = 64.0
-texture = SubResource("GradientTexture1D_j4c0i")
+texture = SubResource("GradientTexture1D_eum2t")
+expand_mode = 1

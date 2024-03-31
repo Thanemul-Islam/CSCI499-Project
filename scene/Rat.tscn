@@ -307,4 +307,8 @@ wait_time = 0.1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
+[node name="InvulnerabilityTimer" type="Timer" parent="."]
+wait_time = 0.8
+one_shot = true
+
 [connection signal="timeout" from="Dash_Trail_Timer" to="." method="_on_dash_trail_timer_timeout"]

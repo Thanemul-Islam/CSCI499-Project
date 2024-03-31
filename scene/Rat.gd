@@ -115,3 +115,7 @@ func dash():
 func _input(event):
 	if event.is_action_pressed("dash"):
 		dash()
+
+
+func _on_spikes_impaled():
+	_damage(1)

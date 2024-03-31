@@ -102,6 +102,7 @@ next_level_up = NodePath("../LevelIcon7")
 next_level_left = NodePath("../LevelIcon6")
 
 [node name="PlayerIcon" parent="." instance=ExtResource("4_t2k7d")]
+texture_filter = 1
 layout_mode = 0
 offset_left = 0.0
 offset_top = 0.0

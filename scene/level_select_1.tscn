@@ -78,6 +78,7 @@ level_name = "6"
 next_level_down = NodePath("../LevelIcon5")
 
 [node name="PlayerIcon" parent="." instance=ExtResource("4_vfop6")]
+texture_filter = 1
 layout_mode = 0
 offset_left = 0.0
 offset_top = 0.0

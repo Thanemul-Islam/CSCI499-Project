@@ -95,6 +95,7 @@ level_name = "8"
 next_level_left = NodePath("../LevelIcon4")
 
 [node name="PlayerIcon" parent="." instance=ExtResource("4_lmqgp")]
+texture_filter = 1
 layout_mode = 0
 offset_left = 0.0
 offset_top = 0.0

@@ -12,16 +12,16 @@
 # Overview: A Rat Through Time is a 2D platformer-action game that follows Tony the Rat as he defeats enemies to gain new powers to explore worlds in different time periods. Our project is a satisfying, fast-paced video game.
 
 # MVP Features:
-# Basic level select - mario-inspired top-down world map (w/ shop)
-# 2-3 worlds featuring multiple smaller levels with backtracking progression.
-# Working framework for character movement + unlockable abilities
-# Working framework for combat system
-# Enemies - Roaches, Pigeon, Squirrel
-# Leaderboard for best times
+Basic level select - mario-inspired top-down world map (w/ shop)
+2-3 worlds featuring multiple smaller levels with backtracking progression.
+Working framework for character movement + unlockable abilities
+Working framework for combat system
+Enemies - Roaches, Pigeon, Squirrel
+Leaderboard for best times
 
 # Reach Goals/Features:
-# Day/Night Cycle: with daytime map+shop and nighttime level design
-# More levels
-# More unlockable movement techniques - wall climb/jump
-# Intricate combat mechanics - parry, more weapons
-# More difficulties (harder enemies, faster speed)
+Day/Night Cycle: with daytime map+shop and nighttime level design
+More levels
+More unlockable movement techniques - wall climb/jump
+Intricate combat mechanics - parry, more weapons
+More difficulties (harder enemies, faster speed)

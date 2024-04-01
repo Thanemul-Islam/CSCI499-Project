@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b1ppkef85f5qu"]
 
-[ext_resource type="Texture2D" uid="uid://doc4dt6g020iu" path="res://assets/global assets/enemy/roach.png" id="1_fhvlu"]
+[ext_resource type="Texture2D" uid="uid://doc4dt6g020iu" path="res://assets/base assets/enemy/roach.png" id="1_fhvlu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rqt6i"]
 size = Vector2(63, 31)

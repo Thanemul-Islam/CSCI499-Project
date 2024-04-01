@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bxgk63e0gvcsh"
-path="res://.godot/imported/dash_trail.png-8d9da99d189e0e565ea467d3a8562402.ctex"
+path="res://.godot/imported/dash_trail.png-39d39c1fcb5ef528be366d2203718b0b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/global assets/dash_trail.png"
-dest_files=["res://.godot/imported/dash_trail.png-8d9da99d189e0e565ea467d3a8562402.ctex"]
+source_file="res://assets/base assets/dash_trail.png"
+dest_files=["res://.godot/imported/dash_trail.png-39d39c1fcb5ef528be366d2203718b0b.ctex"]
 
 [params]
 

@@ -2,7 +2,7 @@
 extends Control
 
 @export var world_index: int = 1
-@export var level_select_packed: PackedScene = load("res://scene/level_select_1.tscn")
+@export var level_select_packed: PackedScene = load("res://scene/level select/level_select_1.tscn")
 @onready var level_select_scene: LevelSelect = level_select_packed.instantiate()
 
 # makes name of world

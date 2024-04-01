@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://blr8r7l5ygafu" path="res://scene/Rat.tscn" id="3_6rcbu"]
 [ext_resource type="Texture2D" uid="uid://sxl0u0g2ccph" path="res://assets/tutorial/tilemaps/StoneForegroundTiles.png" id="3_kyr54"]
 [ext_resource type="Texture2D" uid="uid://2heqiacwyr47" path="res://assets/tutorial/tilemaps/tutorialsigns.png" id="3_ma0sk"]
-[ext_resource type="Texture2D" uid="uid://dl2t6ipg8vgxf" path="res://SpikeTileset.png" id="4_fc8rd"]
+[ext_resource type="Texture2D" uid="uid://dl2t6ipg8vgxf" path="res://assets/base assets/enemy/SpikeTileset.png" id="4_fc8rd"]
 [ext_resource type="PackedScene" uid="uid://cnrkj0aupslyt" path="res://scene/level functions/platform.tscn" id="4_na5mj"]
 [ext_resource type="Script" path="res://scripts/platform.gd" id="5_4wawb"]
 [ext_resource type="Texture2D" uid="uid://bd2hx7fjy5gee" path="res://assets/tutorial/background/caveback2para4.png" id="6_0sgvl"]
@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://diplyu0qexi2y" path="res://assets/tutorial/background/caveback2para2.png" id="8_4747r"]
 [ext_resource type="Texture2D" uid="uid://cyvhwh7rup7s1" path="res://assets/tutorial/background/caveback2para1.png" id="9_xcn83"]
 [ext_resource type="PackedScene" uid="uid://dtw1nh2smuhfq" path="res://scene/level functions/finish.tscn" id="10_ptmau"]
-[ext_resource type="PackedScene" uid="uid://dqcjkr0fu8sc2" path="res://scene/level world select/world_select.tscn" id="11_1px1d"]
+[ext_resource type="PackedScene" uid="uid://dqcjkr0fu8sc2" path="res://scene/world and level select/world_select.tscn" id="11_1px1d"]
 [ext_resource type="PackedScene" uid="uid://bk7mljdspn5kl" path="res://scene/level functions/spikes.tscn" id="16_yw7oi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0735w"]

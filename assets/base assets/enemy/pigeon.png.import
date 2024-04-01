@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://j78goxtwisab"
-path="res://.godot/imported/test_rat2_walk2_animation-Sheet.png-15e5f72c69f061fb48aa137c09b0cad9.ctex"
+uid="uid://y43eg6aji2s4"
+path="res://.godot/imported/pigeon.png-8fa1b14d3c268d7882bfd93b175c7c2c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/global assets/tony/test_rat2_walk2_animation-Sheet.png"
-dest_files=["res://.godot/imported/test_rat2_walk2_animation-Sheet.png-15e5f72c69f061fb48aa137c09b0cad9.ctex"]
+source_file="res://assets/base assets/enemy/pigeon.png"
+dest_files=["res://.godot/imported/pigeon.png-8fa1b14d3c268d7882bfd93b175c7c2c.ctex"]
 
 [params]
 

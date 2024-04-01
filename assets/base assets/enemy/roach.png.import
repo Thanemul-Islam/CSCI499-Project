@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://doc4dt6g020iu"
-path="res://.godot/imported/roach.png-252ddbeef411e4cec7b57e694b273b34.ctex"
+path="res://.godot/imported/roach.png-3be1c87f42dc1679f4fb6ba52aca92a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/global assets/enemy/roach.png"
-dest_files=["res://.godot/imported/roach.png-252ddbeef411e4cec7b57e694b273b34.ctex"]
+source_file="res://assets/base assets/enemy/roach.png"
+dest_files=["res://.godot/imported/roach.png-3be1c87f42dc1679f4fb6ba52aca92a7.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djyc7jlhvx6dp"
-path="res://.godot/imported/test_rat_just_falling_1frame.png-d8106b251eff429e5520db3de0465e94.ctex"
+uid="uid://rspl8wyco0cn"
+path="res://.godot/imported/test_rat2_damaged_sheet.png-53240a69f89546b3fe8a52d3ef4f70d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/global assets/tony/test_rat_just_falling_1frame.png"
-dest_files=["res://.godot/imported/test_rat_just_falling_1frame.png-d8106b251eff429e5520db3de0465e94.ctex"]
+source_file="res://assets/base assets/tony/test_rat2_damaged_sheet.png"
+dest_files=["res://.godot/imported/test_rat2_damaged_sheet.png-53240a69f89546b3fe8a52d3ef4f70d3.ctex"]
 
 [params]
 

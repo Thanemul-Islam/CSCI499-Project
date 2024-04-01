@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dy1s7k8s2unfo"
-path="res://.godot/imported/test_rat2_walk_animation-sheet.png-6582ba546c551dd32fbf394b1c6bde65.ctex"
+path="res://.godot/imported/test_rat2_walk_animation-sheet.png-656f04befc4e12796fb59595305f5e2a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/global assets/tony/test_rat2_walk_animation-sheet.png"
-dest_files=["res://.godot/imported/test_rat2_walk_animation-sheet.png-6582ba546c551dd32fbf394b1c6bde65.ctex"]
+source_file="res://assets/base assets/tony/test_rat2_walk_animation-sheet.png"
+dest_files=["res://.godot/imported/test_rat2_walk_animation-sheet.png-656f04befc4e12796fb59595305f5e2a.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bchse30vwfhkb"
-path="res://.godot/imported/test_rat2_idle-Sheet.png-b9f0859f3b361d9a33e867a8e7bab92d.ctex"
+uid="uid://cvhmabxlvfa4l"
+path="res://.godot/imported/cheese.png-b41e631e5a82333af4952c27db1f19ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/global assets/tony/test_rat2_idle-Sheet.png"
-dest_files=["res://.godot/imported/test_rat2_idle-Sheet.png-b9f0859f3b361d9a33e867a8e7bab92d.ctex"]
+source_file="res://assets/base assets/cheese.png"
+dest_files=["res://.godot/imported/cheese.png-b41e631e5a82333af4952c27db1f19ce.ctex"]
 
 [params]
 

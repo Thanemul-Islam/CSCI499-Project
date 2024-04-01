@@ -30,7 +30,7 @@ offset_left = 104.0
 offset_top = 128.0
 offset_right = 168.0
 offset_bottom = 192.0
-next_scene_path = "res://scene/tutorial level.tscn"
+next_scene_path = "res://scene/levels/tutorial/tutorial1-1.tscn"
 next_level_down = NodePath("../LevelIcon2")
 
 [node name="LevelIcon2" parent="." node_paths=PackedStringArray("next_level_up", "next_level_down") instance=ExtResource("3_mx7wg")]

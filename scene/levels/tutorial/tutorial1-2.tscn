@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://mmfiylxu67ns"]
 
-[ext_resource type="Texture2D" uid="uid://o8d7k6a6ckjr" path="res://assets/tutorial/tilemaps/StoneTileSet2final.png" id="1_i0sih"]
+[ext_resource type="Texture2D" uid="uid://o8d7k6a6ckjr" path="res://assets/tutorial/tilemaps/StoneTileSet.png" id="1_i0sih"]
 [ext_resource type="PackedScene" uid="uid://blr8r7l5ygafu" path="res://scene/Rat.tscn" id="2_gbkve"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hrbrr"]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2heqiacwyr47"
-path="res://.godot/imported/tutorialsigns.png-59d2d4af45f00028132a895bd85ee63f.ctex"
+path="res://.godot/imported/TutorialTileSet.png-644d394e33ef847fa8aa3aaf4e499e86.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tutorial/tilemaps/tutorialsigns.png"
-dest_files=["res://.godot/imported/tutorialsigns.png-59d2d4af45f00028132a895bd85ee63f.ctex"]
+source_file="res://assets/tutorial/tilemaps/TutorialTileSet.png"
+dest_files=["res://.godot/imported/TutorialTileSet.png-644d394e33ef847fa8aa3aaf4e499e86.ctex"]
 
 [params]
 

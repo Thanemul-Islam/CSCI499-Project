@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyvhwh7rup7s1"
-path="res://.godot/imported/caveback2para1.png-33aa36f951031255cf783e8dca00a157.ctex"
+uid="uid://geryd74pl4x"
+path="res://.godot/imported/cavebgextra.png-f1143b030eb255872412f5a059b99f8e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tutorial/background/caveback2para1.png"
-dest_files=["res://.godot/imported/caveback2para1.png-33aa36f951031255cf783e8dca00a157.ctex"]
+source_file="res://assets/tutorial/background/cavebgextra.png"
+dest_files=["res://.godot/imported/cavebgextra.png-f1143b030eb255872412f5a059b99f8e.ctex"]
 
 [params]
 

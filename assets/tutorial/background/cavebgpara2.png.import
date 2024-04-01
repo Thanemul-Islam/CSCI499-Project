@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8fy1rk0rvcfp"
-path="res://.godot/imported/grass to city background.jpg-5a3c729f2831736b2ad309be6c9b713e.ctex"
+uid="uid://diplyu0qexi2y"
+path="res://.godot/imported/cavebgpara2.png-2e792d07f3683e2845a07d2f30bd8e29.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/world and level select/grass to city background.jpg"
-dest_files=["res://.godot/imported/grass to city background.jpg-5a3c729f2831736b2ad309be6c9b713e.ctex"]
+source_file="res://assets/tutorial/background/cavebgpara2.png"
+dest_files=["res://.godot/imported/cavebgpara2.png-2e792d07f3683e2845a07d2f30bd8e29.ctex"]
 
 [params]
 

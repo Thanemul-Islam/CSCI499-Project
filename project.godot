@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="Testing file"
-run/main_scene="res://scene/world_select.tscn"
+run/main_scene="res://scene/world and level select/world_select.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Functions="*res://scene/Functions.gd"
+Functions="*res://scripts/Functions.gd"
 
 [display]
 

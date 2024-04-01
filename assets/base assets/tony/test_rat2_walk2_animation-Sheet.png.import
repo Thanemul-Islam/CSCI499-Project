@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8fy1rk0rvcfp"
-path="res://.godot/imported/grass to city background.jpg-5a3c729f2831736b2ad309be6c9b713e.ctex"
+uid="uid://j78goxtwisab"
+path="res://.godot/imported/test_rat2_walk2_animation-Sheet.png-b488f36645b4c0130bbaad8cf850d5fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/world and level select/grass to city background.jpg"
-dest_files=["res://.godot/imported/grass to city background.jpg-5a3c729f2831736b2ad309be6c9b713e.ctex"]
+source_file="res://assets/base assets/tony/test_rat2_walk2_animation-Sheet.png"
+dest_files=["res://.godot/imported/test_rat2_walk2_animation-Sheet.png-b488f36645b4c0130bbaad8cf850d5fb.ctex"]
 
 [params]
 

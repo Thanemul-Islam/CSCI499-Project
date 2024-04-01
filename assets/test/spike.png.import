@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8fy1rk0rvcfp"
-path="res://.godot/imported/grass to city background.jpg-5a3c729f2831736b2ad309be6c9b713e.ctex"
+uid="uid://cw1ca67xqcr4r"
+path="res://.godot/imported/spike.png-06df10a4a31fdb9a7b71160d9357e69a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/world and level select/grass to city background.jpg"
-dest_files=["res://.godot/imported/grass to city background.jpg-5a3c729f2831736b2ad309be6c9b713e.ctex"]
+source_file="res://assets/test/spike.png"
+dest_files=["res://.godot/imported/spike.png-06df10a4a31fdb9a7b71160d9357e69a.ctex"]
 
 [params]
 

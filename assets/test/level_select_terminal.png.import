@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8fy1rk0rvcfp"
-path="res://.godot/imported/grass to city background.jpg-5a3c729f2831736b2ad309be6c9b713e.ctex"
+uid="uid://vukacycudtyp"
+path="res://.godot/imported/level_select_terminal.png-d7e47ca9ecc5f82f93476af8c6566bb9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/world and level select/grass to city background.jpg"
-dest_files=["res://.godot/imported/grass to city background.jpg-5a3c729f2831736b2ad309be6c9b713e.ctex"]
+source_file="res://assets/test/level_select_terminal.png"
+dest_files=["res://.godot/imported/level_select_terminal.png-d7e47ca9ecc5f82f93476af8c6566bb9.ctex"]
 
 [params]
 

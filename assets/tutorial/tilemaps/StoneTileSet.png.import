@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8fy1rk0rvcfp"
-path="res://.godot/imported/grass to city background.jpg-5a3c729f2831736b2ad309be6c9b713e.ctex"
+uid="uid://o8d7k6a6ckjr"
+path="res://.godot/imported/StoneTileSet.png-260a1071299e5bb479534146dc42f51a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/world and level select/grass to city background.jpg"
-dest_files=["res://.godot/imported/grass to city background.jpg-5a3c729f2831736b2ad309be6c9b713e.ctex"]
+source_file="res://assets/tutorial/tilemaps/StoneTileSet.png"
+dest_files=["res://.godot/imported/StoneTileSet.png-260a1071299e5bb479534146dc42f51a.ctex"]
 
 [params]
 

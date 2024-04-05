@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bu4p00pj6pvhp"]
 
 [ext_resource type="Script" path="res://scripts/world and level select/level_select.gd" id="1_ooq35"]
-[ext_resource type="Texture2D" uid="uid://8fy1rk0rvcfp" path="res://assets/world and level select/grass to city background.jpg" id="2_c7qmw"]
+[ext_resource type="Texture2D" uid="uid://8fy1rk0rvcfp" path="res://assets/World and level select/grass to city background.jpg" id="2_c7qmw"]
 [ext_resource type="PackedScene" uid="uid://q0tg1dbvd3et" path="res://scene/world and level select/level_icon.tscn" id="3_mx7wg"]
 [ext_resource type="PackedScene" uid="uid://h3gg5e4ds20j" path="res://scene/world and level select/player_icon.tscn" id="4_vfop6"]
 

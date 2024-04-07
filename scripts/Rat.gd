@@ -6,6 +6,7 @@ const JUMP_VELOCITY = -500.0
 @onready var sprite_2d = $Sprite2D
 @onready var healthbar = $Healthbar
 @onready var invulnerability_timer = $InvulnerabilityTimer
+@onready var hurtbox = $AttckBoxArea2D/HitBoxCollisionShape2D
 
 # Variables for dash trail & timer
 @export var dash_trail_node : PackedScene
@@ -47,26 +48,43 @@ func _physics_process(delta):
 
 
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and jump_count<jump_max:
+	if Input.is_action_just_pressed("jump") and jump_count<jump_max and !isDashing:
 		velocity.y = JUMP_VELOCITY
 		jump_count += 1
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("left", "right") 
+	# Handles hitbox h_flip
+	if direction < 0:
+		hurtbox.position.x = -35
+	if direction > 0:
+		hurtbox.position.x = 35
+		
 	if direction and !isDashing:
 		velocity.x = direction * SPEED
 	elif !direction and !isDashing:
 		velocity.x = move_toward(velocity.x, 0, 10)
-
+		
+	# Handles attack
+	if Input.is_action_just_pressed("left_click"):
+		#if there is no timer then hitbox then call timer
+		hurtbox.disabled = false
+		#we need attack animation
+		#sprite_2d.animation = "attack"
+	else:
+		hurtbox.disabled = true
+		
+		
 	move_and_slide()
 	
-	#correct left turn
+	# Correct left turn
 	var isLeft = velocity.x < 0
 	if direction != 0:
 		sprite_2d.flip_h = isLeft
+		
 
-#player spawn
+# Player spawn
 func _ready():
 	healthbar.init_health(health)
 

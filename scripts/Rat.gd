@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+class_name Player
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -500.0
@@ -87,11 +87,13 @@ func _physics_process(delta):
 # Player spawn
 func _ready():
 	healthbar.init_health(health)
+	GameManager.player = self
 
 #player death
 func _die():
-	is_alive = false
-	queue_free()
+	is_alive = false	
+	GameManager.respawn_player()
+	_set_health(max_health)
 	#emit_signal("died")
 
 #sets healthbar value

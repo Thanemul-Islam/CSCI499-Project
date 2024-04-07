@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://b2y8ahvr1rgih"]
+[gd_scene load_steps=31 format=3 uid="uid://b2y8ahvr1rgih"]
 
 [ext_resource type="Texture2D" uid="uid://geryd74pl4x" path="res://assets/tutorial/background/cavebgextra.png" id="1_7m65j"]
 [ext_resource type="Texture2D" uid="uid://bod3dhgkq8elf" path="res://assets/tutorial/tilemaps/GrassTileSet2.png" id="1_mmlhc"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://dtw1nh2smuhfq" path="res://scene/level functions/finish.tscn" id="10_ptmau"]
 [ext_resource type="PackedScene" uid="uid://dqcjkr0fu8sc2" path="res://scene/world and level select/world_select.tscn" id="11_1px1d"]
 [ext_resource type="PackedScene" uid="uid://bk7mljdspn5kl" path="res://scene/level functions/spikes.tscn" id="16_yw7oi"]
+[ext_resource type="PackedScene" uid="uid://voko7aog1hyg" path="res://scene/level functions/checkpoint.tscn" id="17_iueak"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0735w"]
 texture = ExtResource("1_mmlhc")
@@ -765,6 +766,9 @@ target_level = ExtResource("11_1px1d")
 
 [node name="Spikes" parent="." instance=ExtResource("16_yw7oi")]
 position = Vector2(-147, 117)
+
+[node name="Checkpoint" parent="." instance=ExtResource("17_iueak")]
+position = Vector2(-496, -24)
 
 [connection signal="body_entered" from="big plat4/Area2D" to="big plat4" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="big plat4/Area2D" to="big plat4" method="_on_area_2d_body_exited"]

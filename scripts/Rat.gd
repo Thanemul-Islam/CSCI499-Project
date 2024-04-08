@@ -6,7 +6,9 @@ const JUMP_VELOCITY = -500.0
 @onready var sprite_2d = $Sprite2D
 @onready var healthbar = $Healthbar
 @onready var invulnerability_timer = $InvulnerabilityTimer
-@onready var hurtbox = $AttckBoxArea2D/HitBoxCollisionShape2D
+@onready var AttackTimer = $AttackTimer
+@onready var hurtbox = $AttackBoxArea2D/HitBoxCollisionShape2D
+
 
 # Variables for dash trail & timer
 @export var dash_trail_node : PackedScene
@@ -69,7 +71,9 @@ func _physics_process(delta):
 	# Handles attack
 	if Input.is_action_just_pressed("left_click"):
 		#if there is no timer then hitbox then call timer
-		hurtbox.disabled = false
+		if AttackTimer.is_stopped():
+			hurtbox.disabled = false
+			AttackTimer.start()
 		#we need attack animation
 		#sprite_2d.animation = "attack"
 	else:
@@ -107,7 +111,7 @@ func _set_health(value):
 
 #calculates damage and updates health
 func _damage(amount):
-	if invulnerability_timer.is_stopped:
+	if invulnerability_timer.is_stopped():
 		invulnerability_timer.start()
 		_set_health(health - amount)
 

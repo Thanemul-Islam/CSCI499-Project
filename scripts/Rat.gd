@@ -152,3 +152,8 @@ func _input(event):
 
 func _on_spikes_impaled():
 	_damage(1)
+
+
+func _on_hurt_box_area_2d_area_entered(area):
+	if(area.name == "HurtboxArea2D"):
+		_damage(1)

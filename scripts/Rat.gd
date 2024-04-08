@@ -64,7 +64,7 @@ func _physics_process(delta):
 	if direction and !isDashing:
 		velocity.x = direction * SPEED
 	elif !direction and !isDashing:
-		velocity.x = move_toward(velocity.x, 0, 10)
+		velocity.x = move_toward(velocity.x, 0, 30)
 		
 	# Handles attack
 	if Input.is_action_just_pressed("left_click"):

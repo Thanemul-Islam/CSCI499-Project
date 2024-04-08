@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dqcjkr0fu8sc2"]
 
 [ext_resource type="Script" path="res://scripts/world and level select/world_select.gd" id="1_t8wa3"]
-[ext_resource type="Texture2D" uid="uid://dpadne0j240u4" path="res://assets/world and level select/Mellow node background.jpg" id="2_opwdm"]
+[ext_resource type="Texture2D" uid="uid://dpadne0j240u4" path="res://assets/World and level select/Mellow node background.jpg" id="2_opwdm"]
 [ext_resource type="PackedScene" uid="uid://56wqq3f15xbq" path="res://scene/world and level select/world_icon.tscn" id="3_8moh5"]
 [ext_resource type="PackedScene" uid="uid://bpnnnc0vfvop1" path="res://scene/world and level select/Level_select_2.tscn" id="4_ugene"]
 [ext_resource type="PackedScene" uid="uid://dd8o6xjsoqxiu" path="res://scene/world and level select/Level_select_3.tscn" id="5_4tvi5"]
@@ -52,6 +52,7 @@ world_index = 3
 level_select_packed = ExtResource("5_4tvi5")
 
 [node name="PlayerIcon" parent="." instance=ExtResource("6_art3c")]
+texture_filter = 1
 layout_mode = 0
 offset_left = 0.0
 offset_top = 0.0

@@ -1,5 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://blr8r7l5ygafu"]
-
+[gd_scene load_steps=48 format=3 uid="uid://blr8r7l5ygafu"]
 
 [ext_resource type="Script" path="res://scripts/Rat.gd" id="1_yaib4"]
 [ext_resource type="Texture2D" uid="uid://bchse30vwfhkb" path="res://assets/base assets/tony/test_rat2_idle-Sheet.png" id="2_5yt6x"]

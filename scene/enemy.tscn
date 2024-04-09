@@ -63,4 +63,7 @@ offset_bottom = -35.0
 [node name="InvulnerabilityTimer" type="Timer" parent="."]
 wait_time = 0.8
 
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(-13, -19)
+
 [connection signal="area_entered" from="HitBoxArea2D" to="." method="_on_hit_box_area_2d_area_entered"]

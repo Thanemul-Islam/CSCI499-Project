@@ -6,7 +6,7 @@ const JUMP_VELOCITY = -500.0
 @onready var sprite_2d = $Sprite2D
 @onready var healthbar = $Healthbar
 @onready var invulnerability_timer = $InvulnerabilityTimer
-@onready var hurtbox = $AttckBoxArea2D/HitBoxCollisionShape2D
+@onready var hurtbox = $AttackBoxArea2D/HitBoxCollisionShape2D
 
 # Variables for dash trail & timer
 @export var dash_trail_node : PackedScene
@@ -154,3 +154,7 @@ func _input(event):
 
 func _on_spikes_impaled():
 	_damage(1)
+
+func _on_hurt_box_area_2d_area_entered(area):
+	if area.name == "HitBoxArea2D":
+		_damage(1)

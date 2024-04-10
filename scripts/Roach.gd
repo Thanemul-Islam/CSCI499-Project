@@ -3,7 +3,8 @@ extends CharacterBody2D
 var max_health = 2
 var health = max_health
 var is_alive = true
-const SPEED = 300.0
+var facing_right = false
+var SPEED = -200.0
 const JUMP_VELOCITY = -400.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -45,7 +46,26 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	move_and_slide()
+	# Gravity
+	if not is_on_floor():
+		velocity.y += gravity * delta
+	# Turns on ledge
+	if !$RayCast2D.is_colliding() && is_on_floor():
+		flip()
+		
+	velocity.x = SPEED
+	move_and_slide()
 
-# Attacked
-func _on_hit_box_area_2d_area_entered(_area):
-	_damage(1)
+# Turns enemy around
+func flip():
+	facing_right = !facing_right
+	
+	scale.x = abs(scale.x) * -1
+	if facing_right:
+		SPEED = abs(SPEED)
+	else:
+		SPEED = abs(SPEED) * -1
+# Attacked by tony
+func _on_hit_box_area_2d_area_entered(area):
+	if area.name == "AttackBoxArea2D":
+		_damage(1)

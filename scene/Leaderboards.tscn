@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://clnrblgn1alr0"]
+
+[ext_resource type="Texture2D" uid="uid://csg2nwcsmdrcl" path="res://assets/World and level select/360_F_271500423_Ls3YOwFx6DqHy4nUvAV2P0G2UQwFeQaq.jpg" id="1_epsth"]
+
+[node name="Leaderboards" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_epsth")

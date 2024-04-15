@@ -37,6 +37,7 @@ texture_filter = 1
 position = Vector2(0.375, -10)
 scale = Vector2(2.21094, 2.125)
 sprite_frames = SubResource("SpriteFrames_g3o5r")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, -2.5)

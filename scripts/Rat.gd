@@ -50,7 +50,10 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and jump_count<jump_max and !isDashing:
 		velocity.y = JUMP_VELOCITY
-		jump_count += 1
+		if GameManager.learned_double_jump:
+			jump_count += 1
+		else:
+			jump_count +=2
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -58,8 +61,10 @@ func _physics_process(delta):
 	# Handles hitbox h_flip
 	if direction < 0:
 		hurtbox.position.x = -35
+
 	if direction > 0:
 		hurtbox.position.x = 35
+
 		
 	if direction and !isDashing:
 		velocity.x = direction * SPEED
@@ -74,7 +79,8 @@ func _physics_process(delta):
 		#sprite_2d.animation = "attack"
 	else:
 		hurtbox.disabled = true
-		
+	
+	
 		
 	move_and_slide()
 	
@@ -109,7 +115,7 @@ func _set_health(value):
 
 #calculates damage and updates health
 func _damage(amount):
-	if invulnerability_timer.is_stopped:
+	if invulnerability_timer.is_stopped():
 		invulnerability_timer.start()
 		_set_health(health - amount)
 
@@ -145,7 +151,7 @@ func dash():
 	isDashing = false 
 
 func _input(event):
-	if event.is_action_pressed("dash") and canDash:
+	if event.is_action_pressed("dash") and canDash and GameManager.learned_dash:
 		dash()
 		canDash = false
 		await get_tree().create_timer(1).timeout # Time between dashes

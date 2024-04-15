@@ -1,6 +1,7 @@
 extends Node2D
 
-
-func _on_area_2d_area_entered(_area):
-	GameManager.gain_coins(1)
-	queue_free()
+# Detects character body of tony adds coin
+func _on_area_2d_body_entered(body):
+	if (body.name == "CharacterBody2D"):
+		GameManager.gain_coins(1)
+		queue_free()

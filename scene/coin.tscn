@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cvbyc6iiq8tnq"]
+[gd_scene load_steps=9 format=3 uid="uid://k8e1kb743pfq"]
 
 [ext_resource type="Texture2D" uid="uid://bdnyspapwr6e3" path="res://assets/base assets/items.png" id="1_oe1hb"]
 [ext_resource type="Script" path="res://scripts/coin.gd" id="1_s4fwf"]
@@ -52,9 +52,11 @@ autoplay = "default"
 frame_progress = 0.0761582
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_mask = 5
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_07onq")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -628,13 +628,13 @@ position = Vector2(599, 305)
 position = Vector2(1288, 376)
 target_level = ExtResource("5_lidju")
 
-[node name="Tony" parent="." instance=ExtResource("3_tgf0x")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_tgf0x")]
 position = Vector2(200, 912)
 
 [node name="Pigeon" parent="." instance=ExtResource("7_lmj1j")]
 position = Vector2(574, 884)
 
 [node name="Squirrel" parent="." instance=ExtResource("9_32lk0")]
-position = Vector2(278, 495)
+position = Vector2(380, 925)
 
-[editable path="Tony"]
+[editable path="CharacterBody2D"]

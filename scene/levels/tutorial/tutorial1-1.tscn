@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://b2y8ahvr1rgih"]
+[gd_scene load_steps=34 format=3 uid="uid://b2y8ahvr1rgih"]
 
 [ext_resource type="Texture2D" uid="uid://geryd74pl4x" path="res://assets/tutorial/background/cavebgextra.png" id="1_7m65j"]
 [ext_resource type="Texture2D" uid="uid://bod3dhgkq8elf" path="res://assets/tutorial/tilemaps/GrassTileSet2.png" id="1_mmlhc"]
@@ -16,11 +16,10 @@
 [ext_resource type="PackedScene" uid="uid://dtw1nh2smuhfq" path="res://scene/level functions/finish.tscn" id="10_ptmau"]
 [ext_resource type="PackedScene" uid="uid://dqcjkr0fu8sc2" path="res://scene/world and level select/world_select.tscn" id="11_1px1d"]
 [ext_resource type="PackedScene" uid="uid://bk7mljdspn5kl" path="res://scene/level functions/spikes.tscn" id="16_yw7oi"]
-[ext_resource type="PackedScene" uid="uid://voko7aog1hyg" path="res://scene/level functions/checkpoint.tscn" id="17_iueak"]
+[ext_resource type="PackedScene" uid="uid://bjyuk1hhxssc2" path="res://scene/level functions/checkpoint.tscn" id="17_iueak"]
 [ext_resource type="PackedScene" uid="uid://b1ppkef85f5qu" path="res://scene/enemy.tscn" id="18_04e1s"]
-[ext_resource type="PackedScene" uid="uid://cvbyc6iiq8tnq" path="res://scene/coin.tscn" id="19_23qwy"]
-[ext_resource type="Texture2D" uid="uid://bdnyspapwr6e3" path="res://assets/base assets/items.png" id="20_3tj4v"]
-[ext_resource type="Script" path="res://scripts/UI_Manager.gd" id="20_e75si"]
+[ext_resource type="PackedScene" uid="uid://k8e1kb743pfq" path="res://scene/coin.tscn" id="19_23qwy"]
+[ext_resource type="PackedScene" uid="uid://ito8lqcfxhrf" path="res://scene/ui_manager.tscn" id="20_axiko"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0735w"]
 texture = ExtResource("1_mmlhc")
@@ -797,25 +796,7 @@ position = Vector2(776, -232)
 [node name="Coin6" parent="Coin_holder" instance=ExtResource("19_23qwy")]
 position = Vector2(536, -152)
 
-[node name="UI_Manager" type="CanvasLayer" parent="."]
-script = ExtResource("20_e75si")
-
-[node name="Coin" type="Sprite2D" parent="UI_Manager"]
-texture_filter = 1
-position = Vector2(9, 11)
-texture = ExtResource("20_3tj4v")
-region_enabled = true
-region_rect = Rect2(0, 16, 16, 16)
-
-[node name="CoinDisplay" type="Label" parent="UI_Manager"]
-texture_filter = 1
-offset_left = 19.0
-offset_top = -6.0
-offset_right = 36.0
-offset_bottom = 29.0
-theme_override_font_sizes/font_size = 25
-text = "0"
-metadata/_edit_use_anchors_ = true
+[node name="UI_Manager" parent="." instance=ExtResource("20_axiko")]
 
 [node name="Checkpoint2" parent="." instance=ExtResource("17_iueak")]
 position = Vector2(-32, -24)

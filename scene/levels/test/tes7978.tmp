@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dtw1nh2smuhfq" path="res://scene/level functions/finish.tscn" id="6_r455n"]
 [ext_resource type="PackedScene" path="res://scene/level functions/spinningblade.tscn" id="7_r71qh"]
 [ext_resource type="PackedScene" path="res://scene/level functions/fallingspike.tscn" id="8_pj7sv"]
-[ext_resource type="PackedScene" uid="uid://e00my7ykduql" path="res://scene/pooper.tscn" id="9_xqqfx"]
+[ext_resource type="PackedScene" uid="uid://e00my7ykduql" path="res://scene/pooping_pigeon.tscn" id="9_xqqfx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yoarg"]
 texture = ExtResource("2_qaisi")
@@ -630,6 +630,9 @@ scale = Vector2(0.965, 0.965)
 position = Vector2(1288, 376)
 target_level = ExtResource("5_lidju")
 
+[node name="Tony" parent="." instance=ExtResource("3_tgf0x")]
+position = Vector2(200, 912)
+
 [node name="SpinningBlade" parent="." instance=ExtResource("7_r71qh")]
 position = Vector2(348, 319)
 
@@ -648,20 +651,8 @@ scale = Vector2(3, 3)
 position = Vector2(726, 723)
 scale = Vector2(3, 3)
 
-[node name="Tony" parent="." instance=ExtResource("3_tgf0x")]
-position = Vector2(216, 872)
-
-[node name="pooper" parent="." instance=ExtResource("9_xqqfx")]
-position = Vector2(352, 728)
-pace_distance = 100
-SPEED = -375
-ray_length = 250
-
-[node name="pooper2" parent="." instance=ExtResource("9_xqqfx")]
-position = Vector2(304, 776)
-SPEED = -100
-
-[node name="pooper3" parent="." instance=ExtResource("9_xqqfx")]
-position = Vector2(376, 776)
+[node name="Pooping Pigeon" parent="." instance=ExtResource("9_xqqfx")]
+position = Vector2(360, 776)
+rotation_speed = 90.0
 
 [editable path="SpinningBlade"]

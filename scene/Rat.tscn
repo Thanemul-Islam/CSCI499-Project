@@ -344,7 +344,7 @@ size = Vector2(38, 56)
 size = Vector2(32, 40)
 
 [node name="Tony" type="CharacterBody2D"]
-collision_layer = 7
+collision_layer = 4
 script = ExtResource("1_yaib4")
 dash_trail_node = ExtResource("2_tmk3n")
 

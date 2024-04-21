@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://d3wlo1e38hc0r"]
+[gd_scene load_steps=16 format=3 uid="uid://d3wlo1e38hc0r"]
 
 [ext_resource type="Texture2D" uid="uid://6smrw5nysy3c" path="res://assets/test/2023-09-05_02.43.32.png" id="1_wim2s"]
 [ext_resource type="Texture2D" uid="uid://d33w5ndxlxx3b" path="res://assets/tutorial/tilemaps/GrassTileSet.png" id="2_qaisi"]
@@ -6,9 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://b1ppkef85f5qu" path="res://scene/enemy.tscn" id="4_7ko7s"]
 [ext_resource type="PackedScene" uid="uid://dqcjkr0fu8sc2" path="res://scene/world and level select/world_select.tscn" id="5_lidju"]
 [ext_resource type="PackedScene" uid="uid://dtw1nh2smuhfq" path="res://scene/level functions/finish.tscn" id="6_r455n"]
-[ext_resource type="PackedScene" uid="uid://cc5udvt7cdctf" path="res://scene/pigeon.tscn" id="7_lmj1j"]
-[ext_resource type="PackedScene" uid="uid://braiwgvsufs2f" path="res://scene/level functions/spinningblade.tscn" id="7_r71qh"]
-[ext_resource type="PackedScene" uid="uid://beaojotoc53s8" path="res://scene/level functions/fallingspike.tscn" id="8_pj7sv"]
+[ext_resource type="Script" path="res://scripts/spinningblade.gd" id="7_t63d7"]
+[ext_resource type="Texture2D" uid="uid://wdgta6gdv3ty" path="res://assets/base assets/tilesets/SpinningBladeOn(38x38).png" id="8_tf4wf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yoarg"]
 texture = ExtResource("2_qaisi")
@@ -593,6 +592,53 @@ texture = ExtResource("2_qaisi")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_yoarg")
 
+[sub_resource type="Animation" id="Animation_xxbo5"]
+resource_name = "spinningblade"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_h3deo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ctnpr"]
+_data = {
+"RESET": SubResource("Animation_h3deo"),
+"spinningblade": SubResource("Animation_xxbo5")
+}
+
+[sub_resource type="Curve2D" id="Curve2D_6x211"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -0.666664, -0.333328, 0, 0, 0, 0, 185.333, 1, 0, 0, 0, 0, -0.666664, 0, 0, 0, 0, 0, -0.666664, -0.333328)
+}
+point_count = 4
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1hrke"]
+radius = 18.0278
+
 [node name="Node" type="Node"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -617,13 +663,13 @@ format = 2
 layer_0/tile_data = PackedInt32Array(-262144, 65536, 2, -196608, 65536, 2, -131072, 65536, 2, -65536, 65536, 2, 0, 65536, 2, 65536, 65536, 2, 131072, 65536, 2, 196608, 65536, 2, 262144, 65536, 2, 327680, 65536, 2, 393216, 65536, 2, 458752, 65536, 2, 524288, 65536, 2, 589824, 65536, 2, 655360, 65536, 2, 720896, 65536, 2, 786432, 65536, 2, 851968, 65536, 2, 917504, 65536, 2, 983040, 65536, 2, -262119, 327680, 1, -196583, 458752, 1, -131047, 458752, 1, -65511, 458752, 1, 25, 458752, 1, 262169, 327680, 0, 327705, 458752, 1, 393241, 458752, 1, 458777, 458752, 1, 524313, 458752, 1, 589849, 458752, 1, 655385, 458752, 1, 720921, 458752, 1, 786457, 458752, 1, 851993, 458752, 1, 917529, 458752, 1, 983065, 458752, 1, 983041, 65536, 0, 983042, 131072, 0, 983043, 196608, 0, 983044, 262144, 0, 983045, 65536, 0, 983046, 131072, 0, 983047, 196608, 0, 983048, 262144, 0, 983049, 65536, 0, 983050, 65536, 0, 983051, 131072, 0, 983052, 196608, 0, 983053, 262144, 0, 983054, 65536, 0, 983055, 917504, 2, 983056, 983040, 2, 983057, 983040, 2, 983058, 983040, 2, 983059, 720896, 2, 983060, 65536, 0, 983061, 65536, 0, 983062, 131072, 0, 983063, 196608, 0, 983064, 262144, 0, 262167, 131072, 6, 262168, 131072, 0, 262165, 0, 6, 262166, 65536, 6, 393218, 65536, 6, 393219, 131072, 6, 393220, 196608, 6, 393221, 262144, 6, 393222, 327680, 6, 524296, 0, 6, 524297, 65536, 6, 524298, 131072, 6, 524299, 196608, 6, 524300, 262144, 6, 524301, 327680, 6, 131077, 0, 6, 131078, 65536, 6, 131079, 131072, 6, 131080, 196608, 6, 131081, 262144, 6, 131082, 65536, 0, 131083, 65536, 0, 131084, 65536, 6, 131085, 131072, 6, 131086, 196608, 6, 131087, 262144, 6, 131088, 327680, 6, 458754, 65536, 5, 458755, 65536, 5, 458756, 65536, 5, 458757, 65536, 5, 458758, 458752, 5, 196613, 0, 5, 589832, 0, 5, 327701, 0, 5, 589833, 65536, 5, 589834, 65536, 5, 589835, 65536, 5, 589836, 65536, 5, 196614, 65536, 5, 196615, 65536, 5, 196616, 65536, 5, 196617, 65536, 5, 196618, 65536, 5, 196619, 65536, 5, 196620, 65536, 5, 196621, 65536, 5, 196622, 65536, 5, 196623, 65536, 5, 327702, 65536, 5, 327703, 65536, 5, 327704, 65536, 5, 589837, 327680, 5, 196624, 327680, 5, -262143, 65536, 5, -262142, 131072, 5, -262141, 196608, 5, -262140, 262144, 5, -262139, 65536, 5, -262138, 131072, 5, -262137, 196608, 5, -262136, 262144, 5, -262135, 65536, 5, -262134, 131072, 5, -262133, 196608, 5, -262132, 262144, 5, -262131, 65536, 5, -262130, 131072, 5, -262129, 196608, 5, -262128, 262144, 5, -262127, 65536, 5, -262126, 131072, 5, -262125, 196608, 5, -262124, 65536, 5, -262123, 131072, 5, -262122, 65536, 5, -262121, 131072, 5, -262120, 196608, 5, 458753, 65536, 5, 393217, 65536, 0, 917519, 917504, 1, 917520, 983040, 1, 1048577, 196608, 2, 1048578, 196608, 2, 1048579, 196608, 2, 1048580, 196608, 2, 1048581, 196608, 2, 1048582, 196608, 2, 1048583, 196608, 2, 1048584, 196608, 2, 1048585, 196608, 2, 1048586, 196608, 2, 1048587, 196608, 2, 1048588, 196608, 2, 1048589, 196608, 2, 1048590, 196608, 2, 1048591, 196608, 2, 1048592, 196608, 2, 1048593, 196608, 2, 1048594, 196608, 2, 1048595, 196608, 2, 1048596, 196608, 2, 1048597, 196608, 2, 1048598, 196608, 2, 1048599, 196608, 2, 1048600, 196608, 2, 1048601, 196608, 2, 1048576, 65536, 2, 851984, 917504, 1, 786449, 917504, 1, 720914, 917504, 1, 851985, 983040, 1, 786450, 983040, 1, 917521, 983040, 2, 917522, 983040, 2, 851986, 983040, 2, 720915, 458752, 0, 786451, 458752, 1, 851987, 458752, 1, 917523, 458752, 1, 983039, 65536, 2, 1048575, 65536, 2, 1114111, 65536, 2, 917503, 65536, 2, 851967, 65536, 2, 786431, 65536, 2, 720895, 65536, 2, 655359, 65536, 2, 589823, 65536, 2, 524287, 65536, 2, 458751, 65536, 2, 393215, 65536, 2, 327679, 65536, 2, 262143, 65536, 2, 196607, 65536, 2, 131071, 65536, 2, 65535, 65536, 2, -1, 65536, 2, -65537, 65536, 2, -131073, 65536, 2, -196609, 65536, 2, 1179647, 65536, 5, 1114112, 65536, 5, 1114113, 131072, 5, 1114114, 131072, 5, 1114115, 131072, 5, 1114116, 131072, 5, 1114117, 131072, 5, 1114118, 131072, 5, 1114119, 131072, 5, 1114120, 131072, 5, 1114121, 131072, 5, 1114122, 131072, 5, 1114123, 131072, 5, 1114124, 131072, 5, 1114125, 131072, 5, 1114126, 131072, 5, 1114127, 131072, 5, 1114128, 131072, 5, 1114129, 131072, 5, 1114130, 131072, 5, 1114131, 131072, 5, 1114132, 131072, 5, 1114133, 131072, 5, 1114134, 131072, 5, 1114135, 131072, 5, 1114136, 131072, 5, 1114137, 327680, 5, 1179646, 0, 5, -196610, 0, 1, -131074, 0, 1, -65538, 0, 1, -2, 0, 1, 65534, 0, 1, 131070, 0, 1, 196606, 0, 1, 262142, 0, 1, 327678, 0, 1, 393214, 0, 1, 458750, 0, 1, 524286, 0, 1, 589822, 0, 1, 655358, 0, 1, 720894, 0, 1, 786430, 0, 1, 851966, 0, 1, 917502, 0, 1, 983038, 0, 1, 1048574, 0, 1, 1114110, 0, 1, -262146, 1114112, 4, -262145, 1114112, 4, -327680, 1114112, 4, -327679, 1114112, 4, -327678, 1114112, 4, -327677, 1114112, 4, -327676, 1114112, 4, -327675, 1114112, 4, -327674, 1114112, 4, -327673, 1114112, 4, -327672, 1114112, 4, -327671, 1114112, 4, -327670, 1114112, 4, -327669, 1114112, 4, -327668, 1114112, 4, -327667, 1114112, 4, -327666, 1114112, 4, -327665, 1114112, 4, -327664, 1114112, 4, -327663, 1114112, 4, -327662, 1114112, 4, -327661, 1114112, 4, -327660, 1114112, 4, -327659, 1114112, 4, -327658, 1114112, 4, -327657, 1114112, 4, -327656, 1114112, 4, -327655, 1114112, 4)
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("4_7ko7s")]
-position = Vector2(603, 590)
+position = Vector2(628, 593)
 
 [node name="CharacterBody2D3" parent="." instance=ExtResource("4_7ko7s")]
 position = Vector2(1152, 400)
 
 [node name="CharacterBody2D4" parent="." instance=ExtResource("4_7ko7s")]
-position = Vector2(223, 490)
+position = Vector2(288, 492)
 scale = Vector2(0.965, 0.965)
 
 [node name="Finish" parent="." instance=ExtResource("6_r455n")]
@@ -633,25 +679,30 @@ target_level = ExtResource("5_lidju")
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_tgf0x")]
 position = Vector2(200, 912)
 
-[node name="Pigeon" parent="." instance=ExtResource("7_lmj1j")]
-position = Vector2(514, 908)
-
-[node name="SpinningBlade" parent="." instance=ExtResource("7_r71qh")]
-position = Vector2(348, 319)
-
-[node name="Sprite2D" parent="SpinningBlade/Path2D/PathFollow2D" index="0"]
-scale = Vector2(2, 2)
-
-[node name="FallingSpike" parent="." instance=ExtResource("8_pj7sv")]
-position = Vector2(521, 724)
+[node name="SpinningBlade" type="Node2D" parent="."]
+position = Vector2(351, 318)
 scale = Vector2(3, 3)
+script = ExtResource("7_t63d7")
 
-[node name="FallingSpike2" parent="." instance=ExtResource("8_pj7sv")]
-position = Vector2(623, 723)
-scale = Vector2(3, 3)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpinningBlade"]
+root_node = NodePath("../Path2D/PathFollow2D/Sprite2D")
+libraries = {
+"": SubResource("AnimationLibrary_ctnpr")
+}
+speed_scale = 2.5
 
-[node name="FallingSpike3" parent="." instance=ExtResource("8_pj7sv")]
-position = Vector2(726, 723)
-scale = Vector2(3, 3)
+[node name="Path2D" type="Path2D" parent="SpinningBlade"]
+curve = SubResource("Curve2D_6x211")
 
-[editable path="SpinningBlade"]
+[node name="PathFollow2D" type="PathFollow2D" parent="SpinningBlade/Path2D"]
+position = Vector2(-0.666664, -0.333328)
+rotation = 0.00716831
+
+[node name="Sprite2D" type="Sprite2D" parent="SpinningBlade/Path2D/PathFollow2D"]
+texture = ExtResource("8_tf4wf")
+hframes = 8
+
+[node name="Area2D" type="Area2D" parent="SpinningBlade/Path2D/PathFollow2D/Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpinningBlade/Path2D/PathFollow2D/Sprite2D/Area2D"]
+shape = SubResource("CircleShape2D_1hrke")

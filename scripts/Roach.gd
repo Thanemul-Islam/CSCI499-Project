@@ -40,11 +40,15 @@ func _damage(amount):
 		invulnerability_timer.start()
 		_set_health(health - amount)
 
-
 func _physics_process(delta):
 	# Gravity
 	if not is_on_floor():
 		velocity.y += gravity * delta
+	# Turns on ledge
+	if !$RayCast2D.is_colliding() && is_on_floor():
+		flip()
+		
+	velocity.x = SPEED
 	move_and_slide()
 	# Gravity
 	if not is_on_floor():
@@ -65,6 +69,7 @@ func flip():
 		SPEED = abs(SPEED)
 	else:
 		SPEED = abs(SPEED) * -1
+
 # Attacked by tony
 func _on_hit_box_area_2d_area_entered(area):
 	if area.name == "AttackBoxArea2D":

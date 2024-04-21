@@ -1,8 +1,8 @@
 extends CharacterBody2D
 class_name Player
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -500.0
+var SPEED = 300.0
+var JUMP_VELOCITY = -500.0
 @onready var sprite_2d = $Sprite2D
 @onready var healthbar = $Healthbar
 @onready var invulnerability_timer = $InvulnerabilityTimer

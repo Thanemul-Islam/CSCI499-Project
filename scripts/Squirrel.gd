@@ -66,7 +66,8 @@ func _check_player_collision():
 		shoot_timer.stop()
 
 func _on_shoot_timer_timeout():
-	_shoot()
+	if detect:
+		_shoot()
 
 # Spawn acorn and sets its direction
 func _shoot():
@@ -77,11 +78,9 @@ func _shoot():
 
 
 func body_entered(body):
-	print("ghelo")
 	if body is Player:
 		detect = true
 
 func body_exited(body):
-	print("lo")
 	if body is Player:
 		detect = false

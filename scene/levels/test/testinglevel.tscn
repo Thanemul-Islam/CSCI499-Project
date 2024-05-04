@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://d3wlo1e38hc0r"]
+[gd_scene load_steps=12 format=3 uid="uid://d3wlo1e38hc0r"]
 
 [ext_resource type="Texture2D" uid="uid://6smrw5nysy3c" path="res://assets/test/2023-09-05_02.43.32.png" id="1_wim2s"]
 [ext_resource type="Texture2D" uid="uid://d33w5ndxlxx3b" path="res://assets/tutorial/tilemaps/GrassTileSet.png" id="2_qaisi"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dqcjkr0fu8sc2" path="res://scene/world and level select/world_select.tscn" id="5_lidju"]
 [ext_resource type="PackedScene" uid="uid://dtw1nh2smuhfq" path="res://scene/level functions/finish.tscn" id="6_r455n"]
 [ext_resource type="PackedScene" uid="uid://cc5udvt7cdctf" path="res://scene/pigeon.tscn" id="7_lmj1j"]
+[ext_resource type="PackedScene" uid="uid://byx3gvbw72lqk" path="res://dialogue/dummy.tscn" id="9_4vrqk"]
 [ext_resource type="PackedScene" uid="uid://hsy3i27supja" path="res://scene/Squirrel.tscn" id="9_32lk0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yoarg"]
@@ -599,10 +600,9 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1.0
-offset_top = 4.0
-offset_right = 181.0
-offset_bottom = 436.0
+offset_left = 4.0
+offset_right = 378.0
+offset_bottom = 540.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_wim2s")
@@ -632,9 +632,12 @@ target_level = ExtResource("5_lidju")
 position = Vector2(200, 912)
 
 [node name="Pigeon" parent="." instance=ExtResource("7_lmj1j")]
-position = Vector2(574, 884)
+position = Vector2(995, 384)
 
 [node name="Squirrel" parent="." instance=ExtResource("9_32lk0")]
 position = Vector2(278, 495)
+
+[node name="Dummy" parent="." instance=ExtResource("9_4vrqk")]
+position = Vector2(1172, 906)
 
 [editable path="Tony"]

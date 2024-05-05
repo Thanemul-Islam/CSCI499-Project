@@ -40,13 +40,14 @@ animations = [{
 "speed": 20.0
 }]
 
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_04nii"]
 radius = 13.0
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_lnfle"]
 radius = 153.17
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2jswq"]
+
 radius = 17.0
 
 [node name="Pigeon" type="CharacterBody2D"]
@@ -65,6 +66,7 @@ shape = SubResource("CircleShape2D_04nii")
 
 [node name="DetectionArea" type="Area2D" parent="."]
 collision_layer = 2
+
 collision_mask = 4
 monitorable = false
 
@@ -74,6 +76,7 @@ shape = SubResource("CircleShape2D_lnfle")
 [node name="HitBoxArea2D" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 4
+
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxArea2D"]
 position = Vector2(0, -2)

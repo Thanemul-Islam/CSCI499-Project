@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://d3wlo1e38hc0r"]
+[gd_scene load_steps=10 format=3 uid="uid://d3wlo1e38hc0r"]
 
 
 [ext_resource type="Texture2D" uid="uid://6smrw5nysy3c" path="res://assets/test/2023-09-05_02.43.32.png" id="1_wim2s"]
@@ -634,7 +634,6 @@ target_level = ExtResource("5_lidju")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_tgf0x")]
 position = Vector2(200, 912)
-
 
 [node name="Pigeon" parent="." instance=ExtResource("7_lmj1j")]
 position = Vector2(514, 908)

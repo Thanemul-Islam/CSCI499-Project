@@ -8,6 +8,7 @@ var JUMP_VELOCITY = -500.0
 @onready var attack_timer = $AttackTimer
 @onready var invulnerability_timer = $InvulnerabilityTimer
 @onready var hurtbox = $AttackBoxArea2D/HitBoxCollisionShape2D
+@onready var AttackTimer = $AttackTimer
 
 # Variables for dash trail & timer
 @export var dash_trail_node : PackedScene

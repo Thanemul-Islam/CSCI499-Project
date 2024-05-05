@@ -289,6 +289,7 @@ size = Vector2(38, 56)
 size = Vector2(32, 40)
 
 [node name="Tony" type="CharacterBody2D"]
+collision_layer = 4
 script = ExtResource("1_yaib4")
 dash_trail_node = ExtResource("2_tmk3n")
 
@@ -312,13 +313,15 @@ scale = Vector2(0.932145, 0.453771)
 shape = SubResource("RectangleShape2D_eaht6")
 
 [node name="HurtBoxArea2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
 
 [node name="Area2D" type="CollisionShape2D" parent="HurtBoxArea2D"]
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_f4lki")
 
 [node name="AttackBoxArea2D" type="Area2D" parent="."]
-collision_mask = 2
+collision_layer = 4
 
 [node name="HitBoxCollisionShape2D" type="CollisionShape2D" parent="AttackBoxArea2D"]
 position = Vector2(32, 0)

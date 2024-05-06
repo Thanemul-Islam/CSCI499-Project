@@ -1,10 +1,11 @@
 extends CharacterBody2D
 class_name Player
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -500.0
+var SPEED = 300.0
+var JUMP_VELOCITY = -500.0
 @onready var sprite_2d = $Sprite2D
 @onready var healthbar = $Healthbar
+@onready var attack_timer = $AttackTimer
 @onready var invulnerability_timer = $InvulnerabilityTimer
 @onready var hurtbox = $AttackBoxArea2D/HitBoxCollisionShape2D
 @onready var AttackTimer = $AttackTimer
@@ -75,9 +76,9 @@ func _physics_process(delta):
 	# Handles attack
 	if Input.is_action_just_pressed("left_click"):
 		#if there is no timer then hitbox then call timer
-		if AttackTimer.is_stopped():
+		if attack_timer.is_stopped():
 			hurtbox.disabled = false
-			AttackTimer.start()
+			attack_timer.start()
 		#we need attack animation
 		#sprite_2d.animation = "attack"
 	else:

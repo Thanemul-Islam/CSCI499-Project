@@ -1,5 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://d3wlo1e38hc0r"]
-
+[gd_scene load_steps=11 format=3 uid="uid://d3wlo1e38hc0r"]
 
 [ext_resource type="Texture2D" uid="uid://6smrw5nysy3c" path="res://assets/test/2023-09-05_02.43.32.png" id="1_wim2s"]
 [ext_resource type="Texture2D" uid="uid://d33w5ndxlxx3b" path="res://assets/tutorial/tilemaps/GrassTileSet.png" id="2_qaisi"]
@@ -8,9 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dqcjkr0fu8sc2" path="res://scene/world and level select/world_select.tscn" id="5_lidju"]
 [ext_resource type="PackedScene" uid="uid://dtw1nh2smuhfq" path="res://scene/level functions/finish.tscn" id="6_r455n"]
 [ext_resource type="PackedScene" uid="uid://cc5udvt7cdctf" path="res://scene/pigeon.tscn" id="7_lmj1j"]
-[ext_resource type="PackedScene" uid="uid://braiwgvsufs2f" path="res://scene/level functions/spinningblade.tscn" id="7_r71qh"]
-[ext_resource type="PackedScene" uid="uid://beaojotoc53s8" path="res://scene/level functions/fallingspike.tscn" id="8_pj7sv"]
-
+[ext_resource type="PackedScene" uid="uid://hsy3i27supja" path="res://scene/Squirrel.tscn" id="9_32lk0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yoarg"]
 texture = ExtResource("2_qaisi")
@@ -602,9 +599,10 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 4.0
-offset_right = 378.0
-offset_bottom = 540.0
+offset_left = -1.0
+offset_top = 4.0
+offset_right = 181.0
+offset_bottom = 436.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_wim2s")
@@ -624,36 +622,19 @@ position = Vector2(603, 590)
 position = Vector2(1152, 400)
 
 [node name="CharacterBody2D4" parent="." instance=ExtResource("4_7ko7s")]
-position = Vector2(223, 490)
-scale = Vector2(0.965, 0.965)
+position = Vector2(599, 305)
 
 [node name="Finish" parent="." instance=ExtResource("6_r455n")]
 position = Vector2(1288, 376)
 target_level = ExtResource("5_lidju")
 
-[node name="Tony" parent="." instance=ExtResource("3_tgf0x")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_tgf0x")]
 position = Vector2(200, 912)
 
 [node name="Pigeon" parent="." instance=ExtResource("7_lmj1j")]
+position = Vector2(574, 884)
 
-position = Vector2(514, 908)
+[node name="Squirrel" parent="." instance=ExtResource("9_32lk0")]
+position = Vector2(380, 925)
 
-[node name="SpinningBlade" parent="." instance=ExtResource("7_r71qh")]
-position = Vector2(348, 319)
-
-[node name="Sprite2D" parent="SpinningBlade/Path2D/PathFollow2D" index="0"]
-scale = Vector2(2, 2)
-
-[node name="FallingSpike" parent="." instance=ExtResource("8_pj7sv")]
-position = Vector2(521, 724)
-scale = Vector2(3, 3)
-
-[node name="FallingSpike2" parent="." instance=ExtResource("8_pj7sv")]
-position = Vector2(623, 723)
-scale = Vector2(3, 3)
-
-[node name="FallingSpike3" parent="." instance=ExtResource("8_pj7sv")]
-position = Vector2(726, 723)
-scale = Vector2(3, 3)
-
-[editable path="SpinningBlade"]
+[editable path="CharacterBody2D"]

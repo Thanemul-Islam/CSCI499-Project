@@ -323,6 +323,8 @@ shape = SubResource("RectangleShape2D_f4lki")
 
 [node name="AttackBoxArea2D" type="Area2D" parent="."]
 collision_layer = 4
+collision_mask = 2
+monitoring = false
 
 [node name="HitBoxCollisionShape2D" type="CollisionShape2D" parent="AttackBoxArea2D"]
 position = Vector2(32, 0)
@@ -350,7 +352,5 @@ wait_time = 0.6
 one_shot = true
 
 [node name="UI_Manager" parent="." instance=ExtResource("9_t4p0e")]
-
-
 [connection signal="area_entered" from="HurtBoxArea2D" to="." method="_on_hurt_box_area_2d_area_entered"]
 [connection signal="timeout" from="Dash_Trail_Timer" to="." method="_on_dash_trail_timer_timeout"]

@@ -1,5 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://d3wlo1e38hc0r"]
 
+
 [ext_resource type="Texture2D" uid="uid://6smrw5nysy3c" path="res://assets/test/2023-09-05_02.43.32.png" id="1_wim2s"]
 [ext_resource type="Texture2D" uid="uid://d33w5ndxlxx3b" path="res://assets/tutorial/tilemaps/GrassTileSet.png" id="2_qaisi"]
 [ext_resource type="PackedScene" uid="uid://blr8r7l5ygafu" path="res://scene/Rat.tscn" id="3_tgf0x"]

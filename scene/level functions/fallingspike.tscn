@@ -4,9 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://ddxmmkqu2bjwy" path="res://assets/base assets/tilesets/FallingSpike.png" id="1_rqmxw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1o5rm"]
-size = Vector2(12, 98)
+size = Vector2(12, 304)
 
 [node name="FallingSpike" type="Node2D"]
+scale = Vector2(3, 3)
 script = ExtResource("1_cnbln")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -25,7 +26,7 @@ polygon = PackedVector2Array(-10, -12.7273, 10, -12.7273, 0, 11.8182)
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
-position = Vector2(0, 36)
+position = Vector2(0, 139)
 shape = SubResource("RectangleShape2D_1o5rm")
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

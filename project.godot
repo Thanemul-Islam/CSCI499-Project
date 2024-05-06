@@ -27,6 +27,10 @@ window/size/viewport_height=540
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_height"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/ez_dialogue/plugin.cfg")
+
 [input]
 
 ui_cancel={
@@ -81,5 +85,8 @@ left_click={
 
 2d_physics/layer_1="Environment"
 2d_physics/layer_2="Enemies"
-2d_physics/layer_3="Attacks"
+2d_physics/layer_3="Tony"
 2d_physics/layer_4="Enemies that don't touch Tony"
+
+
+

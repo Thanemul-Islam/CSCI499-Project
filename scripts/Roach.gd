@@ -44,6 +44,7 @@ func _physics_process(delta):
 	# Gravity
 	if not is_on_floor():
 		velocity.y += gravity * delta
+
 	# Turns on ledge
 	if !$RayCast2D.is_colliding() && is_on_floor():
 		flip()

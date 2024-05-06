@@ -1,14 +1,14 @@
 extends CharacterBody2D
 class_name Player
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -500.0
+var SPEED = 300.0
+var JUMP_VELOCITY = -500.0
 @onready var sprite_2d = $Sprite2D
 @onready var healthbar = $Healthbar
+@onready var attack_timer = $AttackTimer
 @onready var invulnerability_timer = $InvulnerabilityTimer
-@onready var AttackTimer = $AttackTimer
 @onready var hurtbox = $AttackBoxArea2D/HitBoxCollisionShape2D
-
+@onready var AttackTimer = $AttackTimer
 
 
 # Variables for dash trail & timer
@@ -53,7 +53,10 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and jump_count<jump_max and !isDashing:
 		velocity.y = JUMP_VELOCITY
-		jump_count += 1
+		if GameManager.learned_double_jump:
+			jump_count += 1
+		else:
+			jump_count +=2
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -61,8 +64,10 @@ func _physics_process(delta):
 	# Handles hitbox h_flip
 	if direction < 0:
 		hurtbox.position.x = -35
+
 	if direction > 0:
 		hurtbox.position.x = 35
+
 		
 	if direction and !isDashing:
 		velocity.x = direction * SPEED
@@ -72,14 +77,17 @@ func _physics_process(delta):
 	# Handles attack
 	if Input.is_action_just_pressed("left_click"):
 		#if there is no timer then hitbox then call timer
-		if AttackTimer.is_stopped():
+		if attack_timer.is_stopped():
 			hurtbox.disabled = false
-			AttackTimer.start()
-			#we need attack animation
-			sprite_2d.play("attack")
+
+			attack_timer.start()
+		#we need attack animation
+		  sprite_2d.play("attack")
+
 	else:
 		hurtbox.disabled = true
-		
+	
+	
 		
 	move_and_slide()
 	
@@ -150,7 +158,7 @@ func dash():
 	isDashing = false 
 
 func _input(event):
-	if event.is_action_pressed("dash") and canDash:
+	if event.is_action_pressed("dash") and canDash and GameManager.learned_dash:
 		dash()
 		canDash = false
 		await get_tree().create_timer(1).timeout # Time between dashes
@@ -160,7 +168,8 @@ func _input(event):
 func _on_spikes_impaled():
 	_damage(1)
 
-
 func _on_hurt_box_area_2d_area_entered(area):
-	if(area.name == "HitboxArea2D"):
+
+	if area.name == "HitBoxArea2D":
+
 		_damage(1)

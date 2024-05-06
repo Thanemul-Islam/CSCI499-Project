@@ -40,14 +40,15 @@ animations = [{
 "speed": 20.0
 }]
 
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_04nii"]
+radius = 13.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_lnfle"]
 radius = 153.17
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2jswq"]
-radius = 15.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_04nii"]
-radius = 13.0
+radius = 17.0
 
 [node name="Pigeon" type="CharacterBody2D"]
 collision_layer = 2
@@ -59,8 +60,13 @@ sprite_frames = SubResource("SpriteFrames_xifsf")
 autoplay = "default"
 frame_progress = 0.483701
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_04nii")
+
 [node name="DetectionArea" type="Area2D" parent="."]
-collision_layer = 0
+collision_layer = 2
+
 collision_mask = 4
 monitorable = false
 
@@ -70,15 +76,11 @@ shape = SubResource("CircleShape2D_lnfle")
 [node name="HitBoxArea2D" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 4
-monitorable = false
+
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxArea2D"]
 position = Vector2(0, -2)
 shape = SubResource("CircleShape2D_2jswq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -2)
-shape = SubResource("CircleShape2D_04nii")
 
 [node name="Healthbar" parent="." instance=ExtResource("3_mu40s")]
 offset_left = -15.0

@@ -47,12 +47,6 @@ func _physics_process(_delta):
 			Asprite.flip_h = true
 		else:
 			Asprite.flip_h = false
-		
-	#var distance = self.global_position.x - player.position.x
-	#if abs(distance) > 0:
-	#	Asprite.flip_h = true
-	#if abs(distance) < 0:
-	#	Asprite.flip_h = false
 	move_and_slide()
 	
 # Tony entered detection

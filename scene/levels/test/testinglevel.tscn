@@ -1,5 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://d3wlo1e38hc0r"]
 
+
 [ext_resource type="Texture2D" uid="uid://6smrw5nysy3c" path="res://assets/test/2023-09-05_02.43.32.png" id="1_wim2s"]
 [ext_resource type="Texture2D" uid="uid://d33w5ndxlxx3b" path="res://assets/tutorial/tilemaps/GrassTileSet.png" id="2_qaisi"]
 [ext_resource type="PackedScene" uid="uid://blr8r7l5ygafu" path="res://scene/Rat.tscn" id="3_tgf0x"]
@@ -9,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cc5udvt7cdctf" path="res://scene/pigeon.tscn" id="7_lmj1j"]
 [ext_resource type="PackedScene" uid="uid://braiwgvsufs2f" path="res://scene/level functions/spinningblade.tscn" id="7_r71qh"]
 [ext_resource type="PackedScene" uid="uid://beaojotoc53s8" path="res://scene/level functions/fallingspike.tscn" id="8_pj7sv"]
+
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yoarg"]
 texture = ExtResource("2_qaisi")

@@ -86,3 +86,7 @@ left_click={
 2d_physics/layer_1="Environment"
 2d_physics/layer_2="Enemies"
 2d_physics/layer_3="Tony"
+2d_physics/layer_4="Enemies that don't touch Tony"
+
+
+

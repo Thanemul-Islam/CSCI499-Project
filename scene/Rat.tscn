@@ -296,10 +296,11 @@ script = ExtResource("1_yaib4")
 dash_trail_node = ExtResource("2_tmk3n")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
 texture_filter = 1
 scale = Vector2(1.625, 2.1975)
 sprite_frames = SubResource("SpriteFrames_s6ko7")
-animation = &"damaged"
+animation = &"walk2"
 autoplay = "idle"
 
 [node name="Checkpoint Detector" type="Area2D" parent="."]

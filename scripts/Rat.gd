@@ -8,7 +8,7 @@ var JUMP_VELOCITY = -500.0
 @onready var attack_timer = $AttackTimer
 @onready var invulnerability_timer = $InvulnerabilityTimer
 @onready var hurtbox = $AttackBoxArea2D/HitBoxCollisionShape2D
-@onready var AttackTimer = $AttackTimer
+@onready var attackTimer = $AttackTimer
 
 # Variables for dash trail & timer
 @export var dash_trail_node : PackedScene
@@ -25,7 +25,7 @@ var health = max_health
 var canDash = true
 var isDashing = false
 
-
+var vulnerable = true
 var is_alive: bool = true
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -74,7 +74,7 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, 30)
 		
 	# Handles attack
-	if Input.is_action_just_pressed("left_click") && !GameManager.learned_attack:
+	if Input.is_action_just_pressed("left_click") && GameManager.learned_attack:
 		#if there is no timer then hitbox then call timer
 		if attack_timer.is_stopped():
 			hurtbox.disabled = false
@@ -119,7 +119,7 @@ func _set_health(value):
 
 #calculates damage and updates health
 func _damage(amount):
-	if invulnerability_timer.is_stopped():
+	if invulnerability_timer.is_stopped() && vulnerable:
 		invulnerability_timer.start()
 		_set_health(health - amount)
 

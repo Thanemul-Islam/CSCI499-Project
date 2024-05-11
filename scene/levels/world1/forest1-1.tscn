@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://c3r8kjnfgv3s8" path="res://assets/world1/background/ForestBGpara2.png" id="3_0qq4h"]
 [ext_resource type="Texture2D" uid="uid://cq5n87jjb6l4e" path="res://assets/world1/tilemaps/ForestBuildingExterior.png" id="3_kccpt"]
 [ext_resource type="Texture2D" uid="uid://bppsw73pin0et" path="res://assets/world1/background/ForestBGpara1.png" id="4_iex02"]
-[ext_resource type="PackedScene" uid="uid://df6p25dbx1s1v" path="res://scene/level functions/tiny_platform.tscn" id="8_t7hoi"]
-[ext_resource type="PackedScene" uid="uid://blsv7aklk4df8" path="res://scene/level functions/big_platform.tscn" id="9_dy0ba"]
+[ext_resource type="PackedScene" path="res://scene/level functions/tiny_platform.tscn" id="8_t7hoi"]
+[ext_resource type="PackedScene" path="res://scene/level functions/big_platform.tscn" id="9_dy0ba"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3osse"]
 texture = ExtResource("1_ldcnh")

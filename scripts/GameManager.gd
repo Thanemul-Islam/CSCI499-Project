@@ -2,7 +2,7 @@ extends Node
 
 signal spent_coins()
 signal gained_coins()
-var coins : int = 50
+var coins : int = 0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var learned_double_jump = true
 var learned_dash = true
@@ -14,8 +14,8 @@ var items = {
 		"Cost": 20
 	},
 	1: {
-		"Name": "Nutrition Cube",
-		"Des": "this item grants perma increased 1HP",
+		"Name": "Fortified Brace",
+		"Des": "this item grants immunity for 30s",
 		"Cost": 35
 	},
 	2: {

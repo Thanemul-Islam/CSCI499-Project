@@ -15,11 +15,6 @@ func switch_item(select):
 			get_node("Des").text = GameManager.items[curr_item]["Des"]
 			get_node("Des").text += "\nCost: " + str(GameManager.items[curr_item]["Cost"])
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
 func _on_button_pressed():
 	get_tree().paused = false
 	$".".visible = false
@@ -30,15 +25,11 @@ func _on_purchase_pressed():
 		GameManager.player.SPEED = 450
 		await get_tree().create_timer(100.00).timeout
 		GameManager.player.SPEED = 300
-	if GameManager.items[curr_item]["Name"] == "Nutrition Cube" && GameManager.coins >= 35:
+	if GameManager.items[curr_item]["Name"] == "Fortified Brace" && GameManager.coins >= 35:
 		GameManager.spend_coins(35)
-		GameManager.player.max_health += 1
-		GameManager.player.health += 1
-		GameManager.player.healthbar.init_health(GameManager.player.max_health)
-		GameManager.player._set_health(GameManager.player.health)
-		print (GameManager.player.max_health)
-		print(GameManager.player.health)
-		
+		GameManager.player.vulnerable = false
+		await get_tree().create_timer(30.00).timeout
+		GameManager.player.vulnerable = true
 	if GameManager.items[curr_item]["Name"] == "Adrenaline" && GameManager.coins >= 25:
 		GameManager.spend_coins(25)
 		GameManager.player.SPEED = 400

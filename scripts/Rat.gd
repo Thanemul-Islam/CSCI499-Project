@@ -8,6 +8,7 @@ var JUMP_VELOCITY = -500.0
 @onready var attack_timer = $AttackTimer
 @onready var invulnerability_timer = $InvulnerabilityTimer
 @onready var hurtbox = $AttackBoxArea2D/HitBoxCollisionShape2D
+@onready var AttackTimer = $AttackTimer
 
 # Variables for dash trail & timer
 @export var dash_trail_node : PackedScene
@@ -73,7 +74,7 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, 30)
 		
 	# Handles attack
-	if Input.is_action_just_pressed("left_click"):
+	if Input.is_action_just_pressed("left_click") && !GameManager.learned_attack:
 		#if there is no timer then hitbox then call timer
 		if attack_timer.is_stopped():
 			hurtbox.disabled = false

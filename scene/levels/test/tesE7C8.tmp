@@ -1,6 +1,5 @@
 [gd_scene load_steps=13 format=3 uid="uid://d3wlo1e38hc0r"]
 
-
 [ext_resource type="Texture2D" uid="uid://6smrw5nysy3c" path="res://assets/test/2023-09-05_02.43.32.png" id="1_wim2s"]
 [ext_resource type="Texture2D" uid="uid://d33w5ndxlxx3b" path="res://assets/tutorial/tilemaps/GrassTileSet.png" id="2_qaisi"]
 [ext_resource type="PackedScene" uid="uid://blr8r7l5ygafu" path="res://scene/Rat.tscn" id="3_tgf0x"]
@@ -8,15 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://dqcjkr0fu8sc2" path="res://scene/world and level select/world_select.tscn" id="5_lidju"]
 [ext_resource type="PackedScene" uid="uid://dtw1nh2smuhfq" path="res://scene/level functions/finish.tscn" id="6_r455n"]
 [ext_resource type="PackedScene" uid="uid://cc5udvt7cdctf" path="res://scene/pigeon.tscn" id="7_lmj1j"]
-<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://byx3gvbw72lqk" path="res://dialogue/dummy.tscn" id="9_4vrqk"]
 [ext_resource type="PackedScene" uid="uid://hsy3i27supja" path="res://scene/Squirrel.tscn" id="9_32lk0"]
 [ext_resource type="PackedScene" uid="uid://c0kxofhq288ml" path="res://scene/future_vending_machine.tscn" id="10_l2fcq"]
-=======
-[ext_resource type="PackedScene" uid="uid://braiwgvsufs2f" path="res://scene/level functions/spinningblade.tscn" id="7_r71qh"]
-[ext_resource type="PackedScene" uid="uid://beaojotoc53s8" path="res://scene/level functions/fallingspike.tscn" id="8_pj7sv"]
-
->>>>>>> 3d37a66df8847b45f7e3b6997a2404be1726ee7d
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yoarg"]
 texture = ExtResource("2_qaisi")
@@ -630,8 +623,7 @@ position = Vector2(603, 590)
 position = Vector2(1152, 400)
 
 [node name="CharacterBody2D4" parent="." instance=ExtResource("4_7ko7s")]
-position = Vector2(223, 490)
-scale = Vector2(0.965, 0.965)
+position = Vector2(599, 305)
 
 [node name="Finish" parent="." instance=ExtResource("6_r455n")]
 position = Vector2(1288, 376)
@@ -641,33 +633,15 @@ target_level = ExtResource("5_lidju")
 position = Vector2(200, 912)
 
 [node name="Pigeon" parent="." instance=ExtResource("7_lmj1j")]
+position = Vector2(995, 384)
 
-position = Vector2(514, 908)
+[node name="Squirrel" parent="." instance=ExtResource("9_32lk0")]
+position = Vector2(278, 495)
 
-<<<<<<< HEAD
 [node name="Dummy" parent="." instance=ExtResource("9_4vrqk")]
-position = Vector2(608, 908)
+position = Vector2(1172, 906)
 
 [node name="VendingMachine" parent="." instance=ExtResource("10_l2fcq")]
-position = Vector2(1205, 905)
-=======
-[node name="SpinningBlade" parent="." instance=ExtResource("7_r71qh")]
-position = Vector2(348, 319)
->>>>>>> 3d37a66df8847b45f7e3b6997a2404be1726ee7d
+position = Vector2(500, 289)
 
-[node name="Sprite2D" parent="SpinningBlade/Path2D/PathFollow2D" index="0"]
-scale = Vector2(2, 2)
-
-[node name="FallingSpike" parent="." instance=ExtResource("8_pj7sv")]
-position = Vector2(521, 724)
-scale = Vector2(3, 3)
-
-[node name="FallingSpike2" parent="." instance=ExtResource("8_pj7sv")]
-position = Vector2(623, 723)
-scale = Vector2(3, 3)
-
-[node name="FallingSpike3" parent="." instance=ExtResource("8_pj7sv")]
-position = Vector2(726, 723)
-scale = Vector2(3, 3)
-
-[editable path="SpinningBlade"]
+[editable path="Tony"]

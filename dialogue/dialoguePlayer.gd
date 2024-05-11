@@ -29,7 +29,7 @@ func load_dialogue():
 func _input(event):
 	if !d_active:
 		return
-	if event.is_action_pressed("ui_accept"):
+	if event.is_action_pressed("interact"):
 		next_script()
 
 func next_script():

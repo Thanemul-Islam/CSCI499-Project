@@ -287,7 +287,7 @@ size = Vector2(34.3294, 115.697)
 size = Vector2(38, 56)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ocxy8"]
-size = Vector2(32, 40)
+size = Vector2(45, 61)
 
 [node name="Tony" type="CharacterBody2D"]
 process_mode = 1
@@ -329,7 +329,7 @@ collision_mask = 2
 monitoring = false
 
 [node name="HitBoxCollisionShape2D" type="CollisionShape2D" parent="AttackBoxArea2D"]
-position = Vector2(32, 0)
+position = Vector2(42, 1)
 shape = SubResource("RectangleShape2D_ocxy8")
 disabled = true
 

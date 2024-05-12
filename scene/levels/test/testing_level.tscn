@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://blr8r7l5ygafu" path="res://scene/Rat.tscn" id="1_3041l"]
 [ext_resource type="PackedScene" uid="uid://jgyon26wo2cd" path="res://scene/levels/test/platform.tscn" id="2_lww0n"]
-[ext_resource type="PackedScene" uid="uid://cc5udvt7cdctf" path="res://scene/pigeon.tscn" id="3_8pnaf"]
+[ext_resource type="PackedScene" uid="uid://b8xkoboyhxasv" path="res://scene/RoachBoss.tscn" id="3_51ohw"]
 
 [sub_resource type="Gradient" id="Gradient_6lpf1"]
 offsets = PackedFloat32Array(0.980519)
@@ -34,5 +34,6 @@ texture = SubResource("GradientTexture1D_vcat5")
 position = Vector2(728, 292)
 shape = SubResource("RectangleShape2D_je2eg")
 
-[node name="Pigeon" parent="." instance=ExtResource("3_8pnaf")]
-position = Vector2(352, 256)
+[node name="roach" parent="." instance=ExtResource("3_51ohw")]
+position = Vector2(557, 253)
+max_health = 5

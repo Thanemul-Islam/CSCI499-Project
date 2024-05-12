@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var max_health = 2
+@export var max_health = 2
 var health = max_health
 var is_alive = true
 var facing_right = false

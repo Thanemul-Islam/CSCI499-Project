@@ -9,7 +9,7 @@ func _physics_process(delta):
 
 # Hits tony and disapears
 func _on_area_entered(area):
-	if area.name == "HurtBoxArea2D":
+	if area.name == "HurtBoxArea2D" || area.name == "AttackBoxArea2D":
 		queue_free()
 
 # Hits tilemap and disapears

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bh8x28npb3f0b"
-path="res://.godot/imported/Future New York City Background.png-1a2156c569612c4356bbf5a3673764d9.ctex"
+uid="uid://i4rfwtm245vo"
+path="res://.godot/imported/pigeon_poop.png-270e8b1ebe479696a27afb3b881707e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/World and level select/Future New York City Background.png"
-dest_files=["res://.godot/imported/Future New York City Background.png-1a2156c569612c4356bbf5a3673764d9.ctex"]
+source_file="res://assets/base assets/enemy/pigeon_poop.png"
+dest_files=["res://.godot/imported/pigeon_poop.png-270e8b1ebe479696a27afb3b881707e8.ctex"]
 
 [params]
 

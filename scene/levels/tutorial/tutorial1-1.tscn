@@ -1,5 +1,5 @@
+[gd_scene load_steps=35 format=3 uid="uid://b2y8ahvr1rgih"]
 
-[gd_scene load_steps=34 format=3 uid="uid://b2y8ahvr1rgih"]
 [ext_resource type="Texture2D" uid="uid://geryd74pl4x" path="res://assets/tutorial/background/cavebgextra.png" id="1_7m65j"]
 [ext_resource type="Texture2D" uid="uid://bod3dhgkq8elf" path="res://assets/tutorial/tilemaps/GrassTileSet2.png" id="1_mmlhc"]
 [ext_resource type="Texture2D" uid="uid://o8d7k6a6ckjr" path="res://assets/tutorial/tilemaps/StoneTileSet.png" id="2_sh4tb"]
@@ -775,10 +775,10 @@ position = Vector2(48, 119)
 [node name="Spikes2" parent="spikes folder/Spikes2" instance=ExtResource("16_yw7oi")]
 position = Vector2(97, 0)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("3_6rcbu")]
+[node name="Tony" parent="." instance=ExtResource("3_6rcbu")]
 position = Vector2(-848, -48)
 
-[node name="Camera2D2" type="Camera2D" parent="CharacterBody2D"]
+[node name="Camera2D2" type="Camera2D" parent="Tony"]
 
 [node name="Finish" parent="." instance=ExtResource("10_ptmau")]
 position = Vector2(1759, -667)
@@ -835,7 +835,7 @@ position = Vector2(-32, -24)
 [connection signal="body_exited" from="platform folder/big plat3/Area2D" to="platform folder/big plat3" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="platform folder/big plat4/Area2D" to="platform folder/big plat4" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="platform folder/big plat4/Area2D" to="platform folder/big plat4" method="_on_area_2d_body_exited"]
-[connection signal="impaled" from="spikes folder/Spikes" to="CharacterBody2D" method="_on_spikes_impaled"]
+[connection signal="impaled" from="spikes folder/Spikes" to="Tony" method="_on_spikes_impaled"]
 
 [editable path="platform folder/small platform"]
 [editable path="platform folder/small platform2"]

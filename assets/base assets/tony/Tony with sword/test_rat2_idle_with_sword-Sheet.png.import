@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bh8x28npb3f0b"
-path="res://.godot/imported/Future New York City Background.png-1a2156c569612c4356bbf5a3673764d9.ctex"
+uid="uid://bbgr3av48fmiq"
+path="res://.godot/imported/test_rat2_idle_with_sword-Sheet.png-6d85b6600fe10b89b4bf8c091145aee2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/World and level select/Future New York City Background.png"
-dest_files=["res://.godot/imported/Future New York City Background.png-1a2156c569612c4356bbf5a3673764d9.ctex"]
+source_file="res://assets/base assets/tony/Tony with sword/test_rat2_idle_with_sword-Sheet.png"
+dest_files=["res://.godot/imported/test_rat2_idle_with_sword-Sheet.png-6d85b6600fe10b89b4bf8c091145aee2.ctex"]
 
 [params]
 

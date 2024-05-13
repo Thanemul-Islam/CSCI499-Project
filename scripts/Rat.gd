@@ -8,13 +8,11 @@ var JUMP_VELOCITY = -500.0
 @onready var attack_timer = $AttackTimer
 @onready var invulnerability_timer = $InvulnerabilityTimer
 @onready var hurtbox = $AttackBoxArea2D/HitBoxCollisionShape2D
-<<<<<<< Updated upstream
-@onready var AttackTimer = $AttackTimer
-=======
+
 
 # Variable for bullet
 @export var BULLET : PackedScene
->>>>>>> Stashed changes
+
 
 # Variables for dash trail & timer
 @export var dash_trail_node : PackedScene
@@ -24,7 +22,7 @@ var jump_count = 0
 var jump_max = 2
 signal jumped
 
-@export var max_health = 3
+var max_health = 3
 var health = max_health
 
 
@@ -41,34 +39,30 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _physics_process(delta):
 	# Adding walk animation
 	if(velocity.x > 1 || velocity.x < -1):
-		sprite_2d.animation = "walk1"
+		sprite_2d.play("walk1")
 	else:
-		sprite_2d.animation = "idle"
+		sprite_2d.play("idle")
 	
 	# Add the gravity.
 	if not is_on_floor() and !isDashing:
 		velocity.y += gravity * delta
-
 		# Adding jumping frame
-		sprite_2d.animation = "jumping"
+		sprite_2d.play("jumping")
+		emit_signal("jumped")
 	
 	if is_on_floor():
 		jump_count = 0
-
-
+	
+	
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and jump_count<jump_max and !isDashing:
 		velocity.y = JUMP_VELOCITY
-<<<<<<< Updated upstream
 		if GameManager.learned_double_jump:
 			jump_count += 1
 		else:
 			jump_count +=2
-
-=======
-		jump_count += 1
 		emit_signal("jumped")
->>>>>>> Stashed changes
+
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("left", "right") 
@@ -92,16 +86,12 @@ func _physics_process(delta):
 			hurtbox.disabled = false
 			attack_timer.start()
 		#we need attack animation
-		#sprite_2d.animation = "attack"
+		#sprite_2d.play("attack")
 	else:
 		hurtbox.disabled = true
 	
-<<<<<<< Updated upstream
-	
-		
-=======
 	# Handles shooting
-	if Input.is_action_just_pressed("right_click"):
+	if Input.is_action_just_pressed("right_click") and GameManager.ammo > 0:
 		var left_or_right = sprite_2d.flip_h
 		var up_or_down = Input.get_axis("up","down")
 		if up_or_down == 0:
@@ -113,15 +103,16 @@ func _physics_process(delta):
 			_shoot(Vector2.UP)
 		else:
 			_shoot(Vector2.DOWN)
+		GameManager.gain_ammo(-1)
 	
->>>>>>> Stashed changes
+
 	move_and_slide()
 	
 	# Correct left turn
-	var isLeft = velocity.x < 0
-	if direction != 0:
-		sprite_2d.flip_h = isLeft
-		
+	if direction > 0:
+		sprite_2d.flip_h = false
+	elif direction < 0:
+		sprite_2d.flip_h = true
 
 # Player spawn
 func _ready():

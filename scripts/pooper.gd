@@ -9,9 +9,7 @@ var max_health = 1
 var health = max_health
 var is_alive = true
 var facing_right = false
-
 ## This value must be negative since the bird always starts fliying left first
-
 @export var SPEED = 0
 var current_pos : Vector2
 var target = null
@@ -42,10 +40,8 @@ func _physics_process(delta):
 	if ray_cast_2d.is_colliding():
 		target = ray_cast_2d.get_collider()
 		
-
 		
 		if target.get_parent() is Player:
-
 			if reload_timer.is_stopped():
 				shit()
 	
@@ -53,7 +49,6 @@ func _physics_process(delta):
 	
 
 #Death of pooper
-
 func _die():
 	is_alive = false
 	queue_free()

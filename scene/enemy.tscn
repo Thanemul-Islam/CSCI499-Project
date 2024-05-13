@@ -1,43 +1,22 @@
-[gd_scene load_steps=12 format=3 uid="uid://b1ppkef85f5qu"]
+[gd_scene load_steps=9 format=3 uid="uid://b1ppkef85f5qu"]
 
+[ext_resource type="Texture2D" uid="uid://doc4dt6g020iu" path="res://assets/base assets/enemy/roach.png" id="1_fhvlu"]
 [ext_resource type="Script" path="res://scripts/Roach.gd" id="1_iw32d"]
 [ext_resource type="PackedScene" uid="uid://ffnbogjsdmxn" path="res://scene/healthbar.tscn" id="2_iufj4"]
-[ext_resource type="Texture2D" uid="uid://b7frphxpibbv7" path="res://assets/base assets/enemy/roach_walk-Sheet.png" id="2_jilkr"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yfa37"]
-atlas = ExtResource("2_jilkr")
+[sub_resource type="AtlasTexture" id="AtlasTexture_vb7g0"]
+atlas = ExtResource("1_fhvlu")
 region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p7tik"]
-atlas = ExtResource("2_jilkr")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_86jwp"]
-atlas = ExtResource("2_jilkr")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bc37d"]
-atlas = ExtResource("2_jilkr")
-region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g3o5r"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yfa37")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p7tik")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_86jwp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bc37d")
+"texture": SubResource("AtlasTexture_vb7g0")
 }],
 "loop": true,
 "name": &"default",
-"speed": 10.0
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rqt6i"]

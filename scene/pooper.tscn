@@ -3,9 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cjdvmg2pbkum4" path="res://assets/base assets/enemy/pigeon_flight_animation.png" id="1_gsf57"]
 [ext_resource type="Script" path="res://scripts/pooper.gd" id="1_oyvgv"]
 [ext_resource type="Texture2D" uid="uid://y43eg6aji2s4" path="res://assets/base assets/enemy/pigeon.png" id="2_6hsdj"]
-
 [ext_resource type="PackedScene" uid="uid://d1ln3afmj1k7s" path="res://scene/poop_bullet.tscn" id="2_ht30u"]
-
 [ext_resource type="PackedScene" uid="uid://ffnbogjsdmxn" path="res://scene/healthbar.tscn" id="5_png2x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1j4mt"]
@@ -93,9 +91,7 @@ offset_right = 15.0
 offset_bottom = -15.0
 
 [node name="HitboxArea2D" type="Area2D" parent="."]
-
 collision_mask = 5
-
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxArea2D"]
 shape = SubResource("CapsuleShape2D_qccup")

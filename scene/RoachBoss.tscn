@@ -1,67 +1,46 @@
-[gd_scene load_steps=12 format=3 uid="uid://b1ppkef85f5qu"]
+[gd_scene load_steps=9 format=3 uid="uid://b8xkoboyhxasv"]
 
-[ext_resource type="Script" path="res://scripts/Roach.gd" id="1_iw32d"]
-[ext_resource type="PackedScene" uid="uid://ffnbogjsdmxn" path="res://scene/healthbar.tscn" id="2_iufj4"]
-[ext_resource type="Texture2D" uid="uid://b7frphxpibbv7" path="res://assets/base assets/enemy/roach_walk-Sheet.png" id="2_jilkr"]
+[ext_resource type="Script" path="res://scripts/Roach.gd" id="1_fhb52"]
+[ext_resource type="Texture2D" uid="uid://doc4dt6g020iu" path="res://assets/base assets/enemy/roach.png" id="2_l1pgr"]
+[ext_resource type="PackedScene" uid="uid://ffnbogjsdmxn" path="res://scene/healthbar.tscn" id="3_mit84"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yfa37"]
-atlas = ExtResource("2_jilkr")
+[sub_resource type="AtlasTexture" id="AtlasTexture_vb7g0"]
+atlas = ExtResource("2_l1pgr")
 region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p7tik"]
-atlas = ExtResource("2_jilkr")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_86jwp"]
-atlas = ExtResource("2_jilkr")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bc37d"]
-atlas = ExtResource("2_jilkr")
-region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g3o5r"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yfa37")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p7tik")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_86jwp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bc37d")
+"texture": SubResource("AtlasTexture_vb7g0")
 }],
 "loop": true,
 "name": &"default",
-"speed": 10.0
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rqt6i"]
-size = Vector2(63, 31)
+size = Vector2(98, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4meh"]
-size = Vector2(68, 33)
+size = Vector2(109, 39.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0mte"]
-size = Vector2(74, 36.5)
+size = Vector2(140, 54)
 
 [node name="roach" type="CharacterBody2D"]
 collision_layer = 2
-script = ExtResource("1_iw32d")
+script = ExtResource("1_fhb52")
 
 [node name="Node2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(0.375, -10)
-scale = Vector2(2.21094, 2.125)
+position = Vector2(1, -2)
+scale = Vector2(3.71875, 3.51563)
 sprite_frames = SubResource("SpriteFrames_g3o5r")
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -2.5)
+position = Vector2(5, 6.5)
 shape = SubResource("RectangleShape2D_rqt6i")
 
 [node name="HurtboxArea2D" type="Area2D" parent="."]
@@ -69,7 +48,7 @@ collision_layer = 2
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxArea2D"]
-position = Vector2(0, -3.5)
+position = Vector2(4.5, 5.25)
 shape = SubResource("RectangleShape2D_g4meh")
 
 [node name="HitBoxArea2D" type="Area2D" parent="."]
@@ -77,10 +56,10 @@ collision_layer = 2
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxArea2D"]
-position = Vector2(0, -2.75)
+position = Vector2(1, 3)
 shape = SubResource("RectangleShape2D_k0mte")
 
-[node name="Healthbar" parent="." instance=ExtResource("2_iufj4")]
+[node name="Healthbar" parent="." instance=ExtResource("3_mit84")]
 offset_left = -21.0
 offset_top = -44.0
 offset_right = 22.0
@@ -90,6 +69,7 @@ offset_bottom = -35.0
 wait_time = 0.8
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+visible = false
 position = Vector2(-19, -19)
 
 [connection signal="area_entered" from="HitBoxArea2D" to="." method="_on_hit_box_area_2d_area_entered"]

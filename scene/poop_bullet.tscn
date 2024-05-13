@@ -19,3 +19,4 @@ shape = SubResource("CircleShape2D_yvm1u")
 
 [connection signal="area_entered" from="HitBoxArea2D" to="." method="_on_hit_box_area_2d_area_entered"]
 [connection signal="body_entered" from="HitBoxArea2D" to="." method="_on_hit_box_area_2d_body_entered"]
+

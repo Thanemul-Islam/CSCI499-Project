@@ -2,18 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-
-uid="uid://bbgr3av48fmiq"
-
-path="res://.godot/imported/test_rat2_idle_with_sword-Sheet.png-6d85b6600fe10b89b4bf8c091145aee2.ctex"
+uid="uid://21grr4hi3gxo"
+path="res://.godot/imported/test_rat2_attack_Sheet.png-9f1a6543b2460fe86ca9b4d95f6739f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/base assets/tony/Tony with sword/test_rat2_idle_with_sword-Sheet.png"
-dest_files=["res://.godot/imported/test_rat2_idle_with_sword-Sheet.png-6d85b6600fe10b89b4bf8c091145aee2.ctex"]
+source_file="res://assets/base assets/tony/test_rat2_attack_Sheet.png"
+dest_files=["res://.godot/imported/test_rat2_attack_Sheet.png-9f1a6543b2460fe86ca9b4d95f6739f6.ctex"]
 
 [params]
 

@@ -14,6 +14,7 @@ var JUMP_VELOCITY = -500.0
 @export var BULLET : PackedScene
 
 
+
 # Variables for dash trail & timer
 @export var dash_trail_node : PackedScene
 @onready var dash_trail_timer = $Dash_Trail_Timer
@@ -37,18 +38,21 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 #movements and animation
 func _physics_process(delta):
+
 	# Adding walk animation
-	if(velocity.x > 1 || velocity.x < -1):
+	if(velocity.x > 1 || velocity.x < -1) and attack_timer.is_stopped():
 		sprite_2d.play("walk1")
-	else:
+	elif velocity.x == 0 and attack_timer.is_stopped():
 		sprite_2d.play("idle")
 	
 	# Add the gravity.
 	if not is_on_floor() and !isDashing:
 		velocity.y += gravity * delta
 		# Adding jumping frame
-		sprite_2d.play("jumping")
-		emit_signal("jumped")
+
+		if AttackTimer.is_stopped():
+			sprite_2d.play("jumping")
+      emit_signal("jumped")
 	
 	if is_on_floor():
 		jump_count = 0
@@ -84,9 +88,12 @@ func _physics_process(delta):
 		#if there is no timer then hitbox then call timer
 		if attack_timer.is_stopped():
 			hurtbox.disabled = false
+
 			attack_timer.start()
 		#we need attack animation
-		#sprite_2d.play("attack")
+
+		  sprite_2d.play("attack")
+
 	else:
 		hurtbox.disabled = true
 	
@@ -109,10 +116,12 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	# Correct left turn
+
 	if direction > 0:
 		sprite_2d.flip_h = false
 	elif direction < 0:
 		sprite_2d.flip_h = true
+
 
 # Player spawn
 func _ready():
@@ -152,9 +161,7 @@ func add_dash_trail():
 	var trail = dash_trail_node.instantiate()
 	
 	# Turning the trail character when facing left
-	var turn_left = velocity.x < 0
-	if turn_left:
-		trail.flip_h = turn_left
+	trail.flip_h = sprite_2d.flip_h
 	
 	trail.set_property(position, sprite_2d.scale)
 	get_tree().current_scene.add_child(trail)
@@ -169,8 +176,8 @@ func dash():
 	isDashing = true # Setting true at start to deal with physics conflicts up there
 	
 	# Gets direction of dash from where the sprite is facing
-	if sprite_2d.flip_h: # This spaghetti was the best global facing direction I could find
-		velocity = Vector2(SPEED * -2.25, 0) # Only a change in X velocity and not Y
+	if sprite_2d.flip_h: 
+		velocity = Vector2(SPEED * -2.25, 0) 
 	else:
 		velocity = Vector2(SPEED * 2.25, 0)
 	
@@ -198,6 +205,8 @@ func _on_spikes_impaled():
 	_damage(1)
 
 func _on_hurt_box_area_2d_area_entered(area):
+
 	if area.name == "HitBoxArea2D":
+
 		_damage(1)
 		

@@ -7,11 +7,10 @@ signal dialogue_finished
 var dialogue = []
 var current_dialogue_id = 0
 var d_active = false
-var person
 
 func _ready():
 	$NinePatchRect.visible = false
-	var person = get_parent()
+	var _person = get_parent()
 func start():
 	if d_active:
 		return

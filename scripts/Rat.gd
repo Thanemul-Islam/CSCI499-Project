@@ -92,7 +92,7 @@ func _physics_process(delta):
 		hurtbox.disabled = true
 	
 	# Handles shooting
-	if Input.is_action_just_pressed("right_click") and GameManager.ammo > 0:
+	if Input.is_action_just_pressed("right_click") and GameManager.ammo > 0 and GameManager.learned_shooting:
 		var left_or_right = sprite_2d.flip_h
 		var up_or_down = Input.get_axis("up","down")
 		if up_or_down == 0:
@@ -181,7 +181,7 @@ func dash():
 
 # Handles shooting
 func _shoot(direction):
-	if BULLET:
+	if BULLET && GameManager.learned_shooting:
 		var bullet = BULLET.instantiate()
 		bullet.direction = direction
 		bullet.global_position = global_position

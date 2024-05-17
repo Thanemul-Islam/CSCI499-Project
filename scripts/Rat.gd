@@ -8,6 +8,7 @@ var JUMP_VELOCITY = -500.0
 @onready var attack_timer = $AttackTimer
 @onready var invulnerability_timer = $InvulnerabilityTimer
 @onready var hurtbox = $AttackBoxArea2D/HitBoxCollisionShape2D
+var vulnerable = true
 
 
 # Variable for bullet
@@ -143,7 +144,7 @@ func heal(value):
 
 #calculates damage and updates health
 func _damage(amount):
-	if invulnerability_timer.is_stopped():
+	if invulnerability_timer.is_stopped() && vulnerable:
 		invulnerability_timer.start()
 		_set_health(health - amount)
 

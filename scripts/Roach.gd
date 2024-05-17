@@ -46,7 +46,7 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 
 	# Turns on ledge
-	if !$RayCast2D.is_colliding() && is_on_floor():
+	if !$RayCast2D.is_colliding() && is_on_floor() || $FaceRayCast.is_colliding() && is_on_floor():
 		flip()
 		
 	velocity.x = SPEED

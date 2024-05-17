@@ -36,8 +36,8 @@ func _on_purchase_pressed():
 		await get_tree().create_timer(100.00).timeout
 		GameManager.player.SPEED = 300
 		GameManager.player.JUMP_VELOCITY = -500
-	if GameManager.items[curr_item]["Name"] == "Ammo" && GameManager.coins >= 1:
-		GameManager.spend_coins(1)
+	if GameManager.items[curr_item]["Name"] == "Ammo" && GameManager.coins >= 5:
+		GameManager.spend_coins(5)
 		GameManager.gain_ammo(1)
 		
 func _on_next_pressed():

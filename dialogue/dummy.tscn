@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://byx3gvbw72lqk"]
+[gd_scene load_steps=7 format=3 uid="uid://byx3gvbw72lqk"]
 
 [ext_resource type="Script" path="res://dialogue/dummy.gd" id="1_5gidb"]
 [ext_resource type="Texture2D" uid="uid://duooe4xjlt7w7" path="res://assets/test/dripgod.jpeg" id="1_orgp1"]
 [ext_resource type="PackedScene" uid="uid://drnvgiih42rcs" path="res://dialogue/dialogue.tscn" id="2_by1og"]
+[ext_resource type="Script" path="res://dialogue/dialoguePlayer.gd" id="4_5tsid"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ph7a"]
 size = Vector2(39, 74)
@@ -33,6 +34,7 @@ shape = SubResource("RectangleShape2D_1dxfd")
 z_index = 2
 offset_top = -35.0
 offset_bottom = -35.0
+script = ExtResource("4_5tsid")
 
 [connection signal="body_entered" from="ChatDetectionArea" to="." method="_on_chat_detection_area_body_entered"]
 [connection signal="body_exited" from="ChatDetectionArea" to="." method="_on_chat_detection_area_body_exited"]

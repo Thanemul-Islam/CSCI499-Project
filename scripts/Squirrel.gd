@@ -17,7 +17,7 @@ var gravity = GameManager.gravity
 #Spawn of Squirrel
 func _ready():
 	healthbar.init_health(health)
-	player = get_parent().find_child("Tony")
+	player = get_parent().get_parent().find_child("Tony")
 
 #Death of Squirrel
 func _die():

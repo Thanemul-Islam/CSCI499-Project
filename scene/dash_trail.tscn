@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cn5bh21odbijl"]
+[gd_scene load_steps=3 format=3 uid="uid://jb5yb8643oku"]
 
 [ext_resource type="Texture2D" uid="uid://bxgk63e0gvcsh" path="res://assets/base assets/dash_trail.png" id="1_8pm10"]
 [ext_resource type="Script" path="res://scripts/DashTrail.gd" id="2_m7h02"]

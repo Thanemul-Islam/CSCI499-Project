@@ -10,7 +10,7 @@ var d_active = false
 
 func _ready():
 	$NinePatchRect.visible = false
-
+	var _person = get_parent()
 func start():
 	if d_active:
 		return
@@ -22,7 +22,7 @@ func start():
 	
 func load_dialogue():
 	# you can change the json file here to fit your own dialogue
-	var file = FileAccess.open("res://dialogue/json/Dummy.json", FileAccess.READ)
+	var file = FileAccess.open("res://dialogue/mysterman/json/mysteryman1.json", FileAccess.READ)
 	var content = JSON.parse_string(file.get_as_text())
 	return content
 	

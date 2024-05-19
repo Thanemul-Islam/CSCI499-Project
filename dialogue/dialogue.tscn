@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://drnvgiih42rcs"]
 
+[ext_resource type="Script" path="res://dialogue/mysterman/dialoguePlayermysterman.gd" id="1_an1ab"]
 [ext_resource type="Texture2D" uid="uid://21dluakd26em" path="res://assets/base assets/dialogue_box.png" id="1_p2c22"]
-[ext_resource type="Script" path="res://dialogue/dialoguePlayer.gd" id="1_xwect"]
 
 [node name="Dialogue" type="Control"]
 layout_mode = 3
@@ -12,7 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
-script = ExtResource("1_xwect")
+script = ExtResource("1_an1ab")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 z_index = 2

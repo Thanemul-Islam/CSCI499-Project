@@ -8,6 +8,7 @@ var JUMP_VELOCITY = -500.0
 @onready var attack_timer = $AttackTimer
 @onready var invulnerability_timer = $InvulnerabilityTimer
 @onready var hurtbox = $AttackBoxArea2D/HitBoxCollisionShape2D
+var vulnerable = true
 
 
 # Variable for bullet
@@ -91,7 +92,7 @@ func _physics_process(delta):
 		hurtbox.disabled = true
 	
 	# Handles shooting
-	if Input.is_action_just_pressed("right_click") and GameManager.ammo > 0:
+	if Input.is_action_just_pressed("right_click") and GameManager.ammo > 0 and GameManager.learned_shooting:
 		var left_or_right = sprite_2d.flip_h
 		var up_or_down = Input.get_axis("up","down")
 		if up_or_down == 0:
@@ -143,7 +144,7 @@ func heal(value):
 
 #calculates damage and updates health
 func _damage(amount):
-	if invulnerability_timer.is_stopped():
+	if invulnerability_timer.is_stopped() && vulnerable:
 		invulnerability_timer.start()
 		_set_health(health - amount)
 
@@ -180,7 +181,7 @@ func dash():
 
 # Handles shooting
 func _shoot(direction):
-	if BULLET:
+	if BULLET && GameManager.learned_shooting:
 		var bullet = BULLET.instantiate()
 		bullet.direction = direction
 		bullet.global_position = global_position

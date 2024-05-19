@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var max_health = 2
+var max_health = 10
 var health = max_health
 var is_alive = true
 var facing_right = false
@@ -12,6 +12,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var healthbar = $Healthbar
 @onready var invulnerability_timer = $InvulnerabilityTimer
 @onready var hitbox = $HitBoxArea2D
+@export var roach : PackedScene
 
 #Spawn of roach
 func _ready():
@@ -20,6 +21,9 @@ func _ready():
 #Death of roach
 func _die():
 	is_alive = false
+	var Roach = roach.instantiate()
+	Roach.position = position
+	get_tree().current_scene.add_child(Roach)
 	queue_free()
 	#emit_signal("died")
 
@@ -46,7 +50,7 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 
 	# Turns on ledge
-	if !$RayCast2D.is_colliding() && is_on_floor() || $FaceRayCast.is_colliding() && is_on_floor():
+	if !$RayCast2D.is_colliding() && is_on_floor():
 		flip()
 		
 	velocity.x = SPEED

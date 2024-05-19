@@ -27,6 +27,11 @@ var items = {
 		"Des": "this item grants speed and jump boost",
 		"Cost": 25
 	},
+	3: {
+		"Name": "Ammo",
+		"Des": "1 bullet ",
+		"Cost": 5
+	},
 }
 
 var current_checkpoint : Checkpoint

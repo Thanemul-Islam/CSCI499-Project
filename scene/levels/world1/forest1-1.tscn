@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://blsv7aklk4df8" path="res://scene/level functions/big_platform.tscn" id="9_dy0ba"]
 [ext_resource type="PackedScene" uid="uid://bk7mljdspn5kl" path="res://scene/level functions/spikes.tscn" id="10_7bnmv"]
 
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3osse"]
 texture = ExtResource("1_ldcnh")
 0:0/0 = 0

@@ -117,7 +117,7 @@ func _physics_process(delta):
 
 # Player spawn
 func _ready():
-	healthbar.init_health(health)
+	healthbar.init_health(max_health)
 	GameManager.player = self
 
 #player death

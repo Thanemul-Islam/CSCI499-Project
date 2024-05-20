@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bca1ubokaa0n0"]
+[gd_scene load_steps=21 format=3 uid="uid://bca1ubokaa0n0"]
 
 [ext_resource type="Texture2D" uid="uid://bkrp7xsel3ksy" path="res://assets/world1/background/ForestBGpara4.png" id="1_rt2hw"]
 [ext_resource type="Texture2D" uid="uid://c0srsgx0xkxqd" path="res://assets/world1/background/ForestBGpara3.png" id="2_pfswl"]
@@ -11,6 +11,12 @@
 [ext_resource type="PackedScene" uid="uid://clpfgm1iue7xb" path="res://scene/level functions/smallplatform.tscn" id="9_d0buh"]
 [ext_resource type="PackedScene" uid="uid://df6p25dbx1s1v" path="res://scene/level functions/tiny_platform.tscn" id="10_mmjfg"]
 [ext_resource type="PackedScene" uid="uid://blsv7aklk4df8" path="res://scene/level functions/big_platform.tscn" id="11_824r4"]
+[ext_resource type="PackedScene" uid="uid://hsy3i27supja" path="res://scene/Squirrel.tscn" id="12_hqwxq"]
+[ext_resource type="PackedScene" uid="uid://cc5udvt7cdctf" path="res://scene/pigeon.tscn" id="13_8ptn3"]
+[ext_resource type="PackedScene" uid="uid://b1ppkef85f5qu" path="res://scene/enemy.tscn" id="14_q8lya"]
+[ext_resource type="PackedScene" uid="uid://e00my7ykduql" path="res://scene/pooper.tscn" id="15_2ynid"]
+[ext_resource type="PackedScene" uid="uid://beaojotoc53s8" path="res://scene/level functions/fallingspike.tscn" id="16_5o1b0"]
+[ext_resource type="PackedScene" uid="uid://bk7mljdspn5kl" path="res://scene/level functions/spikes.tscn" id="17_30o65"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5g5hu"]
 texture = ExtResource("6_n6vmf")
@@ -2707,6 +2713,7 @@ sources/2 = SubResource("TileSetAtlasSource_37702")
 [node name="Node2D" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+visible = false
 scale = Vector2(6, 6)
 transform = Transform2D(6, 0, 0, 6, 0, 0)
 scroll_offset = Vector2(1096.04, 85.8355)
@@ -2837,3 +2844,113 @@ position = Vector2(3651, 199)
 
 [node name="Tiny Platform13" parent="platform folder" instance=ExtResource("10_mmjfg")]
 position = Vector2(3720, 196)
+
+[node name="squirrel folder" type="Node2D" parent="."]
+
+[node name="Squirrel3" parent="squirrel folder" instance=ExtResource("12_hqwxq")]
+position = Vector2(1222, -413)
+
+[node name="Squirrel2" parent="squirrel folder" instance=ExtResource("12_hqwxq")]
+position = Vector2(456, -127)
+
+[node name="Squirrel" parent="squirrel folder" instance=ExtResource("12_hqwxq")]
+position = Vector2(1262, 163)
+
+[node name="Squirrel4" parent="squirrel folder" instance=ExtResource("12_hqwxq")]
+position = Vector2(4149, -33)
+
+[node name="Squirrel5" parent="squirrel folder" instance=ExtResource("12_hqwxq")]
+position = Vector2(5418, -280)
+
+[node name="Squirrel6" parent="squirrel folder" instance=ExtResource("12_hqwxq")]
+position = Vector2(4931, 60)
+
+[node name="Squirrel7" parent="squirrel folder" instance=ExtResource("12_hqwxq")]
+position = Vector2(4618, -225)
+
+[node name="roach folder" type="Node2D" parent="."]
+
+[node name="roach" parent="roach folder" instance=ExtResource("14_q8lya")]
+position = Vector2(1783, -414)
+
+[node name="roach2" parent="roach folder" instance=ExtResource("14_q8lya")]
+position = Vector2(2073, -29)
+
+[node name="roach3" parent="roach folder" instance=ExtResource("14_q8lya")]
+position = Vector2(2281, 353)
+
+[node name="roach4" parent="roach folder" instance=ExtResource("14_q8lya")]
+position = Vector2(3258, -356)
+
+[node name="bird folder" type="Node2D" parent="."]
+
+[node name="Pigeon" parent="bird folder" instance=ExtResource("13_8ptn3")]
+position = Vector2(882, -79)
+
+[node name="pooper" parent="bird folder" instance=ExtResource("15_2ynid")]
+position = Vector2(2616, -518)
+
+[node name="pooper2" parent="bird folder" instance=ExtResource("15_2ynid")]
+position = Vector2(3001, -528)
+
+[node name="Pigeon2" parent="bird folder" instance=ExtResource("13_8ptn3")]
+position = Vector2(3366, -493)
+
+[node name="trap folder" type="Node2D" parent="."]
+
+[node name="FallingSpike" parent="trap folder" instance=ExtResource("16_5o1b0")]
+position = Vector2(2711, -552)
+
+[node name="FallingSpike2" parent="trap folder" instance=ExtResource("16_5o1b0")]
+position = Vector2(2906, -699)
+
+[node name="Spikes" parent="trap folder" instance=ExtResource("17_30o65")]
+position = Vector2(3692, 403)
+
+[node name="Spikes2" parent="trap folder" instance=ExtResource("17_30o65")]
+position = Vector2(3792, 403)
+
+[node name="Spikes3" parent="trap folder" instance=ExtResource("17_30o65")]
+position = Vector2(3894, 403)
+
+[node name="Spikes4" parent="trap folder" instance=ExtResource("17_30o65")]
+position = Vector2(3994, 403)
+
+[node name="Spikes5" parent="trap folder" instance=ExtResource("17_30o65")]
+position = Vector2(4095, 403)
+
+[node name="Spikes6" parent="trap folder" instance=ExtResource("17_30o65")]
+position = Vector2(4195, 403)
+
+[node name="Spikes7" parent="trap folder" instance=ExtResource("17_30o65")]
+position = Vector2(4297, 403)
+
+[node name="Spikes8" parent="trap folder" instance=ExtResource("17_30o65")]
+position = Vector2(4397, 403)
+
+[node name="Spikes9" parent="trap folder" instance=ExtResource("17_30o65")]
+position = Vector2(4497, 403)
+
+[node name="Spikes10" parent="trap folder" instance=ExtResource("17_30o65")]
+position = Vector2(4597, 403)
+
+[node name="Spikes11" parent="trap folder" instance=ExtResource("17_30o65")]
+position = Vector2(4699, 403)
+
+[node name="Spikes12" parent="trap folder" instance=ExtResource("17_30o65")]
+position = Vector2(4799, 403)
+
+[node name="Spikes13" parent="trap folder" instance=ExtResource("17_30o65")]
+position = Vector2(4900, 403)
+
+[node name="Spikes14" parent="trap folder" instance=ExtResource("17_30o65")]
+position = Vector2(5000, 403)
+
+[node name="Spikes15" parent="trap folder" instance=ExtResource("17_30o65")]
+position = Vector2(5102, 403)
+
+[node name="Spikes16" parent="trap folder" instance=ExtResource("17_30o65")]
+position = Vector2(5202, 403)
+
+[node name="pooper" parent="." instance=ExtResource("15_2ynid")]
+position = Vector2(3926, -546)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://b2y8ahvr1rgih"]
+[gd_scene load_steps=33 format=3 uid="uid://b2y8ahvr1rgih"]
 
 [ext_resource type="Texture2D" uid="uid://geryd74pl4x" path="res://assets/tutorial/background/cavebgextra.png" id="1_7m65j"]
 [ext_resource type="Texture2D" uid="uid://bod3dhgkq8elf" path="res://assets/tutorial/tilemaps/GrassTileSet2.png" id="1_mmlhc"]
@@ -15,7 +15,10 @@
 [ext_resource type="Texture2D" uid="uid://cyvhwh7rup7s1" path="res://assets/tutorial/background/cavebgpara1.png" id="9_xcn83"]
 [ext_resource type="PackedScene" uid="uid://dtw1nh2smuhfq" path="res://scene/level functions/finish.tscn" id="10_ptmau"]
 [ext_resource type="PackedScene" uid="uid://dqcjkr0fu8sc2" path="res://scene/world and level select/world_select.tscn" id="11_1px1d"]
+[ext_resource type="FontFile" uid="uid://vqs1tfvmwaai" path="res://assets/Font/lunchtime-doubly-so/lunchds.ttf" id="13_i1qvx"]
 [ext_resource type="PackedScene" uid="uid://bk7mljdspn5kl" path="res://scene/level functions/spikes.tscn" id="16_yw7oi"]
+[ext_resource type="PackedScene" uid="uid://ceivx18by0dqh" path="res://scene/PauseMenu.tscn" id="17_q3kd1"]
+[ext_resource type="Script" path="res://scene/Timer.gd" id="18_smat4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0735w"]
 texture = ExtResource("1_mmlhc")
@@ -765,6 +768,49 @@ target_level = ExtResource("11_1px1d")
 
 [node name="Spikes" parent="." instance=ExtResource("16_yw7oi")]
 position = Vector2(-147, 117)
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+
+[node name="Timer" type="Panel" parent="CanvasLayer3"]
+offset_right = 195.0
+offset_bottom = 42.0
+script = ExtResource("18_smat4")
+
+[node name="Minutes" type="Label" parent="CanvasLayer3/Timer"]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 44.0
+offset_bottom = 42.0
+theme_override_fonts/font = ExtResource("13_i1qvx")
+theme_override_font_sizes/font_size = 39
+text = "00:"
+horizontal_alignment = 2
+
+[node name="Seconds" type="Label" parent="CanvasLayer3/Timer"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 2.0
+offset_right = 132.0
+offset_bottom = 42.0
+theme_override_fonts/font = ExtResource("13_i1qvx")
+theme_override_font_sizes/font_size = 39
+text = "00:"
+horizontal_alignment = 2
+
+[node name="Msecs" type="Label" parent="CanvasLayer3/Timer"]
+layout_mode = 0
+offset_left = 132.0
+offset_top = 2.0
+offset_right = 176.0
+offset_bottom = 42.0
+theme_override_fonts/font = ExtResource("13_i1qvx")
+theme_override_font_sizes/font_size = 39
+text = "00"
+horizontal_alignment = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("17_q3kd1")]
 
 [connection signal="body_entered" from="big plat4/Area2D" to="big plat4" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="big plat4/Area2D" to="big plat4" method="_on_area_2d_body_exited"]

@@ -14,4 +14,3 @@ func _on_sign_in_pressed():
 
 func _on_quit_pressed():
 	get_tree().quit()
-	

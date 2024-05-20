@@ -134,3 +134,5 @@ func _input(event):
 
 func _on_spikes_impaled():
 	_damage(1)
+
+

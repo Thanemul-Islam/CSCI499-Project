@@ -1,57 +1,64 @@
-[gd_scene load_steps=2 format=3 uid="uid://dpfqtlroyuner"]
+[gd_scene load_steps=4 format=3 uid="uid://df4x75uhl1f52"]
 
-[ext_resource type="Script" path="res://scene/Authentication.gd" id="1_4lyq1"]
+[ext_resource type="Script" path="res://scene/Authentication.gd" id="1_sflgv"]
+[ext_resource type="Texture2D" uid="uid://dm2id7x461fks" path="res://assets/World and level select/Screenshot 2024-04-23 at 8.46.33 PM.png" id="2_2wnq8"]
+[ext_resource type="FontFile" uid="uid://vqs1tfvmwaai" path="res://assets/Font/lunchtime-doubly-so/lunchds.ttf" id="3_w6lde"]
 
-[node name="Authentication" type="Control"]
+[node name="Control" type="Control" node_paths=PackedStringArray("login_state_label")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1.0
-offset_right = -1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_4lyq1")
+script = ExtResource("1_sflgv")
+login_state_label = NodePath("VBoxContainer/LoginStateLabel")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2wnq8")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -100.0
+offset_top = -65.5
+offset_right = 100.0
+offset_bottom = 65.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 20
+alignment = 1
 
-[node name="StateLabel" type="Label" parent="VBoxContainer"]
-unique_name_in_owner = true
+[node name="LoginStateLabel" type="Label" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_w6lde")
 text = "Not logged in"
 
-[node name="EmailLineEdit" type="LineEdit" parent="VBoxContainer"]
-unique_name_in_owner = true
+[node name="Register Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-placeholder_text = "Email"
+theme_override_fonts/font = ExtResource("3_w6lde")
+text = "Register"
 
-[node name="PasswordLineEdit" type="LineEdit" parent="VBoxContainer"]
-unique_name_in_owner = true
+[node name="Login Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-placeholder_text = "Password"
-secret = true
+theme_override_fonts/font = ExtResource("3_w6lde")
+text = "Login"
 
-[node name="LoginButton" type="Button" parent="VBoxContainer"]
+[node name="Logout Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "Log in"
+theme_override_fonts/font = ExtResource("3_w6lde")
+text = "Logout"
 
-[node name="SignupButton" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "Sign up"
-
-[connection signal="pressed" from="VBoxContainer/LoginButton" to="." method="_on_login_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/SignupButton" to="." method="_on_signup_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Register Button" to="." method="_on_register_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Login Button" to="." method="_on_login_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Logout Button" to="." method="_on_logout_button_pressed"]

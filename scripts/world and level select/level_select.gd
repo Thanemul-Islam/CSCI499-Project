@@ -1,7 +1,7 @@
 extends Control
 class_name LevelSelect
 
-@onready var current_level: LevelIcon = $LevelIcon1
+@onready var current_level: LevelIcon = $LevelIcon0
 var parent_world_select: Node
 
 # Called when the node enters the scene tree for the first time.

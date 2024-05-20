@@ -14,10 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://diplyu0qexi2y" path="res://assets/tutorial/background/cavebgpara2.png" id="8_4747r"]
 [ext_resource type="Texture2D" uid="uid://cyvhwh7rup7s1" path="res://assets/tutorial/background/cavebgpara1.png" id="9_xcn83"]
 [ext_resource type="PackedScene" uid="uid://dtw1nh2smuhfq" path="res://scene/level functions/finish.tscn" id="10_ptmau"]
-[ext_resource type="PackedScene" uid="uid://dqcjkr0fu8sc2" path="res://scene/world and level select/world_select.tscn" id="11_1px1d"]
 [ext_resource type="PackedScene" uid="uid://braiwgvsufs2f" path="res://scene/level functions/spinningblade.tscn" id="13_c140t"]
 [ext_resource type="PackedScene" uid="uid://bk7mljdspn5kl" path="res://scene/level functions/spikes.tscn" id="16_yw7oi"]
 [ext_resource type="PackedScene" uid="uid://bjyuk1hhxssc2" path="res://scene/level functions/checkpoint.tscn" id="17_iueak"]
+[ext_resource type="PackedScene" uid="uid://mmfiylxu67ns" path="res://scene/levels/tutorial/tutorial1-2.tscn" id="17_yyol7"]
 [ext_resource type="PackedScene" uid="uid://b1ppkef85f5qu" path="res://scene/enemy.tscn" id="18_04e1s"]
 [ext_resource type="PackedScene" uid="uid://k8e1kb743pfq" path="res://scene/coin.tscn" id="19_23qwy"]
 [ext_resource type="PackedScene" uid="uid://ito8lqcfxhrf" path="res://scene/ui_manager.tscn" id="20_axiko"]
@@ -539,6 +539,7 @@ scale = Vector2(3.82813, 1.44531)
 texture = ExtResource("1_7m65j")
 
 [node name="Background" type="ParallaxBackground" parent="."]
+scroll_offset = Vector2(-1212, 835.757)
 
 [node name="Layer 1" type="ParallaxLayer" parent="Background"]
 position = Vector2(4, -2)
@@ -782,16 +783,13 @@ position = Vector2(-848, -48)
 
 [node name="Finish" parent="." instance=ExtResource("10_ptmau")]
 position = Vector2(1759, -667)
-target_level = ExtResource("11_1px1d")
+target_level = ExtResource("17_yyol7")
 
 [node name="Checkpoint" parent="." instance=ExtResource("17_iueak")]
 position = Vector2(-496, -24)
 
 [node name="roach" parent="." instance=ExtResource("18_04e1s")]
 position = Vector2(424, -112)
-
-[node name="roach2" parent="." instance=ExtResource("18_04e1s")]
-position = Vector2(272, -16)
 
 [node name="Coin_holder" type="Node2D" parent="."]
 
@@ -811,9 +809,6 @@ position = Vector2(776, -232)
 position = Vector2(536, -152)
 
 [node name="UI_Manager" parent="." instance=ExtResource("20_axiko")]
-
-[node name="Checkpoint2" parent="." instance=ExtResource("17_iueak")]
-position = Vector2(-32, -24)
 
 [connection signal="body_entered" from="platform folder/small platform/Area2D" to="platform folder/small platform" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="platform folder/small platform/Area2D" to="platform folder/small platform" method="_on_area_2d_body_exited"]
@@ -835,7 +830,6 @@ position = Vector2(-32, -24)
 [connection signal="body_exited" from="platform folder/big plat3/Area2D" to="platform folder/big plat3" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="platform folder/big plat4/Area2D" to="platform folder/big plat4" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="platform folder/big plat4/Area2D" to="platform folder/big plat4" method="_on_area_2d_body_exited"]
-[connection signal="impaled" from="spikes folder/Spikes" to="Tony" method="_on_spikes_impaled"]
 
 [editable path="platform folder/small platform"]
 [editable path="platform folder/small platform2"]

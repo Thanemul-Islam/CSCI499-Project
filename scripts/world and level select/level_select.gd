@@ -25,7 +25,7 @@ func _input(event):
 		get_tree().get_root().add_child(parent_world_select)
 		get_tree().current_scene = parent_world_select
 		get_tree().get_root().remove_child(self)
-	
+		
 	if event.is_action_pressed("ui_accept"):
 		if current_level.next_scene_path:
 			Functions.load_screen_to_scene(current_level.next_scene_path)

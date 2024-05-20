@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://diplyu0qexi2y" path="res://assets/tutorial/background/cavebgpara2.png" id="8_4747r"]
 [ext_resource type="Texture2D" uid="uid://cyvhwh7rup7s1" path="res://assets/tutorial/background/cavebgpara1.png" id="9_xcn83"]
 [ext_resource type="PackedScene" uid="uid://dtw1nh2smuhfq" path="res://scene/level functions/finish.tscn" id="10_ptmau"]
+
 [ext_resource type="PackedScene" uid="uid://braiwgvsufs2f" path="res://scene/level functions/spinningblade.tscn" id="13_c140t"]
 [ext_resource type="PackedScene" uid="uid://bk7mljdspn5kl" path="res://scene/level functions/spikes.tscn" id="16_yw7oi"]
 [ext_resource type="PackedScene" uid="uid://bjyuk1hhxssc2" path="res://scene/level functions/checkpoint.tscn" id="17_iueak"]

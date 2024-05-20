@@ -201,4 +201,3 @@ func _on_spikes_impaled():
 func _on_hurt_box_area_2d_area_entered(area):
 	if area.name == "HitBoxArea2D":
 		_damage(1)
-		

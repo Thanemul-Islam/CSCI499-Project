@@ -1,11 +1,19 @@
 extends CharacterBody2D
+class_name Player
 
-
-const SPEED = 300.0
-const JUMP_VELOCITY = -500.0
+var SPEED = 300.0
+var JUMP_VELOCITY = -500.0
 @onready var sprite_2d = $Sprite2D
 @onready var healthbar = $Healthbar
+@onready var attack_timer = $AttackTimer
 @onready var invulnerability_timer = $InvulnerabilityTimer
+@onready var hurtbox = $AttackBoxArea2D/HitBoxCollisionShape2D
+var vulnerable = true
+
+
+# Variable for bullet
+@export var BULLET : PackedScene
+
 
 # Variables for dash trail & timer
 @export var dash_trail_node : PackedScene
@@ -13,8 +21,9 @@ const JUMP_VELOCITY = -500.0
 
 var jump_count = 0
 var jump_max = 2
+signal jumped
 
-@export var max_health = 3
+var max_health = 3
 var health = max_health
 
 
@@ -31,49 +40,91 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _physics_process(delta):
 	# Adding walk animation
 	if(velocity.x > 1 || velocity.x < -1):
-		sprite_2d.animation = "walk1"
+		sprite_2d.play("walk1")
 	else:
-		sprite_2d.animation = "idle"
+		sprite_2d.play("idle")
 	
 	# Add the gravity.
 	if not is_on_floor() and !isDashing:
 		velocity.y += gravity * delta
-
 		# Adding jumping frame
-		sprite_2d.animation = "jumping"
+		sprite_2d.play("jumping")
+		emit_signal("jumped")
 	
 	if is_on_floor():
 		jump_count = 0
-
-
+	
+	
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and jump_count<jump_max:
+	if Input.is_action_just_pressed("jump") and jump_count<jump_max and !isDashing:
 		velocity.y = JUMP_VELOCITY
-		jump_count += 1
+		if GameManager.learned_double_jump:
+			jump_count += 1
+		else:
+			jump_count +=2
+		emit_signal("jumped")
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("left", "right") 
+	# Handles hitbox h_flip
+	if direction < 0:
+		hurtbox.position.x = -35
+
+	if direction > 0:
+		hurtbox.position.x = 35
+
+		
 	if direction and !isDashing:
 		velocity.x = direction * SPEED
 	elif !direction and !isDashing:
-		velocity.x = move_toward(velocity.x, 0, 10)
+		velocity.x = move_toward(velocity.x, 0, 30)
+		
+	# Handles attack
+	if Input.is_action_just_pressed("left_click"):
+		#if there is no timer then hitbox then call timer
+		if attack_timer.is_stopped():
+			hurtbox.disabled = false
+			attack_timer.start()
+		#we need attack animation
+		#sprite_2d.play("attack")
+	else:
+		hurtbox.disabled = true
+	
+	# Handles shooting
+	if Input.is_action_just_pressed("right_click") and GameManager.ammo > 0 and GameManager.learned_shooting:
+		var left_or_right = sprite_2d.flip_h
+		var up_or_down = Input.get_axis("up","down")
+		if up_or_down == 0:
+			if left_or_right:
+				_shoot(Vector2.LEFT)
+			else:
+				_shoot(Vector2.RIGHT)
+		elif up_or_down < 0:
+			_shoot(Vector2.UP)
+		else:
+			_shoot(Vector2.DOWN)
+		GameManager.gain_ammo(-1)
+	
 
 	move_and_slide()
 	
-	#correct left turn
-	var isLeft = velocity.x < 0
-	if direction != 0:
-		sprite_2d.flip_h = isLeft
+	# Correct left turn
+	if direction > 0:
+		sprite_2d.flip_h = false
+	elif direction < 0:
+		sprite_2d.flip_h = true
 
-#player spawn
+# Player spawn
 func _ready():
-	healthbar.init_health(health)
+	healthbar.init_health(max_health)
+	GameManager.player = self
 
 #player death
 func _die():
-	is_alive = false
-	queue_free()
+	is_alive = false	
+	GameManager.respawn_player()
+	_set_health(max_health)
 	#emit_signal("died")
 
 #sets healthbar value
@@ -87,9 +138,13 @@ func _set_health(value):
 			_die()
 			#emit_signal("killed")
 
+# function to call for healing the player from elsewhere
+func heal(value):
+	_set_health(value + health)
+
 #calculates damage and updates health
 func _damage(amount):
-	if invulnerability_timer.is_stopped:
+	if invulnerability_timer.is_stopped() && vulnerable:
 		invulnerability_timer.start()
 		_set_health(health - amount)
 
@@ -124,8 +179,16 @@ func dash():
 	dash_trail_timer.stop()
 	isDashing = false 
 
+# Handles shooting
+func _shoot(direction):
+	if BULLET && GameManager.learned_shooting:
+		var bullet = BULLET.instantiate()
+		bullet.direction = direction
+		bullet.global_position = global_position
+		get_tree().current_scene.add_child(bullet)
+
 func _input(event):
-	if event.is_action_pressed("dash") and canDash:
+	if event.is_action_pressed("dash") and canDash and GameManager.learned_dash:
 		dash()
 		canDash = false
 		await get_tree().create_timer(1).timeout # Time between dashes
@@ -135,4 +198,6 @@ func _input(event):
 func _on_spikes_impaled():
 	_damage(1)
 
-
+func _on_hurt_box_area_2d_area_entered(area):
+	if area.name == "HitBoxArea2D":
+		_damage(1)

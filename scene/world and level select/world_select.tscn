@@ -52,6 +52,7 @@ world_index = 3
 level_select_packed = ExtResource("5_4tvi5")
 
 [node name="PlayerIcon" parent="." instance=ExtResource("6_art3c")]
+texture_filter = 1
 layout_mode = 0
 offset_left = 0.0
 offset_top = 0.0

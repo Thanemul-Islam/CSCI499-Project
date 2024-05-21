@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
-var is_chatting = false
+var chat_timer = false
 var player
 var player_in_chat_zone = false
 @export var dialogue_path: String = "res://dialogue/json/Dummy.json"
@@ -16,13 +16,14 @@ func _process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	# If entered pressed start chatting
-	if Input.is_action_just_pressed("interact") && player_in_chat_zone:
+	if Input.is_action_just_pressed("interact") && player_in_chat_zone && !chat_timer:
 		$Dialogue.start()
-		is_chatting = true
+		chat_timer = true
 	move_and_slide()
 	
 func _on_dialogue_dialogue_finished():
-	is_chatting = false
+	await get_tree().create_timer(1).timeout
+	chat_timer = false
 	
 
 func _on_chat_detection_area_body_entered(body):

@@ -72,9 +72,9 @@ func _damage(amount):
 func shit():
 	
 	if BULLET:
-		var bullet: = BULLET.instantiate()		
-		bullet.global_position = global_position
-		bullet.global_rotation = global_rotation
+		var bullet: = BULLET.instantiate()
+		bullet.global_position = position
+		bullet.global_rotation = rotation
 		get_tree().current_scene.add_child(bullet)
 	
 	reload_timer.start()

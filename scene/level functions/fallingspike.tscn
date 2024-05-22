@@ -15,6 +15,7 @@ texture_filter = 1
 texture = ExtResource("1_rqmxw")
 
 [node name="Hitbox" type="Area2D" parent="."]
+collision_mask = 4
 monitorable = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
@@ -23,6 +24,7 @@ scale = Vector2(0.3, 1.1)
 polygon = PackedVector2Array(-10, -12.7273, 10, -12.7273, 0, 11.8182)
 
 [node name="PlayerDetection" type="Area2D" parent="."]
+collision_mask = 4
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]

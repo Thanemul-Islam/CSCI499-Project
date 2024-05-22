@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://d3wlo1e38hc0r"]
+[gd_scene load_steps=14 format=3 uid="uid://d3wlo1e38hc0r"]
 
 [ext_resource type="Texture2D" uid="uid://6smrw5nysy3c" path="res://assets/test/2023-09-05_02.43.32.png" id="1_wim2s"]
 [ext_resource type="Texture2D" uid="uid://d33w5ndxlxx3b" path="res://assets/tutorial/tilemaps/GrassTileSet.png" id="2_qaisi"]
@@ -6,12 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://b1ppkef85f5qu" path="res://scene/enemy.tscn" id="4_7ko7s"]
 [ext_resource type="PackedScene" uid="uid://dqcjkr0fu8sc2" path="res://scene/world and level select/world_select.tscn" id="5_lidju"]
 [ext_resource type="PackedScene" uid="uid://dtw1nh2smuhfq" path="res://scene/level functions/finish.tscn" id="6_r455n"]
-[ext_resource type="PackedScene" uid="uid://cc5udvt7cdctf" path="res://scene/pigeon.tscn" id="7_lmj1j"]
 [ext_resource type="PackedScene" uid="uid://braiwgvsufs2f" path="res://scene/level functions/spinningblade.tscn" id="7_r71qh"]
 [ext_resource type="PackedScene" uid="uid://beaojotoc53s8" path="res://scene/level functions/fallingspike.tscn" id="8_pj7sv"]
 [ext_resource type="PackedScene" uid="uid://e00my7ykduql" path="res://scene/pooper.tscn" id="9_xqqfx"]
 [ext_resource type="PackedScene" uid="uid://be2pg3qk8roy0" path="res://scene/Jump_pizza.tscn" id="11_ncnn3"]
 [ext_resource type="PackedScene" uid="uid://nbaix1qr3ocw" path="res://scene/spam.tscn" id="12_cqvqj"]
+[ext_resource type="PackedScene" uid="uid://bjyuk1hhxssc2" path="res://scene/level functions/checkpoint.tscn" id="13_1oku8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yoarg"]
 texture = ExtResource("2_qaisi")
@@ -635,9 +635,6 @@ target_level = ExtResource("5_lidju")
 [node name="Tony" parent="." instance=ExtResource("3_tgf0x")]
 position = Vector2(200, 912)
 
-[node name="Pigeon" parent="." instance=ExtResource("7_lmj1j")]
-position = Vector2(514, 908)
-
 [node name="SpinningBlade" parent="." instance=ExtResource("7_r71qh")]
 position = Vector2(348, 319)
 
@@ -654,7 +651,7 @@ position = Vector2(623, 723)
 position = Vector2(726, 723)
 
 [node name="pooper" parent="." instance=ExtResource("9_xqqfx")]
-position = Vector2(432, 784)
+position = Vector2(360, 819)
 pace_distance = 50
 ray_length = 300
 
@@ -662,6 +659,9 @@ ray_length = 300
 position = Vector2(248, 768)
 
 [node name="SPAM" parent="." instance=ExtResource("12_cqvqj")]
-position = Vector2(256, 888)
+position = Vector2(305, 749)
+
+[node name="Checkpoint" parent="." instance=ExtResource("13_1oku8")]
+position = Vector2(200, 920)
 
 [editable path="SpinningBlade"]

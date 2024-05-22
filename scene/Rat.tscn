@@ -300,15 +300,15 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_j4vvq")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack",
-"speed": 5.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mf5a0")
 }],
-"loop": false,
+"loop": true,
 "name": &"damaged",
 "speed": 5.0
 }, {
@@ -424,7 +424,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_sword",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -521,7 +521,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_sword",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eaht6"]
@@ -547,7 +547,7 @@ dash_trail_node = ExtResource("2_tmk3n")
 texture_filter = 1
 scale = Vector2(1.625, 2.1975)
 sprite_frames = SubResource("SpriteFrames_s6ko7")
-animation = &"damaged_sword"
+animation = &"attack"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

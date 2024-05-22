@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://d3wlo1e38hc0r"]
+[gd_scene load_steps=14 format=3 uid="uid://d3wlo1e38hc0r"]
 
 [ext_resource type="Texture2D" uid="uid://6smrw5nysy3c" path="res://assets/test/2023-09-05_02.43.32.png" id="1_wim2s"]
 [ext_resource type="Texture2D" uid="uid://d33w5ndxlxx3b" path="res://assets/tutorial/tilemaps/GrassTileSet.png" id="2_qaisi"]
@@ -651,7 +651,7 @@ position = Vector2(623, 723)
 position = Vector2(726, 723)
 
 [node name="pooper" parent="." instance=ExtResource("9_xqqfx")]
-position = Vector2(432, 784)
+position = Vector2(360, 819)
 pace_distance = 50
 ray_length = 300
 
@@ -659,7 +659,7 @@ ray_length = 300
 position = Vector2(248, 768)
 
 [node name="SPAM" parent="." instance=ExtResource("12_cqvqj")]
-position = Vector2(256, 888)
+position = Vector2(305, 749)
 
 [node name="Checkpoint" parent="." instance=ExtResource("13_1oku8")]
 position = Vector2(200, 920)

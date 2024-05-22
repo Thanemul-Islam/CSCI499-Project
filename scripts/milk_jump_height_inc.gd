@@ -22,7 +22,7 @@ func reset_jump_height():
 		consumed = false
 
 func _on_area_2d_area_entered(area):
-	print(area.name, area.get_parent())
+	#print(area.name, area.get_parent())
 	# If this is Tony
 	if area.get_parent() is Player and !consumed:
 		# Now the buff is consumed

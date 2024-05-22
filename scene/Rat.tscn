@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bchse30vwfhkb" path="res://assets/base assets/tony/test_rat2_idle-Sheet.png" id="2_5yt6x"]
 [ext_resource type="Texture2D" uid="uid://rspl8wyco0cn" path="res://assets/base assets/tony/test_rat2_damaged_sheet.png" id="2_341ox"]
 [ext_resource type="PackedScene" uid="uid://6bkthesgluny" path="res://scene/gun_bullet.tscn" id="2_cfclk"]
-[ext_resource type="PackedScene" uid="uid://cn5bh21odbijl" path="res://scene/dash_trail.tscn" id="2_tmk3n"]
+[ext_resource type="PackedScene" uid="uid://jb5yb8643oku" path="res://scene/dash_trail.tscn" id="2_tmk3n"]
 [ext_resource type="PackedScene" uid="uid://ffnbogjsdmxn" path="res://scene/healthbar.tscn" id="3_xqasi"]
 [ext_resource type="Texture2D" uid="uid://djyc7jlhvx6dp" path="res://assets/base assets/tony/test_rat_just_falling_1frame.png" id="4_6mqoh"]
 [ext_resource type="Texture2D" uid="uid://c1kf106t6uurq" path="res://assets/base assets/tony/Tony with sword/test_rat2_attack_Sheet.png" id="4_q2s5w"]

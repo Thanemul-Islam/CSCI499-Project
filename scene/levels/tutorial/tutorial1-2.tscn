@@ -733,5 +733,11 @@ target_level = ExtResource("12_o75bl")
 [node name="Checkpoint" parent="." instance=ExtResource("13_rjwrc")]
 position = Vector2(-255, 402)
 
+[node name="Tiny Platform" parent="." instance=ExtResource("6_j442y")]
+position = Vector2(1752, -328)
+
+[node name="Tiny Platform2" parent="." instance=ExtResource("6_j442y")]
+position = Vector2(1752, -568)
+
 [connection signal="area_entered" from="Spinningblades folder/SpinningBlade/Path2D/PathFollow2D/Sprite2D/Area2D" to="Spinningblades folder/SpinningBlade" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Spinningblades folder/SpinningBlade2/Path2D/PathFollow2D/Sprite2D/Area2D" to="Spinningblades folder/SpinningBlade2" method="_on_area_2d_area_entered"]

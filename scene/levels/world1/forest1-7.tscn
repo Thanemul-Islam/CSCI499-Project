@@ -580,7 +580,7 @@ curve = SubResource("Curve2D_54jyx")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="trap folder/SpinningBlade8/Path2D"]
 position = Vector2(-1.33325, -1)
-rotation = -0.68573
+rotation = -0.685728
 
 [node name="Sprite2D" type="Sprite2D" parent="trap folder/SpinningBlade8/Path2D/PathFollow2D"]
 position = Vector2(-4.76837e-07, 0)
@@ -708,7 +708,7 @@ curve = SubResource("Curve2D_s4wdi")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="trap folder/SpinningBlade12/Path2D"]
 position = Vector2(0.666748, 0.333328)
-rotation = -0.00781223
+rotation = -0.00781222
 
 [node name="Sprite2D" type="Sprite2D" parent="trap folder/SpinningBlade12/Path2D/PathFollow2D"]
 position = Vector2(-4.76837e-07, 0)
@@ -740,7 +740,7 @@ curve = SubResource("Curve2D_s4wdi")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="trap folder/SpinningBlade13/Path2D"]
 position = Vector2(0.666748, 0.333328)
-rotation = -0.00781223
+rotation = -0.00781222
 
 [node name="Sprite2D" type="Sprite2D" parent="trap folder/SpinningBlade13/Path2D/PathFollow2D"]
 position = Vector2(-4.76837e-07, 0)

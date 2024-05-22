@@ -460,9 +460,6 @@ position = Vector2(908, 521)
 [node name="roach2" parent="Entities/roaches" instance=ExtResource("10_3xpvq")]
 position = Vector2(1146, 250)
 
-[node name="roach3" parent="Entities/roaches" instance=ExtResource("10_3xpvq")]
-position = Vector2(1400, 251)
-
 [node name="roach4" parent="Entities/roaches" instance=ExtResource("10_3xpvq")]
 position = Vector2(1385, 539)
 

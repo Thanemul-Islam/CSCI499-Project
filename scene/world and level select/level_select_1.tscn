@@ -39,7 +39,6 @@ offset_left = 158.0
 offset_top = 271.0
 offset_right = 222.0
 offset_bottom = 335.0
-next_scene_path = "res://scene/levels/world1/forest1-1.tscn"
 next_level_up = NodePath("../LevelIcon0")
 next_level_down = NodePath("../LevelIcon2")
 
@@ -49,6 +48,7 @@ offset_top = 360.0
 offset_right = 326.0
 offset_bottom = 424.0
 level_name = "2"
+next_scene_path = "res://scene/levels/world1/forest2-1.tscn"
 next_level_up = NodePath("../LevelIcon1")
 next_level_down = NodePath("../LevelIcon3")
 
@@ -58,7 +58,6 @@ offset_top = 456.0
 offset_right = 392.0
 offset_bottom = 520.0
 level_name = "3"
-next_scene_path = "res://scene/levels/world1/2-3-1.tscn"
 next_level_up = NodePath("../LevelIcon2")
 next_level_right = NodePath("../LevelIcon4")
 
@@ -68,7 +67,6 @@ offset_top = 480.0
 offset_right = 632.0
 offset_bottom = 544.0
 level_name = "4"
-next_scene_path = "res://scene/levels/world1/2-4-2.tscn"
 next_level_up = NodePath("../LevelIcon5")
 next_level_left = NodePath("../LevelIcon3")
 

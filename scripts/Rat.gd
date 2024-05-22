@@ -59,7 +59,6 @@ func _physics_process(delta):
 		else:
 			sprite_2d.play("jumping")
 	
-	
 	if is_on_floor():
 		jump_count = 0
 	

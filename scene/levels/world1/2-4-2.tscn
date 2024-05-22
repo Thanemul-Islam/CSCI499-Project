@@ -434,7 +434,7 @@ position = Vector2(5396, 1701)
 [node name="Entities" type="Node2D" parent="."]
 
 [node name="Tony" parent="Entities" instance=ExtResource("8_kqcj1")]
-position = Vector2(1912, 958)
+position = Vector2(51.0001, 67)
 scale = Vector2(0.75, 0.75)
 
 [node name="MysteryMan" parent="Entities" instance=ExtResource("16_vsxaq")]

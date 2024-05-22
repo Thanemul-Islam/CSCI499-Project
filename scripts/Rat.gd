@@ -40,16 +40,25 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _physics_process(delta):
 	# Adding walk animation
 	if(velocity.x > 1 || velocity.x < -1):
-		sprite_2d.play("walk1")
+		if GameManager.learned_attack:
+			sprite_2d.play("walk_sword")
+		else:
+			sprite_2d.play("walk1")
 	else:
-		sprite_2d.play("idle")
+		if GameManager.learned_attack:
+			sprite_2d.play("idle_sword")
+		else:
+			sprite_2d.play("idle")
 	
 	# Add the gravity.
 	if not is_on_floor() and !isDashing:
 		velocity.y += gravity * delta
 		# Adding jumping frame
-		sprite_2d.play("jumping")
-		emit_signal("jumped")
+		if GameManager.learned_attack:
+			sprite_2d.play("jumping_sword")
+		else:
+			sprite_2d.play("jumping")
+	
 	
 	if is_on_floor():
 		jump_count = 0
@@ -86,8 +95,8 @@ func _physics_process(delta):
 		if attack_timer.is_stopped():
 			hurtbox.disabled = false
 			attack_timer.start()
-		#we need attack animation
-		#sprite_2d.play("attack")
+			#we need attack animation
+			sprite_2d.play("attack")
 	else:
 		hurtbox.disabled = true
 	
@@ -104,7 +113,7 @@ func _physics_process(delta):
 			_shoot(Vector2.UP)
 		else:
 			_shoot(Vector2.DOWN)
-		GameManager.gain_ammo(-1)
+		
 	
 
 	move_and_slide()
@@ -122,7 +131,7 @@ func _ready():
 
 #player death
 func _die():
-	is_alive = false	
+	is_alive = false
 	GameManager.respawn_player()
 	_set_health(max_health)
 	#emit_signal("died")
@@ -184,8 +193,9 @@ func _shoot(direction):
 	if BULLET && GameManager.learned_shooting:
 		var bullet = BULLET.instantiate()
 		bullet.direction = direction
-		bullet.global_position = global_position
+		bullet.global_position = position
 		get_tree().current_scene.add_child(bullet)
+		GameManager.gain_ammo(-1)
 
 func _input(event):
 	if event.is_action_pressed("dash") and canDash and GameManager.learned_dash:

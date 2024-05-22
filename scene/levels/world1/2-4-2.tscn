@@ -27,7 +27,7 @@
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scale = Vector2(6, 6)
 transform = Transform2D(6, 0, 0, 6, 0, 0)
-scroll_offset = Vector2(416.837, 321.512)
+scroll_offset = Vector2(4230.99, 2532.74)
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(166.5, -242.167)
@@ -421,7 +421,7 @@ position = Vector2(397, 2822)
 [node name="Entities" type="Node2D" parent="."]
 
 [node name="Tony" parent="Entities" instance=ExtResource("8_kqcj1")]
-position = Vector2(4800, 327)
+position = Vector2(36, 497)
 scale = Vector2(0.75, 0.75)
 
 [node name="MysteryMan" parent="Entities" instance=ExtResource("16_vsxaq")]
@@ -442,7 +442,7 @@ position = Vector2(2683, 1227)
 [node name="roaches" type="Node2D" parent="Entities"]
 
 [node name="roach" parent="Entities/roaches" instance=ExtResource("10_3xpvq")]
-position = Vector2(908, 521)
+position = Vector2(314, 506)
 
 [node name="roach2" parent="Entities/roaches" instance=ExtResource("10_3xpvq")]
 position = Vector2(1146, 250)

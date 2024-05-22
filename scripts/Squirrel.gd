@@ -14,10 +14,12 @@ var gravity = GameManager.gravity
 @onready var shoot_timer = $ShootTimer
 @onready var hitbox = $HitBoxArea2D
 @export var acorn : PackedScene
+
 #Spawn of Squirrel
 func _ready():
 	healthbar.init_health(health)
 	player = get_parent().get_parent().find_child("Tony")
+
 
 #Death of Squirrel
 func _die():
@@ -53,7 +55,7 @@ func _physics_process(delta):
 	move_and_slide()
 	
 func _aim():
-	ray_cast.target_position = to_local(player.position)
+	ray_cast.target_position = to_local(player.global_position)
 
 func _on_hit_box_area_2d_area_entered(area):
 	if area.name == "AttackBoxArea2D":
@@ -72,15 +74,16 @@ func _on_shoot_timer_timeout():
 # Spawn acorn and sets its direction
 func _shoot():
 	var Acorn = acorn.instantiate()
-	Acorn.position = position
+	Acorn.global_position = position
 	Acorn.direction = (ray_cast.target_position).normalized()
 	get_tree().current_scene.add_child(Acorn)
 
 
-func body_entered(body):
+func body_entered(body):	
 	if body is Player:
 		detect = true
 
 func body_exited(body):
 	if body is Player:
 		detect = false
+

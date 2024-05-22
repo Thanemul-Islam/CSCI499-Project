@@ -835,7 +835,6 @@ position = Vector2(-32, -24)
 [connection signal="body_exited" from="platform folder/big plat3/Area2D" to="platform folder/big plat3" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="platform folder/big plat4/Area2D" to="platform folder/big plat4" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="platform folder/big plat4/Area2D" to="platform folder/big plat4" method="_on_area_2d_body_exited"]
-[connection signal="impaled" from="spikes folder/Spikes" to="Tony" method="_on_spikes_impaled"]
 
 [editable path="platform folder/small platform"]
 [editable path="platform folder/small platform2"]

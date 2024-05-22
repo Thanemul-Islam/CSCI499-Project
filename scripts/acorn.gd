@@ -5,7 +5,7 @@ var SPEED : float = 300
 
 func _physics_process(delta):
 	#acorn motion
-	position += direction * SPEED * delta
+	global_position += direction * SPEED * delta
 
 # Hits tony and disapears
 func _on_area_entered(area):

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bchse30vwfhkb" path="res://assets/base assets/tony/test_rat2_idle-Sheet.png" id="2_5yt6x"]
 [ext_resource type="Texture2D" uid="uid://rspl8wyco0cn" path="res://assets/base assets/tony/test_rat2_damaged_sheet.png" id="2_341ox"]
 [ext_resource type="PackedScene" uid="uid://6bkthesgluny" path="res://scene/gun_bullet.tscn" id="2_cfclk"]
-[ext_resource type="PackedScene" uid="uid://cn5bh21odbijl" path="res://scene/dash_trail.tscn" id="2_tmk3n"]
+[ext_resource type="PackedScene" uid="uid://jb5yb8643oku" path="res://scene/dash_trail.tscn" id="2_tmk3n"]
 [ext_resource type="PackedScene" uid="uid://ffnbogjsdmxn" path="res://scene/healthbar.tscn" id="3_xqasi"]
 [ext_resource type="Texture2D" uid="uid://djyc7jlhvx6dp" path="res://assets/base assets/tony/test_rat_just_falling_1frame.png" id="4_6mqoh"]
 [ext_resource type="Texture2D" uid="uid://c1kf106t6uurq" path="res://assets/base assets/tony/Tony with sword/test_rat2_attack_Sheet.png" id="4_q2s5w"]
@@ -300,15 +300,15 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_j4vvq")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack",
-"speed": 5.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mf5a0")
 }],
-"loop": false,
+"loop": true,
 "name": &"damaged",
 "speed": 5.0
 }, {
@@ -424,7 +424,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_sword",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -521,7 +521,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_sword",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eaht6"]
@@ -547,7 +547,7 @@ dash_trail_node = ExtResource("2_tmk3n")
 texture_filter = 1
 scale = Vector2(1.625, 2.1975)
 sprite_frames = SubResource("SpriteFrames_s6ko7")
-animation = &"damaged_sword"
+animation = &"attack"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

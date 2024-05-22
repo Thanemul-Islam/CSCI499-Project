@@ -12,7 +12,12 @@ func _on_hitbox_area_entered(area):
 	# call damage function
 	if area.get_parent() is Player:
 		area.get_parent()._damage(1)
-		queue_free()
+		
+		# reset using spawn_pos after timeout
+		position = spawn_pos
+		
+		current_speed = 0
+		
 
 func _on_player_detection_area_entered(area):
 	if area.get_parent() is Player:

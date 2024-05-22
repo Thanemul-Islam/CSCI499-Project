@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cul3ll4rn5541"]
+[gd_scene load_steps=19 format=3 uid="uid://bl325xalmcfah"]
 
 [ext_resource type="Texture2D" uid="uid://c0srsgx0xkxqd" path="res://assets/world1/background/ForestBGpara3.png" id="2_6wibo"]
 [ext_resource type="Texture2D" uid="uid://c3r8kjnfgv3s8" path="res://assets/world1/background/ForestBGpara2.png" id="3_eb1p8"]
@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dtw1nh2smuhfq" path="res://scene/level functions/finish.tscn" id="12_0d205"]
 [ext_resource type="PackedScene" uid="uid://k8e1kb743pfq" path="res://scene/coin.tscn" id="15_gkvpq"]
 [ext_resource type="PackedScene" uid="uid://bsunrep4hb7rb" path="res://scene/cookies_healing_1hp.tscn" id="16_ep4me"]
-[ext_resource type="PackedScene" uid="uid://b5uqu8mtsyif2" path="res://scene/levels/world1/2-3-2.tscn" id="18_pqttk"]
+[ext_resource type="PackedScene" uid="uid://4jpwtucav4l1" path="res://scene/levels/world1/2-3-2.tscn" id="18_pqttk"]
 
 [node name="2-3-1" type="Node2D"]
 position = Vector2(2622, -1437)

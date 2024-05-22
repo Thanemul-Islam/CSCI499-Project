@@ -6,7 +6,6 @@ extends Node2D
 var consumed = false
 func _ready():
 	GameManager.player.connect("jumped", reappear)
-	
 
 func reappear():
 	sprite_2d.show()

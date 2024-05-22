@@ -126,7 +126,7 @@ func _physics_process(delta):
 
 # Player spawn
 func _ready():
-	healthbar.init_health(health)
+	healthbar.init_health(max_health)
 	GameManager.player = self
 
 #player death
@@ -211,4 +211,3 @@ func _on_spikes_impaled():
 func _on_hurt_box_area_2d_area_entered(area):
 	if area.name == "HitBoxArea2D":
 		_damage(1)
-		

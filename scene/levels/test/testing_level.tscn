@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bkww065jf6j7l"]
+[gd_scene load_steps=7 format=3 uid="uid://bkww065jf6j7l"]
 
 [ext_resource type="PackedScene" uid="uid://blr8r7l5ygafu" path="res://scene/Rat.tscn" id="1_3041l"]
 [ext_resource type="PackedScene" uid="uid://jgyon26wo2cd" path="res://scene/levels/test/platform.tscn" id="2_lww0n"]
+[ext_resource type="PackedScene" uid="uid://dblruh5n3j5vb" path="res://dialogue/pixie/pixie.tscn" id="3_44216"]
 
 [sub_resource type="Gradient" id="Gradient_6lpf1"]
 offsets = PackedFloat32Array(0.980519)
@@ -32,3 +33,6 @@ texture = SubResource("GradientTexture1D_vcat5")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
 position = Vector2(728, 292)
 shape = SubResource("RectangleShape2D_je2eg")
+
+[node name="Dummy" parent="." instance=ExtResource("3_44216")]
+position = Vector2(304, 382)

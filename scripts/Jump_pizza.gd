@@ -6,7 +6,6 @@ extends Node2D
 var consumed = false
 func _ready():
 	GameManager.player.connect("jumped", reappear)
-	
 
 func reappear():
 	sprite_2d.show()
@@ -14,7 +13,6 @@ func reappear():
 
 
 func _on_area_2d_area_entered(area):
-	print(area.get_parent() is Player, consumed)
 	if area.get_parent() is Player and !consumed:
 		
 		# Get the values from Rat to type less

@@ -49,7 +49,6 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 		# Adding jumping frame
 		sprite_2d.play("jumping")
-		emit_signal("jumped")
 	
 	if is_on_floor():
 		jump_count = 0

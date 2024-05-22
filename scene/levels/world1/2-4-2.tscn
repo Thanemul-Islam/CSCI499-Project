@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://hsy3i27supja" path="res://scene/Squirrel.tscn" id="7_85l3l"]
 [ext_resource type="PackedScene" uid="uid://blr8r7l5ygafu" path="res://scene/Rat.tscn" id="8_kqcj1"]
 [ext_resource type="PackedScene" uid="uid://b1ppkef85f5qu" path="res://scene/enemy.tscn" id="10_3xpvq"]
-[ext_resource type="PackedScene" uid="uid://clpfgm1iue7xb" path="res://scene/level functions/smallplatform.tscn" id="11_d725b"]
 [ext_resource type="PackedScene" uid="uid://k8e1kb743pfq" path="res://scene/coin.tscn" id="13_8hewo"]
 [ext_resource type="PackedScene" uid="uid://dqcjkr0fu8sc2" path="res://scene/world and level select/world_select.tscn" id="13_ppnti"]
 [ext_resource type="PackedScene" uid="uid://bmainlt5yr8qf" path="res://scene/ammo.tscn" id="14_1ghib"]
@@ -22,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://3r427nn5kidw" path="res://scene/level functions/future_vending_machine.tscn" id="19_5cqa2"]
 [ext_resource type="PackedScene" uid="uid://dtw1nh2smuhfq" path="res://scene/level functions/finish.tscn" id="20_of10u"]
 [ext_resource type="PackedScene" uid="uid://df6p25dbx1s1v" path="res://scene/level functions/tiny_platform.tscn" id="21_fbs83"]
+[ext_resource type="PackedScene" uid="uid://blsv7aklk4df8" path="res://scene/level functions/big_platform.tscn" id="22_pri6p"]
 
 [node name="2-4-2" type="Node2D"]
 
@@ -434,7 +434,7 @@ position = Vector2(5396, 1701)
 [node name="Entities" type="Node2D" parent="."]
 
 [node name="Tony" parent="Entities" instance=ExtResource("8_kqcj1")]
-position = Vector2(1711, 836)
+position = Vector2(64.0001, 25.0001)
 scale = Vector2(0.75, 0.75)
 
 [node name="MysteryMan" parent="Entities" instance=ExtResource("16_vsxaq")]
@@ -444,7 +444,7 @@ position = Vector2(3259, 2764)
 position = Vector2(3381, 1891)
 
 [node name="Checkpoint" parent="Entities" instance=ExtResource("14_ykbu2")]
-position = Vector2(36, 502)
+position = Vector2(63, 502)
 
 [node name="Checkpoint2" parent="Entities" instance=ExtResource("14_ykbu2")]
 position = Vector2(3194, 2774)
@@ -525,9 +525,6 @@ position = Vector2(2982, 2214)
 
 [node name="roach24" parent="Entities/roaches" instance=ExtResource("10_3xpvq")]
 position = Vector2(1995, 645)
-
-[node name="roach30" parent="Entities/roaches" instance=ExtResource("10_3xpvq")]
-position = Vector2(2296, 657)
 
 [node name="roach31" parent="Entities/roaches" instance=ExtResource("10_3xpvq")]
 position = Vector2(1873, 804)
@@ -638,114 +635,6 @@ layer_0/tile_data = PackedInt32Array(11075754, 720896, 6, 11075752, 589824, 6, 1
 
 [node name="PlatformCollection" type="Node2D" parent="."]
 
-[node name="platform" parent="PlatformCollection" instance=ExtResource("11_d725b")]
-position = Vector2(931, 438)
-scale = Vector2(0.8, 0.8)
-
-[node name="platform2" parent="PlatformCollection" instance=ExtResource("11_d725b")]
-position = Vector2(932, 362)
-scale = Vector2(0.8, 0.8)
-
-[node name="platform3" parent="PlatformCollection" instance=ExtResource("11_d725b")]
-position = Vector2(1096, 755)
-scale = Vector2(0.5, 0.5)
-
-[node name="platform4" parent="PlatformCollection" instance=ExtResource("11_d725b")]
-position = Vector2(1288, 755)
-scale = Vector2(0.5, 0.5)
-
-[node name="platform5" parent="PlatformCollection" instance=ExtResource("11_d725b")]
-position = Vector2(1095, 900)
-scale = Vector2(0.5, 0.5)
-
-[node name="platform6" parent="PlatformCollection" instance=ExtResource("11_d725b")]
-position = Vector2(1287, 900)
-scale = Vector2(0.5, 0.5)
-
-[node name="platform7" parent="PlatformCollection" instance=ExtResource("11_d725b")]
-position = Vector2(1097, 1027)
-scale = Vector2(0.5, 0.5)
-
-[node name="platform8" parent="PlatformCollection" instance=ExtResource("11_d725b")]
-position = Vector2(1288, 1028)
-scale = Vector2(0.5, 0.5)
-
-[node name="platform9" parent="PlatformCollection" instance=ExtResource("11_d725b")]
-position = Vector2(1542, 274)
-scale = Vector2(0.5, 0.5)
-
-[node name="platform10" parent="PlatformCollection" instance=ExtResource("11_d725b")]
-position = Vector2(439, -42)
-scale = Vector2(0.5, 0.5)
-
-[node name="platform11" parent="PlatformCollection" instance=ExtResource("11_d725b")]
-position = Vector2(265, -85)
-scale = Vector2(1.2, 1.2)
-
-[node name="platform13" parent="PlatformCollection" instance=ExtResource("11_d725b")]
-position = Vector2(1865, 1683)
-scale = Vector2(0.5, 0.5)
-
-[node name="platform14" parent="PlatformCollection" instance=ExtResource("11_d725b")]
-position = Vector2(1864, 1605)
-scale = Vector2(0.5, 0.5)
-
-[node name="platform15" parent="PlatformCollection" instance=ExtResource("11_d725b")]
-position = Vector2(1864, 1524)
-scale = Vector2(0.5, 0.5)
-
-[node name="platform27" parent="PlatformCollection" instance=ExtResource("11_d725b")]
-position = Vector2(1715, 978)
-scale = Vector2(0.5, 0.5)
-
-[node name="platform28" parent="PlatformCollection" instance=ExtResource("11_d725b")]
-position = Vector2(1722, 889)
-scale = Vector2(0.5, 0.5)
-
-[node name="platform16" parent="PlatformCollection" instance=ExtResource("11_d725b")]
-position = Vector2(361, 2787)
-scale = Vector2(0.5, 0.5)
-
-[node name="platform17" parent="PlatformCollection" instance=ExtResource("11_d725b")]
-position = Vector2(2872, 2129)
-scale = Vector2(0.5, 0.5)
-
-[node name="platform18" parent="PlatformCollection" instance=ExtResource("11_d725b")]
-position = Vector2(2871, 2051)
-scale = Vector2(0.5, 0.5)
-
-[node name="platform19" parent="PlatformCollection" instance=ExtResource("11_d725b")]
-position = Vector2(2872, 1955)
-scale = Vector2(0.5, 0.5)
-
-[node name="platform20" parent="PlatformCollection" instance=ExtResource("11_d725b")]
-position = Vector2(3529, 1586)
-scale = Vector2(0.5, 0.5)
-
-[node name="platform21" parent="PlatformCollection" instance=ExtResource("11_d725b")]
-position = Vector2(3113, 1567)
-scale = Vector2(0.5, 0.5)
-
-[node name="platform22" parent="PlatformCollection" instance=ExtResource("11_d725b")]
-position = Vector2(3113, 1567)
-scale = Vector2(0.5, 0.5)
-
-[node name="platform24" parent="PlatformCollection" instance=ExtResource("11_d725b")]
-position = Vector2(3303, 1857)
-scale = Vector2(0.5, 0.5)
-
-[node name="platform25" parent="PlatformCollection" instance=ExtResource("11_d725b")]
-position = Vector2(3305, 1779)
-scale = Vector2(0.5, 0.5)
-
-[node name="platform26" parent="PlatformCollection" instance=ExtResource("11_d725b")]
-position = Vector2(3306, 1714)
-scale = Vector2(0.5, 0.5)
-
-[node name="platform23" parent="PlatformCollection" instance=ExtResource("11_d725b")]
-position = Vector2(3305, 1472)
-scale = Vector2(0.5, 0.5)
-
 [node name="Collectables" type="Node2D" parent="."]
 
 [node name="pizzas" type="Node2D" parent="Collectables"]
@@ -783,6 +672,12 @@ position = Vector2(3493, 2285)
 [node name="Pizza12" parent="Collectables/pizzas" instance=ExtResource("18_xrjof")]
 position = Vector2(3303, 1626)
 
+[node name="Pizza27" parent="Collectables/pizzas" instance=ExtResource("18_xrjof")]
+position = Vector2(2873, 2017)
+
+[node name="Pizza28" parent="Collectables/pizzas" instance=ExtResource("18_xrjof")]
+position = Vector2(2923, 1893)
+
 [node name="Pizza13" parent="Collectables/pizzas" instance=ExtResource("18_xrjof")]
 position = Vector2(3415, 1563)
 
@@ -803,6 +698,9 @@ position = Vector2(3260, 1363)
 
 [node name="Pizza19" parent="Collectables/pizzas" instance=ExtResource("18_xrjof")]
 position = Vector2(3107, 1322)
+
+[node name="Pizza29" parent="Collectables/pizzas" instance=ExtResource("18_xrjof")]
+position = Vector2(1851, 722)
 
 [node name="Pizza20" parent="Collectables/pizzas" instance=ExtResource("18_xrjof")]
 position = Vector2(3033, 672)
@@ -1299,4 +1197,70 @@ position = Vector2(3656, 719)
 position = Vector2(3667, 735)
 
 [node name="Tiny Platform" parent="." instance=ExtResource("21_fbs83")]
-position = Vector2(4950, 285)
+position = Vector2(438, -42)
+
+[node name="Tiny Platform2" parent="." instance=ExtResource("21_fbs83")]
+position = Vector2(931, 360)
+
+[node name="Tiny Platform3" parent="." instance=ExtResource("21_fbs83")]
+position = Vector2(935, 437)
+
+[node name="Tiny Platform4" parent="." instance=ExtResource("21_fbs83")]
+position = Vector2(1097, 755)
+
+[node name="Tiny Platform5" parent="." instance=ExtResource("21_fbs83")]
+position = Vector2(1289, 751)
+
+[node name="Tiny Platform6" parent="." instance=ExtResource("21_fbs83")]
+position = Vector2(1094, 896)
+
+[node name="Tiny Platform7" parent="." instance=ExtResource("21_fbs83")]
+position = Vector2(1291, 895)
+
+[node name="Tiny Platform8" parent="." instance=ExtResource("21_fbs83")]
+position = Vector2(1100, 1028)
+
+[node name="Tiny Platform9" parent="." instance=ExtResource("21_fbs83")]
+position = Vector2(1100, 1028)
+
+[node name="Tiny Platform10" parent="." instance=ExtResource("21_fbs83")]
+position = Vector2(1288, 1024)
+
+[node name="Tiny Platform11" parent="." instance=ExtResource("21_fbs83")]
+position = Vector2(1864, 1681)
+
+[node name="Tiny Platform17" parent="." instance=ExtResource("21_fbs83")]
+position = Vector2(359, 2789)
+
+[node name="Tiny Platform18" parent="." instance=ExtResource("21_fbs83")]
+position = Vector2(1721, 969)
+
+[node name="Tiny Platform19" parent="." instance=ExtResource("21_fbs83")]
+position = Vector2(1722, 886)
+
+[node name="Tiny Platform12" parent="." instance=ExtResource("21_fbs83")]
+position = Vector2(1865, 1606)
+
+[node name="Tiny Platform13" parent="." instance=ExtResource("21_fbs83")]
+position = Vector2(1868, 1520)
+
+[node name="Tiny Platform20" parent="." instance=ExtResource("21_fbs83")]
+position = Vector2(3306, 1858)
+
+[node name="Tiny Platform21" parent="." instance=ExtResource("21_fbs83")]
+position = Vector2(3303, 1777)
+
+[node name="Tiny Platform22" parent="." instance=ExtResource("21_fbs83")]
+position = Vector2(3306, 1716)
+
+[node name="Tiny Platform14" parent="." instance=ExtResource("21_fbs83")]
+position = Vector2(2874, 2133)
+
+[node name="Tiny Platform15" parent="." instance=ExtResource("21_fbs83")]
+position = Vector2(2871, 2057)
+
+[node name="Tiny Platform16" parent="." instance=ExtResource("21_fbs83")]
+position = Vector2(2873, 1957)
+
+[node name="Big Platform" parent="." instance=ExtResource("22_pri6p")]
+position = Vector2(1547, 275)

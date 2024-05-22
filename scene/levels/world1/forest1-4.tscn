@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bop5oylswb4sx"]
+[gd_scene load_steps=17 format=3 uid="uid://bop5oylswb4sx"]
 
 [ext_resource type="Texture2D" uid="uid://bkrp7xsel3ksy" path="res://assets/world1/background/ForestBGpara4.png" id="1_b2ddc"]
 [ext_resource type="Texture2D" uid="uid://c0srsgx0xkxqd" path="res://assets/world1/background/ForestBGpara3.png" id="2_id7kj"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://bp8odqqd2dbmk" path="res://scene/levels/world1/forest1-5.tscn" id="13_ymp8a"]
 [ext_resource type="PackedScene" uid="uid://b4vfcdokke5w5" path="res://scene/levels/world1/forest1-7.tscn" id="14_vctge"]
 [ext_resource type="PackedScene" uid="uid://be2pg3qk8roy0" path="res://scene/Jump_pizza.tscn" id="15_mbn1n"]
+[ext_resource type="PackedScene" uid="uid://dblruh5n3j5vb" path="res://dialogue/pixie/pixie.tscn" id="16_svffk"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -168,3 +169,6 @@ position = Vector2(1753, 822)
 
 [node name="Pizza3" parent="." instance=ExtResource("15_mbn1n")]
 position = Vector2(2046, 979)
+
+[node name="Dummy" parent="." instance=ExtResource("16_svffk")]
+position = Vector2(973, 473)

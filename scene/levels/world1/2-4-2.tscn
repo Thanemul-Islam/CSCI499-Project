@@ -434,7 +434,7 @@ position = Vector2(5396, 1701)
 [node name="Entities" type="Node2D" parent="."]
 
 [node name="Tony" parent="Entities" instance=ExtResource("8_kqcj1")]
-position = Vector2(58, -29)
+position = Vector2(1711, 836)
 scale = Vector2(0.75, 0.75)
 
 [node name="MysteryMan" parent="Entities" instance=ExtResource("16_vsxaq")]
@@ -558,7 +558,7 @@ position = Vector2(276, 226)
 
 [node name="Squirrel2" parent="Entities/squirrels" instance=ExtResource("7_85l3l")]
 z_index = 1
-position = Vector2(309, 61)
+position = Vector2(288, 50)
 
 [node name="Squirrel5" parent="Entities/squirrels" instance=ExtResource("7_85l3l")]
 z_index = 1
@@ -692,6 +692,14 @@ scale = Vector2(0.5, 0.5)
 
 [node name="platform15" parent="PlatformCollection" instance=ExtResource("11_d725b")]
 position = Vector2(1864, 1524)
+scale = Vector2(0.5, 0.5)
+
+[node name="platform27" parent="PlatformCollection" instance=ExtResource("11_d725b")]
+position = Vector2(1715, 978)
+scale = Vector2(0.5, 0.5)
+
+[node name="platform28" parent="PlatformCollection" instance=ExtResource("11_d725b")]
+position = Vector2(1722, 889)
 scale = Vector2(0.5, 0.5)
 
 [node name="platform16" parent="PlatformCollection" instance=ExtResource("11_d725b")]

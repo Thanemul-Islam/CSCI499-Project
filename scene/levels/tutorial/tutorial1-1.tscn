@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://b2y8ahvr1rgih"]
+[gd_scene load_steps=36 format=3 uid="uid://b2y8ahvr1rgih"]
 
 [ext_resource type="Texture2D" uid="uid://geryd74pl4x" path="res://assets/tutorial/background/cavebgextra.png" id="1_7m65j"]
 [ext_resource type="Texture2D" uid="uid://bod3dhgkq8elf" path="res://assets/tutorial/tilemaps/GrassTileSet2.png" id="1_mmlhc"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://b1ppkef85f5qu" path="res://scene/enemy.tscn" id="18_04e1s"]
 [ext_resource type="PackedScene" uid="uid://k8e1kb743pfq" path="res://scene/coin.tscn" id="19_23qwy"]
 [ext_resource type="PackedScene" uid="uid://ito8lqcfxhrf" path="res://scene/ui_manager.tscn" id="20_axiko"]
+[ext_resource type="PackedScene" uid="uid://be2pg3qk8roy0" path="res://scene/Jump_pizza.tscn" id="22_tf61e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0735w"]
 texture = ExtResource("1_mmlhc")
@@ -777,7 +778,7 @@ position = Vector2(48, 119)
 position = Vector2(97, 0)
 
 [node name="Tony" parent="." instance=ExtResource("3_6rcbu")]
-position = Vector2(-848, -48)
+position = Vector2(-704, -528)
 
 [node name="Camera2D2" type="Camera2D" parent="Tony"]
 
@@ -807,6 +808,15 @@ position = Vector2(776, -232)
 
 [node name="Coin6" parent="Coin_holder" instance=ExtResource("19_23qwy")]
 position = Vector2(536, -152)
+
+[node name="Pizza" parent="Coin_holder" instance=ExtResource("22_tf61e")]
+position = Vector2(-816, -560)
+
+[node name="Pizza2" parent="Coin_holder" instance=ExtResource("22_tf61e")]
+position = Vector2(-816, -704)
+
+[node name="Pizza3" parent="Coin_holder" instance=ExtResource("22_tf61e")]
+position = Vector2(-816, -848)
 
 [node name="UI_Manager" parent="." instance=ExtResource("20_axiko")]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ce4joe0ykmvr8"]
+[gd_scene load_steps=19 format=3 uid="uid://ce4joe0ykmvr8"]
 
 [ext_resource type="Texture2D" uid="uid://c0srsgx0xkxqd" path="res://assets/world1/background/ForestBGpara3.png" id="1_iuks1"]
 [ext_resource type="Texture2D" uid="uid://c3r8kjnfgv3s8" path="res://assets/world1/background/ForestBGpara2.png" id="2_5dcqv"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://k8e1kb743pfq" path="res://scene/coin.tscn" id="13_8vghl"]
 [ext_resource type="PackedScene" uid="uid://dtw1nh2smuhfq" path="res://scene/level functions/finish.tscn" id="15_xbe0i"]
 [ext_resource type="PackedScene" uid="uid://dqcjkr0fu8sc2" path="res://scene/world and level select/world_select.tscn" id="17_ex4ux"]
+[ext_resource type="PackedScene" uid="uid://cpeyw5ennqp3j" path="res://scene/unlock_dash.tscn" id="18_e5f45"]
 
 [node name="2-3-5" type="Node2D"]
 
@@ -484,3 +485,6 @@ position = Vector2(837, 496)
 position = Vector2(2474, 436)
 scale = Vector2(0.5, 0.5)
 target_level = ExtResource("17_ex4ux")
+
+[node name="Unlock Dash" parent="." instance=ExtResource("18_e5f45")]
+position = Vector2(2271, 428)

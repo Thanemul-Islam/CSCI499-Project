@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://b2y8ahvr1rgih"]
+[gd_scene load_steps=36 format=3 uid="uid://b2y8ahvr1rgih"]
 
 [ext_resource type="Texture2D" uid="uid://geryd74pl4x" path="res://assets/tutorial/background/cavebgextra.png" id="1_7m65j"]
 [ext_resource type="Texture2D" uid="uid://bod3dhgkq8elf" path="res://assets/tutorial/tilemaps/GrassTileSet2.png" id="1_mmlhc"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://b1ppkef85f5qu" path="res://scene/enemy.tscn" id="18_04e1s"]
 [ext_resource type="PackedScene" uid="uid://k8e1kb743pfq" path="res://scene/coin.tscn" id="19_23qwy"]
 [ext_resource type="PackedScene" uid="uid://ito8lqcfxhrf" path="res://scene/ui_manager.tscn" id="20_axiko"]
+[ext_resource type="PackedScene" uid="uid://be2pg3qk8roy0" path="res://scene/Jump_pizza.tscn" id="22_tf61e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0735w"]
 texture = ExtResource("1_mmlhc")
@@ -809,6 +810,15 @@ position = Vector2(776, -232)
 position = Vector2(536, -152)
 
 [node name="UI_Manager" parent="." instance=ExtResource("20_axiko")]
+
+[node name="Pizza" parent="." instance=ExtResource("22_tf61e")]
+position = Vector2(-813, -535)
+
+[node name="Pizza2" parent="." instance=ExtResource("22_tf61e")]
+position = Vector2(-812, -673)
+
+[node name="Pizza3" parent="." instance=ExtResource("22_tf61e")]
+position = Vector2(-813, -817)
 
 [connection signal="body_entered" from="platform folder/small platform/Area2D" to="platform folder/small platform" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="platform folder/small platform/Area2D" to="platform folder/small platform" method="_on_area_2d_body_exited"]

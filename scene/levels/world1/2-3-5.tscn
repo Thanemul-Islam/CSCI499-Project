@@ -487,4 +487,4 @@ scale = Vector2(0.5, 0.5)
 target_level = ExtResource("17_ex4ux")
 
 [node name="Unlock Dash" parent="." instance=ExtResource("18_e5f45")]
-position = Vector2(2311, 417)
+position = Vector2(2271, 428)

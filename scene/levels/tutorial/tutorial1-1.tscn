@@ -778,7 +778,7 @@ position = Vector2(48, 119)
 position = Vector2(97, 0)
 
 [node name="Tony" parent="." instance=ExtResource("3_6rcbu")]
-position = Vector2(-848, -48)
+position = Vector2(-704, -528)
 
 [node name="Camera2D2" type="Camera2D" parent="Tony"]
 
@@ -809,16 +809,16 @@ position = Vector2(776, -232)
 [node name="Coin6" parent="Coin_holder" instance=ExtResource("19_23qwy")]
 position = Vector2(536, -152)
 
+[node name="Pizza" parent="Coin_holder" instance=ExtResource("22_tf61e")]
+position = Vector2(-816, -560)
+
+[node name="Pizza2" parent="Coin_holder" instance=ExtResource("22_tf61e")]
+position = Vector2(-816, -704)
+
+[node name="Pizza3" parent="Coin_holder" instance=ExtResource("22_tf61e")]
+position = Vector2(-816, -848)
+
 [node name="UI_Manager" parent="." instance=ExtResource("20_axiko")]
-
-[node name="Pizza" parent="." instance=ExtResource("22_tf61e")]
-position = Vector2(-813, -535)
-
-[node name="Pizza2" parent="." instance=ExtResource("22_tf61e")]
-position = Vector2(-812, -673)
-
-[node name="Pizza3" parent="." instance=ExtResource("22_tf61e")]
-position = Vector2(-813, -817)
 
 [connection signal="body_entered" from="platform folder/small platform/Area2D" to="platform folder/small platform" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="platform folder/small platform/Area2D" to="platform folder/small platform" method="_on_area_2d_body_exited"]
